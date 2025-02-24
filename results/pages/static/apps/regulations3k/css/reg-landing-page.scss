@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Regulations 3000
+   Regulations landing page
+   ========================================================================== */
+
+// Helper class to correct regs3k notifications alignment
+.block--flush-regs3k {
+  margin-top: -30px;
+
+  .block--flush-bottom + & {
+    margin-top: 30px;
+  }
+}

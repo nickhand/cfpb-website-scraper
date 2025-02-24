@@ -1,0 +1,37 @@
+// Expandable facets.
+
+.o-expandable-facets {
+  &.is-open > div .o-expandable-facets__cue-close {
+    display: inline-block;
+  }
+
+  &.is-closed {
+    > div .o-expandable-facets__cue-open {
+      display: inline-block;
+    }
+
+    > .o-expandable-facets__content {
+      display: none;
+    }
+  }
+}
+
+.o-expandable-facets__target {
+  &.is-closed > .o-expandable-facets__cue-open {
+    display: inline-block;
+  }
+
+  &.is-open > .o-expandable-facets__cue-close {
+    display: inline-block;
+  }
+}
+
+.o-expandable-facets__cue {
+  display: none;
+}
+
+.o-expandable-facets__content {
+  &.o-expandable-facets__content--collapsed {
+    display: none;
+  }
+}

@@ -1,0 +1,21 @@
+// Images inserted via rich text field are given strict width and height
+// attributes in the resulting markup. This resets the dimensions to allow
+// the image to resize to its container without distortion
+//
+// TODO: Check if this can be removed after upgrading to Wagtail 2.0
+
+.richtext-image {
+  height: auto;
+  width: auto;
+}
+
+// Styles for adding radial masks to images.
+// Used by info unit groups.
+
+.u-image__border-circle {
+  border-radius: 50%;
+}
+
+.u-image__border-rounded {
+  border-radius: 12.5%;
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../unprocessed/apps/admin/js/global.js"],
+  "sourcesContent": ["// This is a workaround to an issue in fbjs.\n// See https://github.com/facebook/fbjs/issues/290\n// eslint-disable-next-line no-global-assign\nglobal = globalThis;\n\nconst env = location.hostname.split('.')[0];\n\nconst body = document.querySelector('body');\nbody.setAttribute('data-env', env);\n\n// Modify default document/image title generation to keep file extensions.\n// See https://docs.wagtail.org/en/stable/advanced_topics/documents/title_generation_on_upload.html\n// and https://docs.wagtail.org/en/stable/advanced_topics/images/title_generation_on_upload.html.\nwindow.addEventListener('DOMContentLoaded', function () {\n  const keepFilename = function (event) {\n    event.detail.data.title = event.detail.filename;\n  };\n\n  document.addEventListener('wagtail:documents-upload', keepFilename);\n  document.addEventListener('wagtail:images-upload', keepFilename);\n});\n"],
+  "mappings": "MAGA,OAAS,WAET,IAAMA,EAAM,SAAS,SAAS,MAAM,GAAG,EAAE,CAAC,EAEpCC,EAAO,SAAS,cAAc,MAAM,EAC1CA,EAAK,aAAa,WAAYD,CAAG,EAKjC,OAAO,iBAAiB,mBAAoB,UAAY,CACtD,IAAME,EAAe,SAAUC,EAAO,CACpCA,EAAM,OAAO,KAAK,MAAQA,EAAM,OAAO,QACzC,EAEA,SAAS,iBAAiB,2BAA4BD,CAAY,EAClE,SAAS,iBAAiB,wBAAyBA,CAAY,CACjE,CAAC",
+  "names": ["env", "body", "keepFilename", "event"]
+}

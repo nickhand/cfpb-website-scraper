@@ -56,6 +56,7 @@ def get_webdriver(
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-extensions")
         options.add_argument("--disable-gpu")
+        options.add_argument("--disable-javascript")  # Disable JavaScript !IMPORTANT
         if not debug:
             options.add_argument("--headless")
 
@@ -77,6 +78,7 @@ def get_webdriver(
     elif browser == "firefox":
         # Create the options
         options = webdriver.FirefoxOptions()
+        options.set_preference("javascript.enabled", False)  # Disable JavaScript
         if not debug:
             options.add_argument("--headless")
 
@@ -296,7 +298,7 @@ class WebScraper:
                 with s3.open(output_filename, "w") as f:
                     f.write(page_source)
 
-        else:
+        elif self.kind == "files":
 
             # Get the s3 path
             output_path = urlparse(url).path
@@ -313,3 +315,27 @@ class WebScraper:
             with s3.open(output_filename, "wb") as f:
                 for chunk in response.iter_content(1024):
                     f.write(chunk)
+
+        elif self.kind == "static":
+
+            if "consumerfinance.gov/static/" not in url:
+                return
+
+            # Get the s3 path
+            output_filename = (
+                f"s3://{BUCKET_NAME}/pages/static{url.split('/static')[-1]}"
+            )
+
+            # Download the file
+            response = requests.get(url, stream=True)
+            try:
+                response.raise_for_status()  # Raise an error for bad responses (4xx, 5xx)
+            except:
+                logger.info(f"Failed to download {url}")
+                return
+
+            with s3.open(output_filename, "wb") as f:
+                for chunk in response.iter_content(1024):
+                    f.write(chunk)
+        else:
+            raise ValueError(f"Unknown kind: {self.kind}")

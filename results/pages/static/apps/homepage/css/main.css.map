@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../unprocessed/apps/homepage/css/main.scss"],
+  "sourcesContent": [".content__level--1 {\n  max-width: 1230px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.content__level-1 {\n  max-width: 930px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.content__level-2 {\n  max-width: 870px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.content__main--flush-inner {\n  padding-top: 0;\n  margin-top: 0;\n}"],
+  "mappings": "AAAA,CAAC,kBACC,UAAW,OACX,YAAa,KACb,aAAc,IAChB,CAEA,CAAC,iBACC,UAAW,MACX,YAAa,KACb,aAAc,IAChB,CAEA,CAAC,iBACC,UAAW,MACX,YAAa,KACb,aAAc,IAChB,CAEA,CAAC,2BACC,YAAa,EACb,WAAY,CACd",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../unprocessed/js/routes/on-demand/wagtail-charts-chart-block.js"],
+  "sourcesContent": ["Chart.register(ChartjsPluginStacked100.default);\n\nwindow.test_callback = function () {\n  console.log('hooray');\n  return {\n    plugins: {\n      title: {\n        display: true,\n        text: 'Chart.js Bar Chart',\n      },\n    },\n  };\n};\n\nconsole.log('wat');\n"],
+  "mappings": "MAAA,MAAM,SAAS,wBAAwB,OAAO,EAE9C,OAAO,cAAgB,UAAY,CACjC,eAAQ,IAAI,QAAQ,EACb,CACL,QAAS,CACP,MAAO,CACL,QAAS,GACT,KAAM,oBACR,CACF,CACF,CACF,EAEA,QAAQ,IAAI,KAAK",
+  "names": []
+}

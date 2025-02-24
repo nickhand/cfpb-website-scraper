@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../unprocessed/apps/careers/css/main.scss"],
+  "sourcesContent": ["/* ==========================================================================\n   Design System\n   Variables\n   ========================================================================== */\n/* ==========================================================================\n   Design System\n   Breakpoint variables.\n\n   NOTE: If any of the values in this file are adjusted,\n         they need to be adjusted in vars-breakpoints.js as well.\n   ========================================================================== */\n/* ==========================================================================\n   Design System\n   Grid mixins\n   ========================================================================== */\n/* stylelint-disable selector-class-pattern */\n/* stylelint-disable selector-class-pattern */\n/* stylelint-disable selector-class-pattern */\n/* stylelint-disable selector-class-pattern */\n/* ==========================================================================\n   Design System\n   Media queries\n   ========================================================================== */\n/* ==========================================================================\n   Design System\n   Base styles\n   ========================================================================== */\ndl.vacancy-announcement dt {\n  margin-top: 0.75em;\n  margin-bottom: 0;\n}"],
+  "mappings": "AA2BA,EAAE,CAAC,qBAAqB,GACtB,WAAY,MACZ,cAAe,CACjB",
+  "names": []
+}

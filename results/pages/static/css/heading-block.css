@@ -1,0 +1,27 @@
+/*
+  Wagtail editor style customization for v1.blocks.HeadingBlock.
+  Displays heading text, level, and icon fields side-by-side.
+*/
+
+.struct-block.heading-block div[data-contentpath='text'],
+.struct-block.heading-block div[data-contentpath='level'],
+.struct-block.heading-block div[data-contentpath='icon'] {
+  display: inline-block;
+  margin-right: -0.25em;
+  vertical-align: top;
+}
+
+.struct-block.heading-block div[data-contentpath='text'] {
+  width: 50%;
+}
+.struct-block.heading-block div[data-contentpath='level'] {
+  width: 20%;
+}
+.struct-block.heading-block div[data-contentpath='icon'] {
+  width: 26%;
+}
+
+.struct-block.heading-block div[data-contentpath='level'],
+.struct-block.heading-block div[data-contentpath='icon'] {
+  margin-left: 2%;
+}

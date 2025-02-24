@@ -27,7 +27,7 @@ def cli():
 )
 @click.argument(
     "kind",
-    type=click.Choice(["pages", "files"]),
+    type=click.Choice(["pages", "files", "static"]),
 )
 @click.option("--num-workers", type=int, default=20, help="The number of workers")
 def submit(input_filename, kind, num_workers=20, **kwargs):
@@ -73,7 +73,7 @@ def submit(input_filename, kind, num_workers=20, **kwargs):
 
 @cli.command()
 @click.argument("data_path", type=str)
-@click.argument("kind", type=click.Choice(["pages", "files"]))
+@click.argument("kind", type=click.Choice(["pages", "files", "static"]))
 @aws_scraper_cli.add_run_options
 def run(data_path, kind, **kwargs):
     """Run scraper jobs."""

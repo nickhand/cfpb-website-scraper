@@ -1,0 +1,1151 @@
+<html lang="es" class="no-js"><head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# ">
+
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"gov-bam.nr-data.net","errorBeacon":"gov-bam.nr-data.net","licenseKey":"c656a7b008","applicationID":"17418772","transactionName":"ZlEAYkJWV0cEARFdWl8bJENeVE1dCgxKQ1RWQANfXERRVRcLC1MbR10HQUMNalEXFABiXFRD","queueTime":2,"applicationTime":193,"agent":""};
+(window.NREUM||(NREUM={})).init={ajax:{deny_list:["gov-bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"UgEHVFBRGwIHUFBaAAYF",licenseKey:"c656a7b008",applicationID:"17418772"};;/*! For license information please see nr-loader-full-1.281.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555:(e,t,r)=>{"use strict";r.d(t,{Vp:()=>c,fn:()=>s,x1:()=>u});var n=r(384),i=r(8122);const o={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){try{const t=c(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}function c(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.info=a[e])}},9417:(e,t,r)=>{"use strict";r.d(t,{D0:()=>g,gD:()=>m,xN:()=>p});var n=r(3333),i=r(993);const o=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var a=r(2614),s=r(944),c=r(384),u=r(8122);const d="[data-nr-mask]",l=()=>{const e={feature_flags:[],experimental:{marks:!1,measures:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0,level:i.p_.INFO},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{get capture_marks(){return e.feature_flags.includes(n.$v.MARKS)||e.experimental.marks},set capture_marks(t){e.experimental.marks=t},get capture_measures(){return e.feature_flags.includes(n.$v.MEASURES)||e.experimental.measures},set capture_measures(t){e.experimental.measures=t},capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(n.$v.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:a.wk,inactiveMs:a.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){o(t)?e.mask_selector="".concat(t,",").concat(d):""===t||null===t?e.mask_selector=d:(0,s.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){o(t)?e.block_selector+=",".concat(t):""!==t&&(0,s.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,s.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}},f={},h="All configuration objects require an agent identifier!";function g(e){if(!e)throw new Error(h);if(!f[e])throw new Error("Configuration for ".concat(e," was never set"));return f[e]}function p(e,t){if(!e)throw new Error(h);f[e]=(0,u.a)(t,l());const r=(0,c.nY)(e);r&&(r.init=f[e])}function m(e,t){if(!e)throw new Error(h);var r=g(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}},5603:(e,t,r)=>{"use strict";r.d(t,{a:()=>c,o:()=>s});var n=r(384),i=r(8122);const o={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},a={};function s(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!a[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.loader_config=a[e])}},3371:(e,t,r)=>{"use strict";r.d(t,{V:()=>f,f:()=>l});var n=r(8122),i=r(384),o=r(6154),a=r(9324);let s=0;const c={buildEnv:a.F3,distMethod:a.Xs,version:a.xv,originTime:o.WN},u={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,timeKeeper:void 0,obfuscator:void 0,harvester:void 0},d={};function l(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!d[e])throw new Error("Runtime for ".concat(e," was never set"));return d[e]}function f(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");d[e]={...(0,n.a)(t,u),...c},Object.hasOwnProperty.call(d[e],"harvestCount")||Object.defineProperty(d[e],"harvestCount",{get:()=>++s});const r=(0,i.nY)(e);r&&(r.runtime=d[e])}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>o,Yq:()=>a,xv:()=>n});const n="1.281.0",i="PROD",o="CDN",a="^2.0.0-alpha.17"},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>u,RI:()=>i,WN:()=>f,bv:()=>o,gm:()=>a,lR:()=>l,m:()=>c,mw:()=>s,sb:()=>d});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s=Boolean("hidden"===a?.document?.visibilityState),c=""+a?.location,u=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),d=u&&"undefined"==typeof SharedWorker,l=(()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);return Array.isArray(e)&&e.length>=2?+e[1]:0})(),f=Date.now()-(0,n.t)()},7295:(e,t,r)=>{"use strict";r.d(t,{Xv:()=>a,gX:()=>i,iW:()=>o});var n=[];function i(e){if(!e||o(e))return!1;if(0===n.length)return!0;for(var t=0;t<n.length;t++){var r=n[t];if("*"===r.hostname)return!1;if(s(r.hostname,e.hostname)&&c(r.pathname,e.pathname))return!1}return!0}function o(e){return void 0===e.hostname}function a(e){if(n=[],e&&e.length)for(var t=0;t<e.length;t++){let r=e[t];if(!r)continue;0===r.indexOf("http://")?r=r.substring(7):0===r.indexOf("https://")&&(r=r.substring(8));const i=r.indexOf("/");let o,a;i>0?(o=r.substring(0,i),a=r.substring(i)):(o=r,a="");let[s]=o.split(":");n.push({hostname:s,pathname:a})}}function s(e,t){return!(e.length>t.length)&&t.indexOf(e)===t.length-e.length}function c(e,t){return 0===e.indexOf("/")&&(e=e.substring(1)),0===t.indexOf("/")&&(t=t.substring(1)),""===e||e===t}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(7836),i=r(3606),o=r(860),a=r(2646);const s={};function c(e,t){const r={staged:!1,priority:o.P3[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),h(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return h(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),h(e,t)})))}function h(e,t,r=!0){const o=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!o.aborted&&o.backlog&&s){if(r){const e=o.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)g(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof a.y&&t[0].on(e,t[1])}))}))}}o.isolatedBacklog||delete s[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function g(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],o=e[2];n.apply(i,o)}}))}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>c,ee:()=>u});var n=r(384),i=r(8990),o=r(3371),a=r(2646),s=r(5607);const c="nr@context:".concat(s.W),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.f)(r).isolatedBacklog}catch(e){}var f={on:g,addEventListener:g,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=h(n),c=p(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var g=v()[s[e]];g&&g.push([f,e,r,a]);return a},get:m,listeners:p,context:h,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{s[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function h(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,c,(()=>new a.y(c))):new a.y(c)}function g(e,t){n[e]=p(e).concat(t)}function p(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=u)},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>o});var n=r(9908);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.d,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.d);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function o(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>o,jT:()=>n,sp:()=>i})},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,ZF:()=>c,bz:()=>a,el:()=>u});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}function c(){return s(16)}function u(){return s(32)}},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>a,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>o});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},7485:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(6154);function i(e){if(0===(e||"").indexOf("data:"))return{protocol:"data"};try{const t=new URL(e,location.href),r={port:t.port,hostname:t.hostname,pathname:t.pathname,search:t.search,protocol:t.protocol.slice(0,t.protocol.indexOf(":")),sameOrigin:t.protocol===n.gm?.location?.protocol&&t.host===n.gm?.location?.host};return r.port&&""!==r.port||("http:"===t.protocol&&(r.port="80"),"https:"===t.protocol&&(r.port="443")),r.pathname&&""!==r.pathname?r.pathname.startsWith("/")||(r.pathname="/".concat(r.pathname)):r.pathname="/",r}catch(e){return{}}}},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},5284:(e,t,r)=>{"use strict";r.d(t,{t:()=>c,B:()=>s});var n=r(7836),i=r(6154);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(e={}){try{i.gm.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},3304:(e,t,r)=>{"use strict";r.d(t,{A:()=>o});var n=r(7836);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())??""}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}return""}}},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,sB:()=>a});var n=r(3878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.sp)("load",e,t)}function a(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>d,Zm:()=>a,bQ:()=>c,dV:()=>s,nY:()=>u,pV:()=>l});var n=r(6154),i=r(1863);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=a();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},2843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},8139:(e,t,r)=>{"use strict";r.d(t,{u:()=>f});var n=r(7836),i=r(3434),o=r(8990),a=r(6154);const s={},c=a.gm.XMLHttpRequest,u="addEventListener",d="removeEventListener",l="nr@wrapped:".concat(n.P);function f(e){var t=function(e){return(e||n.ee).get("events")}(e);if(s[t.debugId]++)return t;s[t.debugId]=1;var r=(0,i.YM)(t,!0);function f(e){r.inPlace(e,[u,d],"-",g)}function g(e,t){return e[1]}return"getPrototypeOf"in Object&&(a.RI&&h(document,f),c&&h(c.prototype,f),h(a.gm,f)),t.on(u+"-start",(function(e,t){var n=e[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var i=(0,o.I)(n,l,(function(){var e={object:function(){if("function"!=typeof n.handleEvent)return;return n.handleEvent.apply(n,arguments)},function:n}[typeof n];return e?r(e,"fn-",null,e.name||"anonymous"):n}));this.wrapped=e[1]=i}})),t.on(d+"-start",(function(e){e[1]=this.wrapped||e[1]})),t}function h(e,t,...r){let n=e;for(;"object"==typeof n&&!Object.prototype.hasOwnProperty.call(n,u);)n=Object.getPrototypeOf(n);n&&t(n,...r)}},3434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>o,YM:()=>c});var n=r(7836),i=r(5607);const o="nr@original:".concat(i.W);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],u=e[c];d(u)||(e[c]=r(u,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return d(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){u([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,d,l;try{a=this,o=[...arguments],d="function"==typeof n?n(o,a):n||{}}catch(t){u([t,"",[o,a,s],d],e)}i(r+"start",[o,a,s],d,c);try{return l=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],d,c),e}finally{i(r+"end",[o,a,l],d,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){u([t,r,n,i],e)}s=a}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function d(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},9300:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.ajax},3333:(e,t,r)=>{"use strict";r.d(t,{$v:()=>u,TZ:()=>n,Zp:()=>i,kd:()=>c,mq:()=>s,nf:()=>a,qN:()=>o});const n=r(860).K7.genericEvents,i=["auxclick","click","copy","keydown","paste","scrollend"],o=["focus","blur"],a=4,s=1e3,c=["PageAction","UserAction","BrowserPerformance"],u={MARKS:"experimental.marks",MEASURES:"experimental.measures",RESOURCES:"experimental.resources"}},6774:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.jserrors},993:(e,t,r)=>{"use strict";r.d(t,{ET:()=>o,TZ:()=>a,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},o="log",a=n.K7.logging},3785:(e,t,r)=>{"use strict";r.d(t,{R:()=>c,b:()=>u});var n=r(9908),i=r(1863),o=r(860),a=r(3969),s=r(993);function c(e,t,r={},c=s.p_.INFO){(0,n.p)(a.xV,["API/logging/".concat(c.toLowerCase(),"/called")],void 0,o.K7.metrics,e),(0,n.p)(s.ET,[(0,i.t)(),t,r,c],void 0,o.K7.logging,e)}function u(e){return"string"==typeof e&&Object.values(s.p_).some((t=>t===e.toUpperCase().trim()))}},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>s,rs:()=>i,xV:()=>a,z_:()=>o});const n=r(860).K7.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},6344:(e,t,r)=>{"use strict";r.d(t,{BB:()=>d,G4:()=>o,Qb:()=>l,TZ:()=>i,Ug:()=>a,_s:()=>s,bc:()=>u,yP:()=>c});var n=r(2614);const i=r(860).K7.sessionReplay,o={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"},a=.12,s={DomContentLoaded:0,Load:1,FullSnapshot:2,IncrementalSnapshot:3,Meta:4,Custom:5},c={[n.g.ERROR]:15e3,[n.g.FULL]:3e5,[n.g.OFF]:0},u={RESET:{message:"Session was reset",sm:"Reset"},IMPORT:{message:"Recorder failed to import",sm:"Import"},TOO_MANY:{message:"429: Too Many Requests",sm:"Too-Many"},TOO_BIG:{message:"Payload was too large",sm:"Too-Big"},CROSS_TAB:{message:"Session Entity was set to OFF on another tab",sm:"Cross-Tab"},ENTITLEMENTS:{message:"Session Replay is not allowed and will not be started",sm:"Entitlement"}},d=5e3,l={API:"api"}},5270:(e,t,r)=>{"use strict";r.d(t,{Aw:()=>c,CT:()=>u,SR:()=>s});var n=r(384),i=r(9417),o=r(7767),a=r(6154);function s(e){return!!(0,n.dV)().o.MO&&(0,o.V)(e)&&!0===(0,i.gD)(e,"session_trace.enabled")}function c(e){return!0===(0,i.gD)(e,"session_replay.preload")&&s(e)}function u(e,t){const r=t.correctAbsoluteTimestamp(e);return{originalTimestamp:e,correctedTimestamp:r,timestampDiff:e-r,originTime:a.WN,correctedOriginTime:t.correctedOriginTime,originTimeDiff:Math.floor(a.WN-t.correctedOriginTime)}}},3738:(e,t,r)=>{"use strict";r.d(t,{He:()=>i,Kp:()=>s,Lc:()=>u,Rz:()=>d,TZ:()=>n,bD:()=>o,d3:()=>a,jx:()=>l,uP:()=>c});const n=r(860).K7.sessionTrace,i="bstResource",o="resource",a="-start",s="-end",c="fn"+a,u="fn"+s,d="pushState",l=1e3},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>o});var n=r(7836),i=r(1687);class o{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},7767:(e,t,r)=>{"use strict";r.d(t,{V:()=>o});var n=r(9417),i=r(6154);const o=e=>i.RI&&!0===(0,n.gD)(e,"privacy.cookies_enabled")},425:(e,t,r)=>{"use strict";r.d(t,{j:()=>j});var n=r(860),i=r(2555),o=r(3371),a=r(9908),s=r(7836),c=r(1687),u=r(5289),d=r(6154),l=r(944),f=r(3969),h=r(384),g=r(6344);const p=["setErrorHandler","finished","addToTrace","addRelease","recordCustomEvent","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",g.G4.RECORD,g.G4.PAUSE,"log","wrapLogger"],m=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(1863),b=r(2614),y=r(993),R=r(3785),x=r(2646),w=r(3434);const E=new Map;function A(e,t,r,n){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,l.R)(29);const i=function(e){return(e||s.ee).get("logger")}(e),o=(0,w.YM)(i),a=new x.y(s.P);a.level=n.level,a.customAttributes=n.customAttributes;const c=t[r]?.[w.Jt]||t[r];return E.set(c,a),o.inPlace(t,[r],"wrap-logger-",(()=>E.get(c))),i}function T(){const e=(0,h.pV)();p.forEach((t=>{e[t]=(...r)=>function(t,...r){let n=[];return Object.values(e.initializedAgents).forEach((e=>{e&&e.api?e.exposed&&e.api[t]&&n.push(e.api[t](...r)):(0,l.R)(38,t)})),n.length>1?n:n[0]}(t,...r)}))}const _={};var S=r(9417),O=r(5603),N=r(5284);const I=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let P=!1;function j(e,t={},p,x){let{init:w,info:E,loader_config:j,runtime:C={},exposed:k=!0}=t;C.loaderType=p;const H=(0,h.pV)();E||(w=H.init,E=H.info,j=H.loader_config),(0,S.xN)(e.agentIdentifier,w||{}),(0,O.a)(e.agentIdentifier,j||{}),E.jsAttributes??={},d.bv&&(E.jsAttributes.isWorker=!0),(0,i.x1)(e.agentIdentifier,E);const L=(0,S.D0)(e.agentIdentifier),D=[E.beacon,E.errorBeacon];P||(L.proxy.assets&&(I(L.proxy.assets),D.push(L.proxy.assets)),L.proxy.beacon&&D.push(L.proxy.beacon),T(),(0,h.US)("activatedFeatures",N.B),e.runSoftNavOverSpa&&=!0===L.soft_navigations.enabled&&L.feature_flags.includes("soft_nav")),C.denyList=[...L.ajax.deny_list||[],...L.ajax.block_internal?D:[]],C.ptid=e.agentIdentifier,(0,o.V)(e.agentIdentifier,C),e.ee=s.ee.get(e.agentIdentifier),void 0===e.api&&(e.api=function(e,t,h=!1){t||(0,c.Ak)(e,"api");const p={};var x=s.ee.get(e),w=x.get("tracer");_[e]=b.g.OFF,x.on(g.G4.REPLAY_RUNNING,(t=>{_[e]=t}));var E="api-",T=E+"ixn-";function S(t,r,n,o){const a=(0,i.Vp)(e);return null===r?delete a.jsAttributes[t]:(0,i.x1)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),I(E,n,!0,o||null===r?"session":void 0)(t,r)}function O(){}p.log=function(e,{customAttributes:t={},level:r=y.p_.INFO}={}){(0,a.p)(f.xV,["API/log/called"],void 0,n.K7.metrics,x),(0,R.R)(x,e,t,r)},p.wrapLogger=(e,t,{customAttributes:r={},level:i=y.p_.INFO}={})=>{(0,a.p)(f.xV,["API/wrapLogger/called"],void 0,n.K7.metrics,x),A(x,e,t,{customAttributes:r,level:i})},m.forEach((e=>{p[e]=I(E,e,!0,"api")})),p.addPageAction=I(E,"addPageAction",!0,n.K7.genericEvents),p.recordCustomEvent=I(E,"recordCustomEvent",!0,n.K7.genericEvents),p.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,o.f)(e).customTransaction=(r||"http://custom.transaction")+t,I(E,"setPageViewName",!0)()},p.setCustomAttribute=function(e,t,r=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return S(e,t,"setCustomAttribute",r);(0,l.R)(40,typeof t)}else(0,l.R)(39,typeof e)},p.setUserId=function(e){if("string"==typeof e||null===e)return S("enduser.id",e,"setUserId",!0);(0,l.R)(41,typeof e)},p.setApplicationVersion=function(e){if("string"==typeof e||null===e)return S("application.version",e,"setApplicationVersion",!1);(0,l.R)(42,typeof e)},p.start=()=>{try{(0,a.p)(f.xV,["API/start/called"],void 0,n.K7.metrics,x),x.emit("manual-start-all")}catch(e){(0,l.R)(23,e)}},p[g.G4.RECORD]=function(){(0,a.p)(f.xV,["API/recordReplay/called"],void 0,n.K7.metrics,x),(0,a.p)(g.G4.RECORD,[],void 0,n.K7.sessionReplay,x)},p[g.G4.PAUSE]=function(){(0,a.p)(f.xV,["API/pauseReplay/called"],void 0,n.K7.metrics,x),(0,a.p)(g.G4.PAUSE,[],void 0,n.K7.sessionReplay,x)},p.interaction=function(e){return(new O).get("object"==typeof e?e:{})};const N=O.prototype={createTracer:function(e,t){var r={},i=this,o="function"==typeof t;return(0,a.p)(f.xV,["API/createTracer/called"],void 0,n.K7.metrics,x),h||(0,a.p)(T+"tracer",[(0,v.t)(),e,r],i,n.K7.spa,x),function(){if(w.emit((o?"":"no-")+"fn-start",[(0,v.t)(),i,o],r),o)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw w.emit("fn-err",[arguments,this,t],r),t}finally{w.emit("fn-end",[(0,v.t)()],r)}}}};function I(e,t,r,i){return function(){return(0,a.p)(f.xV,["API/"+t+"/called"],void 0,n.K7.metrics,x),i&&(0,a.p)(e+t,[r?(0,v.t)():performance.now(),...arguments],r?null:this,i,x),r?void 0:this}}function P(){r.e(891).then(r.bind(r,8778)).then((({setAPI:t})=>{t(e),(0,c.Ze)(e,"api")})).catch((e=>{(0,l.R)(27,e),x.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{N[e]=I(T,e,void 0,h?n.K7.softNav:n.K7.spa)})),p.setCurrentRouteName=h?I(T,"routeName",void 0,n.K7.softNav):I(E,"routeName",!0,n.K7.spa),p.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,a.p)(f.xV,["API/noticeError/called"],void 0,n.K7.metrics,x),(0,a.p)("err",[t,(0,v.t)(),!1,r,!!_[e]],void 0,n.K7.jserrors,x)},d.RI?(0,u.GG)((()=>P()),!0):P(),p}(e.agentIdentifier,x,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),P=!0}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>s,P3:()=>c,XX:()=>i,qY:()=>n,v4:()=>a});const n="events",i="jserrors",o="browser/blobs",a="rum",s={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},c={[s.pageViewEvent]:1,[s.pageViewTiming]:2,[s.metrics]:3,[s.jserrors]:4,[s.spa]:5,[s.ajax]:6,[s.sessionTrace]:7,[s.softNav]:8,[s.sessionReplay]:9,[s.logging]:10,[s.genericEvents]:11},u={[s.pageViewEvent]:a,[s.pageViewTiming]:n,[s.ajax]:n,[s.spa]:n,[s.softNav]:n,[s.metrics]:i,[s.jserrors]:i,[s.sessionTrace]:o,[s.sessionReplay]:o,[s.logging]:"browser/logs",[s.genericEvents]:"ins"}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>({95:"nr-full-compressor",222:"nr-full-recorder",891:"nr-full"}[e]+"-1.281.0.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.281.0.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={891:"sha512-54Aat8Udm6iAAlMAdj4qB/wPExKn9TKWSsPnD5+K2RMckmHE0cb0CFc0VauDfpPug5wse9qzwDKuwIMa3hX6gw==",222:"sha512-IA751FH/bvhLWl8I5ZELgH0tFQetWKV1G+9qRkPvOrTSv2X2tgItmreKfvrd8zImHp4sIPTnSN0otmgnX7UJXA==",95:"sha512-Rwnn8hCtQVvDGDl0hSpEazVuRDuvlGnJpNuNwuapJ46vDCvUNGBIzCZCrZYygTgVJUjMrfQoMAULb+2gKoTIiQ=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var h=(t,n)=>{s.onerror=s.onload=null,clearTimeout(g);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},g=setTimeout(h.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=h.bind(null,s.onerror),s.onload=h.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={85:0,959:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.281.0.PROD"]=self["webpackChunk:NRBA-1.281.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(944),t=i(6344),r=i(9566);class n{agentIdentifier;constructor(){this.agentIdentifier=(0,r.LA)(16)}#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}addPageAction(e,t){return this.#e("addPageAction",e,t)}recordCustomEvent(e,t){return this.#e("recordCustomEvent",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}addRelease(e,t){return this.#e("addRelease",e,t)}log(e,t){return this.#e("log",e,t)}}class o extends n{#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}start(){return this.#e("start")}finished(e){return this.#e("finished",e)}recordReplay(){return this.#e(t.G4.RECORD)}pauseReplay(){return this.#e(t.G4.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}wrapLogger(e,t,r){return this.#e("wrapLogger",e,t,r)}}var a=i(860),s=i(9417);const c=Object.values(a.K7);function u(e){const t={};return c.forEach((r=>{t[r]=function(e,t){return!0===(0,s.gD)(t,"".concat(e,".enabled"))}(r,e)})),t}var d=i(425);var l=i(1687),f=i(4234),h=i(5289),g=i(6154),p=i(5270),m=i(7767),v=i(6389);class b extends f.W{constructor(e,t,r=!0){super(e.agentIdentifier,t),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===e.init[this.featureName].autoStart&&(this.auto=!1),this.auto?(0,l.Ak)(e.agentIdentifier,t):this.ee.on("manual-start-all",(0,v.J)((()=>{(0,l.Ak)(e.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator(e)})))}importAggregator(t,r={}){if(this.featAggregate||!this.auto)return;let n;this.onAggregateImported=new Promise((e=>{n=e}));const o=async()=>{let o;try{if((0,m.V)(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(891).then(i.bind(i,6526));o=e(t)}}catch(t){(0,e.R)(20,t),this.ee.emit("internal-error",[t]),this.featureName===a.K7.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,o))return(0,l.Ze)(this.agentIdentifier,this.featureName),void n(!1);const{lazyFeatureLoader:e}=await i.e(891).then(i.bind(i,6103)),{Aggregate:a}=await e(this.featureName,"aggregate");this.featAggregate=new a(t,r),t.runtime.harvester.initializedAggregates.push(this.featAggregate),n(!0)}catch(t){(0,e.R)(34,t),this.abortHandler?.(),(0,l.Ze)(this.agentIdentifier,this.featureName,!0),n(!1),this.ee&&this.ee.abort()}};g.RI?(0,h.GG)((()=>o()),!0):o()}#t(e,t){switch(e){case a.K7.sessionReplay:return(0,p.SR)(this.agentIdentifier)&&!!t;case a.K7.sessionTrace:return!!t;default:return!0}}}var y=i(6630);class R extends b{static featureName=y.T;constructor(e,t=!0){super(e,y.T,t),this.importAggregator(e)}}var x=i(384);var w=i(9908),E=i(2843),A=i(3878),T=i(782),_=i(1863);class S extends b{static featureName=T.T;constructor(e,t=!0){super(e,T.T,t),g.RI&&((0,E.u)((()=>(0,w.p)("docHidden",[(0,_.t)()],void 0,T.T,this.ee)),!0),(0,A.sp)("pagehide",(()=>(0,w.p)("winPagehide",[(0,_.t)()],void 0,T.T,this.ee))),this.importAggregator(e))}}var O=i(3969);class N extends b{static featureName=O.TZ;constructor(e,t=!0){super(e,O.TZ,t),this.importAggregator(e)}}var I=i(6774),P=i(3304);class j{constructor(e,t,r,n,i){this.name="UncaughtError",this.message="string"==typeof e?e:(0,P.A)(e),this.sourceURL=t,this.line=r,this.column=n,this.__newrelic=i}}function C(e){return L(e)?e:new j(void 0!==e?.message?e.message:e,e?.filename||e?.sourceURL,e?.lineno||e?.line,e?.colno||e?.col,e?.__newrelic)}function k(e){const t="Unhandled Promise Rejection";if(!e?.reason)return;if(L(e.reason))try{return e.reason.message=t+": "+e.reason.message,C(e.reason)}catch(t){return C(e.reason)}const r=C(e.reason);return r.message=t+": "+r?.message,r}function H(e){if(e.error instanceof SyntaxError&&!/:\d+$/.test(e.error.stack?.trim())){const t=new j(e.message,e.filename,e.lineno,e.colno,e.error.__newrelic);return t.name=SyntaxError.name,t}return L(e.error)?e.error:C(e)}function L(e){return e instanceof Error&&!!e.stack}class D extends b{static featureName=I.T;#r=!1;constructor(e,r=!0){super(e,I.T,r);try{this.removeOnAbort=new AbortController}catch(e){}this.ee.on("internal-error",((e,t)=>{this.abortHandler&&(0,w.p)("ierr",[C(e),(0,_.t)(),!0,{},this.#r,t],void 0,this.featureName,this.ee)})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.#r=e})),g.gm.addEventListener("unhandledrejection",(e=>{this.abortHandler&&(0,w.p)("err",[k(e),(0,_.t)(),!1,{unhandledPromiseRejection:1},this.#r],void 0,this.featureName,this.ee)}),(0,A.jT)(!1,this.removeOnAbort?.signal)),g.gm.addEventListener("error",(e=>{this.abortHandler&&(0,w.p)("err",[H(e),(0,_.t)(),!1,{},this.#r],void 0,this.featureName,this.ee)}),(0,A.jT)(!1,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator(e)}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var M=i(8990);let K=1;const U="nr@id";function V(e){const t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===g.gm?0:(0,M.I)(e,U,(function(){return K++}))}function G(e){if("string"==typeof e&&e.length)return e.length;if("object"==typeof e){if("undefined"!=typeof ArrayBuffer&&e instanceof ArrayBuffer&&e.byteLength)return e.byteLength;if("undefined"!=typeof Blob&&e instanceof Blob&&e.size)return e.size;if(!("undefined"!=typeof FormData&&e instanceof FormData))try{return(0,P.A)(e).length}catch(e){return}}}var F=i(8139),B=i(7836),W=i(3434);const z={},q=["open","send"];function Z(t){var r=t||B.ee;const n=function(e){return(e||B.ee).get("xhr")}(r);if(void 0===g.gm.XMLHttpRequest)return n;if(z[n.debugId]++)return n;z[n.debugId]=1,(0,F.u)(r);var i=(0,W.YM)(n),o=g.gm.XMLHttpRequest,a=g.gm.MutationObserver,s=g.gm.Promise,c=g.gm.setInterval,u="readystatechange",d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],l=[],f=g.gm.XMLHttpRequest=function(t){const r=new o(t),a=n.context(r);try{n.emit("new-xhr",[r],a),r.addEventListener(u,(s=a,function(){var e=this;e.readyState>3&&!s.resolved&&(s.resolved=!0,n.emit("xhr-resolved",[],e)),i.inPlace(e,d,"fn-",y)}),(0,A.jT)(!1))}catch(t){(0,e.R)(15,t);try{n.emit("internal-error",[t])}catch(e){}}var s;return r};function h(e,t){i.inPlace(t,["onreadystatechange"],"fn-",y)}if(function(e,t){for(var r in e)t[r]=e[r]}(o,f),f.prototype=o.prototype,i.inPlace(f.prototype,q,"-xhr-",y),n.on("send-xhr-start",(function(e,t){h(e,t),function(e){l.push(e),a&&(p?p.then(b):c?c(b):(m=-m,v.data=m))}(t)})),n.on("open-xhr-start",h),a){var p=s&&s.resolve();if(!c&&!s){var m=1,v=document.createTextNode(m);new a(b).observe(v,{characterData:!0})}}else r.on("fn-end",(function(e){e[0]&&e[0].type===u||b()}));function b(){for(var e=0;e<l.length;e++)h(0,l[e]);l.length&&(l=[])}function y(e,t){return t}return n}var Y="fetch-",X=Y+"body-",J=["arrayBuffer","blob","json","text","formData"],Q=g.gm.Request,ee=g.gm.Response,te="prototype";const re={};function ne(e){const t=function(e){return(e||B.ee).get("fetch")}(e);if(!(Q&&ee&&g.gm.fetch))return t;if(re[t.debugId]++)return t;function r(e,r,n){var i=e[r];"function"==typeof i&&(e[r]=function(){var e,r=[...arguments],o={};t.emit(n+"before-start",[r],o),o[B.P]&&o[B.P].dt&&(e=o[B.P].dt);var a=i.apply(this,r);return t.emit(n+"start",[r,e],a),a.then((function(e){return t.emit(n+"end",[null,e],a),e}),(function(e){throw t.emit(n+"end",[e],a),e}))})}return re[t.debugId]=1,J.forEach((e=>{r(Q[te],e,X),r(ee[te],e,X)})),r(g.gm,"fetch",Y),t.on(Y+"end",(function(e,r){var n=this;if(r){var i=r.headers.get("content-length");null!==i&&(n.rxSize=i),t.emit(Y+"done",[null,r],n)}else t.emit(Y+"done",[e],n)})),t}var ie=i(7485),oe=i(5603);class ae{constructor(e){this.agentIdentifier=e}generateTracePayload(e){if(!this.shouldGenerateTrace(e))return null;var t=(0,oe.o)(this.agentIdentifier);if(!t)return null;var n=(t.accountID||"").toString()||null,i=(t.agentID||"").toString()||null,o=(t.trustKey||"").toString()||null;if(!n||!i)return null;var a=(0,r.ZF)(),s=(0,r.el)(),c=Date.now(),u={spanId:a,traceId:s,timestamp:c};return(e.sameOrigin||this.isAllowedOrigin(e)&&this.useTraceContextHeadersForCors())&&(u.traceContextParentHeader=this.generateTraceContextParentHeader(a,s),u.traceContextStateHeader=this.generateTraceContextStateHeader(a,c,n,i,o)),(e.sameOrigin&&!this.excludeNewrelicHeader()||!e.sameOrigin&&this.isAllowedOrigin(e)&&this.useNewrelicHeaderForCors())&&(u.newrelicHeader=this.generateTraceHeader(a,s,c,n,i,o)),u}generateTraceContextParentHeader(e,t){return"00-"+t+"-"+e+"-01"}generateTraceContextStateHeader(e,t,r,n,i){return i+"@nr=0-1-"+r+"-"+n+"-"+e+"----"+t}generateTraceHeader(e,t,r,n,i,o){if(!("function"==typeof g.gm?.btoa))return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:i,id:e,tr:t,ti:r}};return o&&n!==o&&(a.d.tk=o),btoa((0,P.A)(a))}shouldGenerateTrace(e){return this.isDtEnabled()&&this.isAllowedOrigin(e)}isAllowedOrigin(e){var t=!1,r={};if((0,s.gD)(this.agentIdentifier,"distributed_tracing")&&(r=(0,s.D0)(this.agentIdentifier).distributed_tracing),e.sameOrigin)t=!0;else if(r.allowed_origins instanceof Array)for(var n=0;n<r.allowed_origins.length;n++){var i=(0,ie.D)(r.allowed_origins[n]);if(e.hostname===i.hostname&&e.protocol===i.protocol&&e.port===i.port){t=!0;break}}return t}isDtEnabled(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.enabled}excludeNewrelicHeader(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.exclude_newrelic_header}useNewrelicHeaderForCors(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!1!==e.cors_use_newrelic_header}useTraceContextHeadersForCors(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.cors_use_tracecontext_headers}}var se=i(9300),ce=i(7295),ue=["load","error","abort","timeout"],de=ue.length,le=(0,x.dV)().o.REQ,fe=(0,x.dV)().o.XHR;class he extends b{static featureName=se.T;constructor(e,t=!0){super(e,se.T,t),this.dt=new ae(e.agentIdentifier),this.handler=(e,t,r,n)=>(0,w.p)(e,t,r,n,this.ee);try{const e={xmlhttprequest:"xhr",fetch:"fetch",beacon:"beacon"};g.gm?.performance?.getEntriesByType("resource").forEach((t=>{if(t.initiatorType in e&&0!==t.responseStatus){const r={status:t.responseStatus},n={rxSize:t.transferSize,duration:Math.floor(t.duration),cbTime:0};ge(r,t.name),this.handler("xhr",[r,n,t.startTime,t.responseEnd,e[t.initiatorType]],void 0,a.K7.ajax)}}))}catch(e){}ne(this.ee),Z(this.ee),function(e,t,r,n){function i(e){var t=this;t.totalCbs=0,t.called=0,t.cbTime=0,t.end=x,t.ended=!1,t.xhrGuids={},t.lastSize=null,t.loadCaptureCalled=!1,t.params=this.params||{},t.metrics=this.metrics||{},e.addEventListener("load",(function(r){E(t,e)}),(0,A.jT)(!1)),g.lR||e.addEventListener("progress",(function(e){t.lastSize=e.loaded}),(0,A.jT)(!1))}function o(e){this.params={method:e[0]},ge(this,e[1]),this.metrics={}}function s(t,r){e.loader_config.xpid&&this.sameOrigin&&r.setRequestHeader("X-NewRelic-ID",e.loader_config.xpid);var i=n.generateTracePayload(this.parsedOrigin);if(i){var o=!1;i.newrelicHeader&&(r.setRequestHeader("newrelic",i.newrelicHeader),o=!0),i.traceContextParentHeader&&(r.setRequestHeader("traceparent",i.traceContextParentHeader),i.traceContextStateHeader&&r.setRequestHeader("tracestate",i.traceContextStateHeader),o=!0),o&&(this.dt=i)}}function c(e,r){var n=this.metrics,i=e[0],o=this;if(n&&i){var a=G(i);a&&(n.txSize=a)}this.startTime=(0,_.t)(),this.body=i,this.listener=function(e){try{"abort"!==e.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==e.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof r.onload)&&"function"==typeof o.end)&&o.end(r)}catch(e){try{t.emit("internal-error",[e])}catch(e){}}};for(var s=0;s<de;s++)r.addEventListener(ue[s],this.listener,(0,A.jT)(!1))}function u(e,t,r){this.cbTime+=e,t?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof r.onload||"function"!=typeof this.end||this.end(r)}function d(e,t){var r=""+V(e)+!!t;this.xhrGuids&&!this.xhrGuids[r]&&(this.xhrGuids[r]=!0,this.totalCbs+=1)}function l(e,t){var r=""+V(e)+!!t;this.xhrGuids&&this.xhrGuids[r]&&(delete this.xhrGuids[r],this.totalCbs-=1)}function f(){this.endTime=(0,_.t)()}function h(e,r){r instanceof fe&&"load"===e[0]&&t.emit("xhr-load-added",[e[1],e[2]],r)}function p(e,r){r instanceof fe&&"load"===e[0]&&t.emit("xhr-load-removed",[e[1],e[2]],r)}function m(e,t,r){t instanceof fe&&("onload"===r&&(this.onload=!0),("load"===(e[0]&&e[0].type)||this.onload)&&(this.xhrCbStart=(0,_.t)()))}function v(e,r){this.xhrCbStart&&t.emit("xhr-cb-time",[(0,_.t)()-this.xhrCbStart,this.onload,r],r)}function b(e){var t,r=e[1]||{};if("string"==typeof e[0]?0===(t=e[0]).length&&g.RI&&(t=""+g.gm.location.href):e[0]&&e[0].url?t=e[0].url:g.gm?.URL&&e[0]&&e[0]instanceof URL?t=e[0].href:"function"==typeof e[0].toString&&(t=e[0].toString()),"string"==typeof t&&0!==t.length){t&&(this.parsedOrigin=(0,ie.D)(t),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=n.generateTracePayload(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if(e[0]&&e[0].headers)s(e[0].headers,i)&&(this.dt=i);else{var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),s(o.headers,i)&&(this.dt=i),e.length>1?e[1]=o:e.push(o)}}function s(e,t){var r=!1;return t.newrelicHeader&&(e.set("newrelic",t.newrelicHeader),r=!0),t.traceContextParentHeader&&(e.set("traceparent",t.traceContextParentHeader),t.traceContextStateHeader&&e.set("tracestate",t.traceContextStateHeader),r=!0),r}}function y(e,t){this.params={},this.metrics={},this.startTime=(0,_.t)(),this.dt=t,e.length>=1&&(this.target=e[0]),e.length>=2&&(this.opts=e[1]);var r,n=this.opts||{},i=this.target;"string"==typeof i?r=i:"object"==typeof i&&i instanceof le?r=i.url:g.gm?.URL&&"object"==typeof i&&i instanceof URL&&(r=i.href),ge(this,r);var o=(""+(i&&i instanceof le&&i.method||n.method||"GET")).toUpperCase();this.params.method=o,this.body=n.body,this.txSize=G(n.body)||0}function R(e,t){if(this.endTime=(0,_.t)(),this.params||(this.params={}),(0,ce.iW)(this.params))return;let n;this.params.status=t?t.status:0,"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);const i={txSize:this.txSize,rxSize:n,duration:(0,_.t)()-this.startTime};r("xhr",[this.params,i,this.startTime,this.endTime,"fetch"],this,a.K7.ajax)}function x(e){const t=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(let t=0;t<de;t++)e.removeEventListener(ue[t],this.listener,!1);t.aborted||(0,ce.iW)(t)||(n.duration=(0,_.t)()-this.startTime,this.loadCaptureCalled||4!==e.readyState?null==t.status&&(t.status=0):E(this,e),n.cbTime=this.cbTime,r("xhr",[t,n,this.startTime,this.endTime,"xhr"],this,a.K7.ajax))}}function E(e,r){e.params.status=r.status;var n=function(e,t){var r=e.responseType;return"json"===r&&null!==t?t:"arraybuffer"===r||"blob"===r||"json"===r?G(e.response):"text"===r||""===r||void 0===r?G(e.responseText):void 0}(r,e.lastSize);if(n&&(e.metrics.rxSize=n),e.sameOrigin){var i=r.getResponseHeader("X-NewRelic-App-Data");i&&((0,w.p)(O.rs,["Ajax/CrossApplicationTracing/Header/Seen"],void 0,a.K7.metrics,t),e.params.cat=i.split(", ").pop())}e.loadCaptureCalled=!0}t.on("new-xhr",i),t.on("open-xhr-start",o),t.on("open-xhr-end",s),t.on("send-xhr-start",c),t.on("xhr-cb-time",u),t.on("xhr-load-added",d),t.on("xhr-load-removed",l),t.on("xhr-resolved",f),t.on("addEventListener-end",h),t.on("removeEventListener-end",p),t.on("fn-end",v),t.on("fetch-before-start",b),t.on("fetch-start",y),t.on("fn-start",m),t.on("fetch-done",R)}(e,this.ee,this.handler,this.dt),this.importAggregator(e)}}function ge(e,t){var r=(0,ie.D)(t),n=e.params||e;n.hostname=r.hostname,n.port=r.port,n.protocol=r.protocol,n.host=r.hostname+":"+r.port,n.pathname=r.pathname,e.parsedOrigin=r,e.sameOrigin=r.sameOrigin}const pe={},me=["pushState","replaceState"];function ve(e){const t=function(e){return(e||B.ee).get("history")}(e);return!g.RI||pe[t.debugId]++||(pe[t.debugId]=1,(0,W.YM)(t).inPlace(window.history,me,"-")),t}var be=i(3738);const{He:ye,bD:Re,d3:xe,Kp:we,TZ:Ee,Lc:Ae,uP:Te,Rz:_e}=be;class Se extends b{static featureName=Ee;constructor(e,t=!0){super(e,Ee,t);if(!(0,m.V)(this.agentIdentifier))return void this.deregisterDrain();const r=this.ee;let n;ve(r),this.eventsEE=(0,F.u)(r),this.eventsEE.on(Te,(function(e,t){this.bstStart=(0,_.t)()})),this.eventsEE.on(Ae,(function(e,t){(0,w.p)("bst",[e[0],t,this.bstStart,(0,_.t)()],void 0,a.K7.sessionTrace,r)})),r.on(_e+xe,(function(e){this.time=(0,_.t)(),this.startPath=location.pathname+location.hash})),r.on(_e+we,(function(e){(0,w.p)("bstHist",[location.pathname+location.hash,this.startPath,this.time],void 0,a.K7.sessionTrace,r)}));try{n=new PerformanceObserver((e=>{const t=e.getEntries();(0,w.p)(ye,[t],void 0,a.K7.sessionTrace,r)})),n.observe({type:Re,buffered:!0})}catch(e){}this.importAggregator(e,{resourceObserver:n})}}var Oe=i(2614);class Ne extends b{static featureName=t.TZ;#i;#o;constructor(e,r=!0){let n;super(e,t.TZ,r),this.replayRunning=!1,this.#o=e;try{n=JSON.parse(localStorage.getItem("".concat(Oe.H3,"_").concat(Oe.uh)))}catch(e){}(0,p.SR)(e.agentIdentifier)&&this.ee.on(t.G4.RECORD,(()=>this.#a())),this.#s(n)?(this.#i=n?.sessionReplayMode,this.#c()):this.importAggregator(e),this.ee.on("err",(e=>{this.replayRunning&&(this.errorNoticed=!0,(0,w.p)(t.G4.ERROR_DURING_REPLAY,[e],void 0,this.featureName,this.ee))})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.replayRunning=e}))}#s(e){return e&&(e.sessionReplayMode===Oe.g.FULL||e.sessionReplayMode===Oe.g.ERROR)||(0,p.Aw)(this.agentIdentifier)}#u=!1;async#c(e){if(!this.#u){this.#u=!0;try{const{Recorder:t}=await Promise.all([i.e(891),i.e(222)]).then(i.bind(i,8589));this.recorder??=new t({mode:this.#i,agentIdentifier:this.agentIdentifier,trigger:e,ee:this.ee,agentRef:this.#o}),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording}catch(e){}this.importAggregator(this.#o,{recorder:this.recorder,errorNoticed:this.errorNoticed})}}#a(){this.featAggregate?this.featAggregate.mode!==Oe.g.FULL&&this.featAggregate.initializeRecording(Oe.g.FULL,!0):(this.#i=Oe.g.FULL,this.#c(t.Qb.API),this.recorder&&this.recorder.parent.mode!==Oe.g.FULL&&(this.recorder.parent.mode=Oe.g.FULL,this.recorder.stopRecording(),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording))}}var Ie=i(3333);class Pe extends b{static featureName=Ie.TZ;constructor(e,t=!0){super(e,Ie.TZ,t);const r=[e.init.page_action.enabled,e.init.performance.capture_marks,e.init.performance.capture_measures,e.init.user_actions.enabled,e.init.performance.resources.enabled];if(g.RI&&(e.init.user_actions.enabled&&(Ie.Zp.forEach((e=>(0,A.sp)(e,(e=>(0,w.p)("ua",[e],void 0,this.featureName,this.ee)),!0))),Ie.qN.forEach((e=>{const t=(0,v.s)((e=>{(0,w.p)("ua",[e],void 0,this.featureName,this.ee)}),500,{leading:!0});(0,A.sp)(e,t)}))),e.init.performance.resources.enabled&&g.gm.PerformanceObserver?.supportedEntryTypes.includes("resource"))){new PerformanceObserver((e=>{e.getEntries().forEach((e=>{(0,w.p)("browserPerformance.resource",[e],void 0,this.featureName,this.ee)}))})).observe({type:"resource",buffered:!0})}r.some((e=>e))?this.importAggregator(e):this.deregisterDrain()}}var je=i(993),Ce=i(3785);class ke extends b{static featureName=je.TZ;constructor(e,t=!0){super(e,je.TZ,t);const r=this.ee;this.ee.on("wrap-logger-end",(function([e]){const{level:t,customAttributes:n}=this;(0,Ce.R)(r,e,n,t)})),this.importAggregator(e)}}new class extends o{constructor(t){super(),g.gm?(this.features={},(0,x.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(R),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===a.K7.softNav)),(0,d.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=u(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>a.P3[e.featureName]-a.P3[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==a.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===a.K7.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===a.K7.softNav)return;const n=function(e){switch(e){case a.K7.ajax:return[a.K7.jserrors];case a.K7.sessionTrace:return[a.K7.ajax,a.K7.pageViewEvent];case a.K7.sessionReplay:return[a.K7.sessionTrace];case a.K7.pageViewTiming:return[a.K7.pageViewEvent];default:return[]}}(r.featureName).filter((e=>!(e in this.features)));n.length>0&&(0,e.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)}))}catch(t){(0,e.R)(22,t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,x.Zm)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[R,S,Se,Ne,he,N,D,Pe,ke],loaderType:"pro"})})()})();</script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    
+
+
+
+    <title>Hipotecas palabras claves | Oficina para la Protección Financiera del Consumidor</title>
+    <meta name="template" content="v1/browse-basic/index.html">
+    <meta name="description" content="">
+
+    
+    
+      <link rel="canonical" href="https://www.consumerfinance.gov/language/es/hipotecas-palabras-claves/">
+      <meta property="og:url" content="https://www.consumerfinance.gov/language/es/hipotecas-palabras-claves/">
+
+    
+    <meta property="og:title" content="Hipotecas palabras claves | Oficina para la Protección Financiera del Consumidor">
+    <meta property="og:type" content="website">
+
+    
+        
+        <meta property="og:image" content="https://www.consumerfinance.gov/static/img/logo_open-graph_facebook.d0dedfbe1787.png">
+        <meta property="twitter:image" content="https://www.consumerfinance.gov/static/img/logo_open-graph_twitter.ebc43e92acd1.png">
+      
+    
+
+    
+    <meta property="og:description" content="Hipotecas palabras claves">
+    <meta property="og:site_name" content="Consumer Financial Protection Bureau">
+    
+    <meta property="fb:app_id" content="210516218981921">
+    
+    
+
+    
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+
+
+
+    
+    <link rel="stylesheet" href="/static/css/main.ad9d22eb6ba2.css">
+      
+    
+
+
+
+    
+    <link rel="preload" href="/static/css/main.ad9d22eb6ba2.css" as="style">
+    <link rel="preload" href="/static/fonts/2cd55546-ec00-4af9-aeca-4a3cd186da53.457e94a5b665.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/static/fonts/627fbb5a-3bae-4cd9-b617-2f923e29d55e.24932ad03d18.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="/static/js/routes/common.b0591e94a2bb.js" as="script">
+
+    
+    <link rel="preconnect" href="//google-analytics.com/" crossorigin="">
+    <link rel="dns-prefetch" href="//google-analytics.com/">
+
+    <link rel="preconnect" href="//googletagmanager.com/" crossorigin="">
+    <link rel="dns-prefetch" href="//googletagmanager.com/">
+
+    <link rel="preconnect" href="//js-agent.newrelic.com/" crossorigin="">
+    <link rel="dns-prefetch" href="//js-agent.newrelic.com/">
+
+    
+    <link rel="dns-prefetch" href="//ytimg.com/">
+    <link rel="dns-prefetch" href="//doubleclick.net/">
+    
+
+
+    
+
+    
+
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KMMLRS');</script>
+    
+
+    
+    
+    <script>
+      
+      function jsl(a){
+        if(window.fetch){
+          for(var b,c,d=[],f=document.scripts[0];b=a.shift();)c=document.createElement("script"),"async"in c?(c.async=!1,c.src=b,document.head.appendChild(c)):(d.push(c),c.onreadystatechange=function(){for(var e;d[0]&&"loaded"==d[0].readyState;)e=d.shift(),e.onreadystatechange=null,f.parentNode.insertBefore(e,f)},c.src=b);
+        }
+      }
+    </script>
+    
+
+    <script>
+      if(window.fetch){
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js')
+      }
+    </script>
+</head>
+
+<body>
+
+
+
+    
+
+    
+
+    
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMMLRS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+
+    
+    
+
+
+    
+
+    
+    <div class="a-overlay u-hidden"></div>
+
+    <div class="skip-nav">
+        <a class="skip-nav__link" href="
+    #content__main">
+            Ir al contenido principal
+        </a>
+    </div>
+
+    
+        
+        
+
+
+
+<header class="o-header o-header--mega-menu">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    <div class="m-global-eyebrow
+                m-global-eyebrow--horizontal">
+        <div class="wrapper
+                    wrapper--match-content">
+            
+<div class="a-tagline" aria-label="Un sitio web oficial del gobierno federal de los Estados Unidos">
+   <span class="u-usa-flag"></span>
+   <div class="a-tagline__text">
+      Un sitio web oficial del
+      <span class="u-nowrap">gobierno federal de los Estados Unidos</span>
+   </div>
+</div>
+
+            <div class="m-global-eyebrow__actions">
+                <ul class="m-list
+                           m-list--horizontal
+                           m-global-eyebrow__languages">
+                    <li class="m-list__item">
+                        
+                        <a href="/" hreflang="en" lang="en">
+                            English
+                        </a>
+                        
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/zh/" hreflang="zh" lang="zh">
+                            中文
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/vi/" hreflang="vi" lang="vi">
+                            Tiếng Việt
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/ko/" hreflang="ko" lang="ko">
+                            한국어
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/tl/" hreflang="tl" lang="tl">
+                            Tagalog
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/ru/" hreflang="ru" lang="ru">
+                            Pусский
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/ar/" hreflang="ar" lang="ar">
+                            العربية
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/ht/" hreflang="ht" lang="ht">
+                            Kreyòl Ayisyen
+                        </a>
+                    </li>
+                </ul>
+                <span class="m-global-eyebrow__phone">
+                    <a href="tel:+1-855-411-2372">(855) 411-2372</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="o-header__content">
+
+        <div class="wrapper wrapper--match-content">
+            
+            <a class="o-header__logo" href="/es/">
+<img alt="Oficina para la Protección Financiera del Consumidor" class="o-header__logo-img" sizes="(max-width: 900px) 228px,
+                            286px" src="/static/img/logo_es_286x50.678b0bd58f92.png" srcset="/static/img/logo_es_228x40.b5983c6fe660.png 228w,
+                             /static/img/logo_es_228x40@2x.c4cae82c7493.png 456w,
+                             /static/img/logo_es_228x40@3x.c5d0a478dfbf.png 684w,
+                             /static/img/logo_es_228x40@4x.e30056930050.png 912w,
+                             /static/img/logo_es_286x50.678b0bd58f92.png 286w,
+                             /static/img/logo_es_286x50@2x.1c9ea27f2074.png 572w">
+</a>
+            
+
+            
+            
+    
+        
+        
+    <div class="m-global-header-cta">
+        <a href="/es/enviar-una-queja/">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--complaint" viewBox="0 0 15 19"><path d="M14.032 5.286v7.276a1.11 1.11 0 0 1-1.108 1.108H8.75l-1.02 1.635a.273.273 0 0 1-.503 0l-1.02-1.635h-4.13a1.11 1.11 0 0 1-1.109-1.108V5.286a1.11 1.11 0 0 1 1.108-1.108h10.848a1.11 1.11 0 0 1 1.108 1.108M8.206 11.34a.706.706 0 1 0-.706.705.706.706 0 0 0 .706-.705m-1.26-1.83a.554.554 0 1 0 1.108 0V6.275a.554.554 0 1 0-1.108 0z"></path></svg>
+            Enviar una queja
+        </a>
+    </div>
+    
+
+
+            
+            <div class="m-global-search" data-js-hook="behavior_flyout-menu">
+    <div class="m-global-search__fallback">
+        <a rel="nofollow" href="https://search.consumerfinance.gov/search?affiliate=cfpb_es&amp;query=">
+            Buscar
+        </a>
+    </div>
+    <button class="m-global-search__trigger" data-js-hook="behavior_flyout-menu_trigger" aria-label="Busque en el sitio web consumerfinance.gov">
+        <span class="m-global-search__trigger-open-label">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--search" viewBox="0 0 15 19"><path d="M14.147 15.488a1.11 1.11 0 0 1-1.567 0l-3.395-3.395a5.575 5.575 0 1 1 1.568-1.568l3.394 3.395a1.11 1.11 0 0 1 0 1.568m-6.361-3.903a4.488 4.488 0 1 0-1.681.327 4.4 4.4 0 0 0 1.68-.327z"></path></svg>
+            <span class="u-hide-on-mobile">Buscar</span>
+        </span>
+        <span class="m-global-search__trigger-close-label">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error" viewBox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"></path></svg>
+            <span class="u-hide-on-mobile">Cerrar</span>
+        </span>
+    </button>
+    <div class="m-global-search__content
+                u-hidden" data-js-hook="behavior_flyout-menu_content" role="search">
+        <form class="m-global-search__content-form" action="https://search.consumerfinance.gov/search" method="get">
+            
+            <input type="hidden" name="utf8" value="✓">
+            <input type="hidden" id="affiliate" name="affiliate" value="cfpb_es">
+
+            
+            
+            
+
+<div class="o-search-input">
+    <div class="o-search-input__input">
+        <label for="m-global-search_query" class="o-search-input__input-label" aria-label="Busque su pregunta">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--search" viewBox="0 0 15 19"><path d="M14.147 15.488a1.11 1.11 0 0 1-1.567 0l-3.395-3.395a5.575 5.575 0 1 1 1.568-1.568l3.394 3.395a1.11 1.11 0 0 1 0 1.568m-6.361-3.903a4.488 4.488 0 1 0-1.681.327 4.4 4.4 0 0 0 1.68-.327z"></path></svg>
+        </label>
+        <input type="search" id="m-global-search_query" name="query" value="" class="a-text-input" placeholder="Buscar la CFPB" title="Buscar la CFPB" autocomplete="off" maxlength="75">
+        <button type="reset" onclick="document.getElementById('m-global-search_query').setAttribute('value','')" aria-label="Borrar búsqueda" title="Borrar búsqueda">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error" viewBox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"></path></svg>
+        </button>
+    </div>
+
+    <button class="a-btn" type="submit" aria-label="Buscar la CFPB">
+        Buscar
+    </button>
+</div>
+
+
+        </form>
+    </div>
+</div>
+
+
+            
+                
+                
+<nav class="o-mega-menu
+            u-hidden" data-js-hook="behavior_flyout-menu" aria-label="Menú principal">
+    <button class="o-mega-menu__trigger" data-js-hook="behavior_flyout-menu_trigger" aria-haspopup="menu">
+        <span class="o-mega-menu__trigger-open">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--menu" viewBox="0 0 14 19"><path d="M.789 4.836a1.03 1.03 0 0 1 1.03-1.029h10.363a1.03 1.03 0 1 1 0 2.059H1.818A1.03 1.03 0 0 1 .79 4.836zm12.422 4.347a1.03 1.03 0 0 1-1.03 1.029H1.819a1.03 1.03 0 0 1 0-2.059h10.364a1.03 1.03 0 0 1 1.029 1.03zm0 4.345a1.03 1.03 0 0 1-1.03 1.03H1.819a1.03 1.03 0 1 1 0-2.059h10.364a1.03 1.03 0 0 1 1.029 1.03z"></path></svg>
+            <span class="u-visually-hidden">
+                Abre el menú principal
+            </span>
+        </span>
+        <span class="o-mega-menu__trigger-close">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error" viewBox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"></path></svg>
+            <span class="u-visually-hidden">
+                Cerrar el menú principal
+            </span>
+        </span>
+    </button>
+   
+    
+<div class="o-mega-menu__content o-mega-menu__content-1" role="navigation" data-js-hook="behavior_flyout-menu_content">
+
+    
+    
+
+    <div class="o-mega-menu__content-wrapper o-mega-menu__content-1-wrapper">
+
+        
+
+        
+        
+
+        
+        <div class="o-mega-menu__content-lists o-mega-menu__content-1-lists">
+            
+    
+    <div class="o-mega-menu__content-list-group o-mega-menu__content-1-list-group">
+        <div class="o-mega-menu__content-list o-mega-menu__content-1-list">
+
+            
+            <ul>
+                
+                        
+                    
+                    
+
+
+<li class="o-mega-menu__content-item o-mega-menu__content-1-item o-mega-menu__content-item--has-icon o-mega-menu__content-1-item--has-icon">
+
+    <a class="o-mega-menu__content-link o-mega-menu__content-1-link" href="/es/enviar-una-queja/">
+<div aria-level="2" role="heading">
+<span class="o-mega-menu__content-link-icon-pre o-mega-menu__content-1-link-icon-pre"><svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--complaint" viewBox="0 0 15 19" xmlns="http://www.w3.org/2000/svg"><path d="M14.032 5.286v7.276a1.11 1.11 0 0 1-1.108 1.108H8.75l-1.02 1.635a.273.273 0 0 1-.503 0l-1.02-1.635h-4.13a1.11 1.11 0 0 1-1.109-1.108V5.286a1.11 1.11 0 0 1 1.108-1.108h10.848a1.11 1.11 0 0 1 1.108 1.108M8.206 11.34a.706.706 0 1 0-.706.705.706.706 0 0 0 .706-.705m-1.26-1.83a.554.554 0 1 0 1.108 0V6.275a.554.554 0 1 0-1.108 0z"></path></svg></span>
+        
+
+        Enviar una queja
+
+        
+
+        
+        </div>
+</a>
+
+    
+</li>
+
+                    
+
+
+<li class="o-mega-menu__content-item o-mega-menu__content-1-item">
+
+    <a class="o-mega-menu__content-link o-mega-menu__content-1-link" href="/es/herramientas-del-consumidor/">
+<div aria-level="2" role="heading">
+        
+
+        
+
+        Para consumidores
+
+        
+
+        
+        </div>
+</a>
+
+    
+</li>
+
+                    
+
+
+<li class="o-mega-menu__content-item o-mega-menu__content-1-item">
+
+    <a class="o-mega-menu__content-link o-mega-menu__content-1-link" href="/es/obtener-respuestas/">
+<div aria-level="2" role="heading">
+        
+
+        
+
+        Obtener respuestas
+
+        
+
+        
+        </div>
+</a>
+
+    
+</li>
+
+                    
+
+
+<li class="o-mega-menu__content-item o-mega-menu__content-1-item">
+
+    <a class="o-mega-menu__content-link o-mega-menu__content-1-link" href="/es/enviar-una-queja/">
+<div aria-level="2" role="heading">
+        
+
+        
+
+        Enviar una queja
+
+        
+
+        
+        </div>
+</a>
+
+    
+</li>
+
+                    
+
+
+<li class="o-mega-menu__content-item o-mega-menu__content-1-item">
+
+    <a class="o-mega-menu__content-link o-mega-menu__content-1-link" href="/es/quienes-somos/">
+<div aria-level="2" role="heading">
+        
+
+        
+
+        Quiénes somos
+
+        
+
+        
+        </div>
+</a>
+
+    
+</li>
+
+            </ul>
+
+        </div>
+    </div>
+    
+
+
+
+            
+        </div>
+        
+    </div>
+
+    
+    
+    
+
+    <div class="m-global-eyebrow
+                m-global-eyebrow--list">
+        <div class="wrapper
+                    ">
+            
+            <div class="m-global-eyebrow__actions">
+                <ul class="m-list
+                           m-list--horizontal
+                           m-global-eyebrow__languages">
+                    <li class="m-list__item">
+                        
+                        <a href="/" hreflang="en" lang="en">
+                            English
+                        </a>
+                        
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/zh/" hreflang="zh" lang="zh">
+                            中文
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/vi/" hreflang="vi" lang="vi">
+                            Tiếng Việt
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/ko/" hreflang="ko" lang="ko">
+                            한국어
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/tl/" hreflang="tl" lang="tl">
+                            Tagalog
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/ru/" hreflang="ru" lang="ru">
+                            Pусский
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/ar/" hreflang="ar" lang="ar">
+                            العربية
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a href="/language/ht/" hreflang="ht" lang="ht">
+                            Kreyòl Ayisyen
+                        </a>
+                    </li>
+                </ul>
+                <span class="m-global-eyebrow__phone">
+                    <a href="tel:+1-855-411-2372">(855) 411-2372</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+</nav>
+
+            
+        </div>
+
+    </div>
+</header>
+
+
+    
+
+    
+        
+        
+    
+
+    
+    
+
+    
+    
+    <main class="u-layout-grid u-layout-grid--1-3
+                 " id="main">
+
+        <div class="u-layout-grid__wrapper">
+            
+            
+    
+
+
+
+    <div class="u-layout-grid__breadcrumbs">
+     <nav class="m-breadcrumbs" aria-label="Guía de navegación">
+
+         
+         
+         
+         
+
+         
+
+             / 
+
+            
+                <span class="m-breadcrumbs__crumb">
+                    CFPB in Spanish
+                </span>
+            
+
+         
+     </nav>
+ 
+    </div>
+
+            
+                <aside class="u-layout-grid__secondary-nav">
+                    
+                    <nav class="o-secondary-nav
+            o-secondary-nav--no-children" aria-label="Navegación de la sección">
+
+    <button class="o-secondary-nav__header" type="button" aria-expanded="false">
+        <span class="o-secondary-nav__label">
+            Navegue por esta sección
+        </span>
+        <span class="o-secondary-nav__cues">
+            <span class="o-secondary-nav__cue-open" aria-label="Show">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--down" viewBox="0 0 17 19"><path d="M8.5 15.313a1.03 1.03 0 0 1-.728-.302l-6.8-6.8a1.03 1.03 0 0 1 1.455-1.456L8.5 12.828l6.073-6.073a1.03 1.03 0 0 1 1.455 1.456l-6.8 6.8a1.03 1.03 0 0 1-.728.302"></path></svg>
+            </span>
+            <span class="o-secondary-nav__cue-close" aria-label="Hide">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--up" viewBox="0 0 17 19"><path d="M15.3 15.32a1.03 1.03 0 0 1-.727-.302L8.5 8.946l-6.073 6.072a1.03 1.03 0 0 1-1.456-1.455l6.801-6.8a1.03 1.03 0 0 1 1.456 0l6.8 6.8a1.03 1.03 0 0 1-.727 1.757z"></path></svg>
+            </span>
+        </span>
+    </button>
+
+    <div class="o-secondary-nav__content">
+        <ul class="o-secondary-nav__list
+                   o-secondary-nav__list--parents">
+            <li data-nav-is-active="False">
+                
+<a class="o-secondary-nav__link
+          o-secondary-nav__link--parent
+          " href="/language/es/prestamos-para-vehiculos-palabras-claves/">
+    Préstamos para vehículos palabras claves
+</a>
+</li>
+            <li data-nav-is-active="False">
+                
+<a class="o-secondary-nav__link
+          o-secondary-nav__link--parent
+          " href="/language/es/cuentas-bancarias-palabras-claves/">
+    Cuentas bancarias palabras claves
+</a>
+</li>
+            <li data-nav-is-active="False">
+                
+<a class="o-secondary-nav__link
+          o-secondary-nav__link--parent
+          " href="/language/es/tarjetas-de-credito-palabras-claves/">
+    Tarjetas de crédito palabras claves
+</a>
+</li>
+            <li data-nav-is-active="False">
+                
+<a class="o-secondary-nav__link
+          o-secondary-nav__link--parent
+          " href="/language/es/informes-y-puntajes-de-credito-palabras-claves/">
+    Informes y puntajes de crédito palabras claves
+</a>
+</li>
+            <li data-nav-is-active="False">
+                
+<a class="o-secondary-nav__link
+          o-secondary-nav__link--parent
+          " href="/language/es/cobro-de-deudas-palabras-claves/">
+    Cobro de deudas palabras claves
+</a>
+</li>
+            <li data-nav-is-active="False">
+                
+<a class="o-secondary-nav__link
+          o-secondary-nav__link--parent
+          " href="/language/es/fraudes-y-estafas-palabras-claves/">
+    Fraudes y estafas palabras claves
+</a>
+</li>
+            <li data-nav-is-active="True">
+                
+<a class="o-secondary-nav__link
+          o-secondary-nav__link--parent
+          o-secondary-nav__link--current">
+    Hipotecas palabras claves
+</a>
+</li>
+            <li data-nav-is-active="False">
+                
+<a class="o-secondary-nav__link
+          o-secondary-nav__link--parent
+          " href="/language/es/transferencias-de-dinero-palabras-claves/">
+    Transferencias de dinero palabras claves
+</a>
+</li>
+            <li data-nav-is-active="False">
+                
+<a class="o-secondary-nav__link
+          o-secondary-nav__link--parent
+          " href="/language/es/prestamos-del-dia-de-pago-palabras-claves/">
+    Préstamos del día de pago palabras claves
+</a>
+</li>
+            <li data-nav-is-active="False">
+                
+<a class="o-secondary-nav__link
+          o-secondary-nav__link--parent
+          " href="/language/es/tarjetas-prepagadas-palabras-claves/">
+    Tarjetas prepagadas palabras claves
+</a>
+</li>
+            <li data-nav-is-active="False">
+                
+<a class="o-secondary-nav__link
+          o-secondary-nav__link--parent
+          " href="/language/es/hipotecas-inversas-palabras-claves/">
+    Hipotecas inversas palabras claves
+</a>
+</li>
+            <li data-nav-is-active="False">
+                
+<a class="o-secondary-nav__link
+          o-secondary-nav__link--parent
+          " href="/language/es/prestamos-estudiantiles-palabras-claves/">
+    Préstamos estudiantiles palabras claves
+</a>
+</li>
+        </ul>
+    </div>
+</nav>
+
+                </aside>
+                <div class="u-layout-grid__main" id="content__main">
+                    
+    
+            
+   
+
+   
+      
+   
+
+   
+      
+   
+
+   <div class="block block--flush-top">
+      
+
+    <div class="eyebrow">Mortgage key terms (in Spanish)</div>
+
+
+<h1>Hipotecas palabras claves</h1>
+
+    
+    
+    
+    
+    <div class="block block--sub ">
+        <ul dir="ltr" class="m-translation-links">
+                
+                <li>
+                    <a href="/language/cfpb-in-english/mortgages-key-terms/" lang="en" hreflang="en" translate="no">English
+                    </a>
+                </li>
+            
+                
+                <li>Español</li>
+            
+                
+                <li>
+                    <a href="/language/zh/mortgages-key-terms/" lang="zh-Hant" hreflang="zh-Hant" translate="no">中文
+                    </a>
+                </li>
+            
+                
+                <li>
+                    <a href="/language/vi/mortgages-key-terms/" lang="vi" hreflang="vi" translate="no">Tiếng Việt
+                    </a>
+                </li>
+            
+                
+                <li>
+                    <a href="/language/ko/mortgages-key-terms/" lang="ko" hreflang="ko" translate="no">한국어
+                    </a>
+                </li>
+            
+                
+                <li>
+                    <a href="/language/tl/mortgages-key-terms/" lang="tl" hreflang="tl" translate="no">Tagalog
+                    </a>
+                </li>
+            
+                
+                <li>
+                    <a href="/language/ru/mortgages-key-terms/" lang="ru" hreflang="ru" translate="no">Pусский
+                    </a>
+                </li>
+            
+                
+                <li>
+                    <a href="/language/ar/mortgages-key-terms/" lang="ar" hreflang="ar" translate="no">العربية
+                    </a>
+                </li>
+            
+                
+                <li>
+                    <a href="/language/ht/mortgages-key-terms/" lang="ht" hreflang="ht" translate="no">Kreyòl Ayisyen
+                    </a>
+                </li>
+            </ul>
+    </div>
+
+
+
+
+
+   </div>
+
+   
+   
+
+        
+
+    
+
+    
+            
+   
+
+   
+      
+   
+
+   
+
+   <div class="block block--flush-top">
+      
+
+
+<div class="o-full-width-text-group">
+    
+        
+        
+            <div class="m-full-width-text">
+                <h2 id="ajustable-51-(51-adjustable-rate-mortgage)" data-block-key="typiw">Ajustable 5/1 (<b>5/1 Adjustable Rate Mortgage)</b></h2><p data-block-key="fp7oi">Una 5/1 “adjustable rate mortgage”, ARM, o hipoteca de tasa ajustable, es un préstamo en el cual, el “5” representa el número de años durante los cuales la tasa de interés inicial se mantendrá fija, mientras el “1” representa las veces que la tasa de interés se ajustará, una vez que el período inicial de cinco años termine. Los períodos de tasa fija más comunes son de 3, 5, 7 y 10 años, y “1” es el período de ajuste más común. Es importante hacer preguntas y leer cuidadosamente el contrato, si usted está evaluando obtener una ARM.</p><p data-block-key="7rlbc"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/para-una-hipoteca-de-tasa-ajustable-arm-cuales-son-el-indice-y-el-margen-y-como-funcionan-es-1949/">Sepa más sobre cómo las tasas ajustables cambian</a>.</p><p data-block-key="booth"><br></p><hr><p data-block-key="e0928"></p><h2 id="regla-de-capacidad-de-pago-(ability-to-repay-rule)" data-block-key="tpkae">Regla de capacidad de pago (<b>Ability-to-repay rule)</b></h2><p data-block-key="8u59l">La regla de capacidad de pago es la determinación, razonable y de buena fe, que la mayoría de los prestamistas hipotecarios deben hacer de que usted podrá pagar de vuelta el préstamo.</p><p data-block-key="bj5rg"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/cual-es-la-regla-de-la-capacidad-de-pago-por-que-es-importante-para-mi-es-1787/">Leer más</a></p><p data-block-key="bu05b"><br></p><hr><p data-block-key="486jl"></p><h2 id="hipoteca-de-tasa-ajustable-(adjustable-rate-mortgage-arm)" data-block-key="p1wav">Hipoteca de tasa ajustable (<b>Adjustable Rate Mortgage - ARM)</b></h2><p data-block-key="c2d9a">Una “adjustable rate mortgage”, ARM, o hipoteca con tasa de interés ajustable es un tipo de préstamo en el que la tasa de interés podría cambiar usualmente debido a los cambios del índice de tasa de interés. Su mensualidad subirá o bajará, dependiendo de la duración del plazo introductorio del préstamo, cualquier límite de tasa, y el índice de la tasa de interés. Bajo una ARM, tanto la tasa de interés, como la mensualidad, podrían ser al principio más baja que las de una hipoteca de tasa fija, sin embargo, ambas podrían incrementarse substancialmente.</p><p data-block-key="4b0pt">Sepa más acerca de&nbsp;<a href="https://www.consumerfinance.gov/es/obtener-respuestas/para-una-hipoteca-de-tasa-ajustable-arm-cuales-son-el-indice-y-el-margen-y-como-funcionan-es-1949/">cómo funcionan las ARM y qué debe usted considerar sobre ellas</a>.</p><p data-block-key="bed42"><br></p><hr><p data-block-key="1oqia"></p><h2 id="amortizacion-(amortization)" data-block-key="gjynv">Amortización (<b>Amortization)</b></h2><p data-block-key="3odfo">Amortización significa cancelar un préstamo dentro de un plazo, haciendo pagos regularmente, de forma tal que el monto que debe se reduzca con cada pago que haga. La mayoría de los préstamos para vivienda se amortizan, sin embargo, algunos préstamos de hipotecas no se amortizan completamente, lo que significa que usted deberá dinero, aún después de haber hecho todos sus pagos. Algunos préstamos para vivienda permiten pagos que solamente cubran el monto de los intereses o inclusive, menos de ese monto. Si los pagos son menos que el monto de los intereses vencidos cada mes, el saldo de la hipoteca crecerá en vez de reducirse. Esto se conoce como amortización negativa. Otros programas de préstamos que no se amorticen por completo podrían requerir un pago grande, global, conocido como “balloon payment”, al final del plazo del préstamo. Asegúrese de saber qué tipo de préstamo está usted obteniendo.</p><p data-block-key="dm20l"><a href="https://www.consumerfinance.gov/es/prepararse-para-comprar-casa/">Conozca más sobre el proceso de comprar vivienda</a>.</p><p data-block-key="7o8rt"><br></p><hr><p data-block-key="brnhe"></p><h2 id="monto-financiado-(amount-financed)" data-block-key="ytzo7">Monto financiado (<b>Amount financed)</b></h2><p data-block-key="9uaoc">Significa la cantidad de dinero que usted está tomando en préstamo del prestamista, menos la mayor parte de los cargos iniciales que el prestamista le está cobrando.</p><p data-block-key="dcbl8"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-significa-cantidad-financiada-cuando-se-obtiene-un-prestamo-hipotecario-es-1923/">Leer más</a></p><p data-block-key="2l8da"><br></p><hr><p data-block-key="4601b"></p><h2 id="ingreso-anual-(annual-income)" data-block-key="pn18p">Ingreso anual (<b>Annual income)</b></h2><p data-block-key="aggiv">El ingreso anual es uno de los factores considerados en su solicitud de un préstamo de hipoteca y generalmente, se refiere a su ingreso total, antes de impuestos, durante un año. El ingreso anual puede incluir ingresos provenientes de un trabajo a tiempo completo o parcial, de un trabajo independiente, propinas, comisiones, horas extras, bonos, u otras fuentes. Un prestamista usará la información relativa a su ingreso anual y sus deudas mensuales actuales, para determinar si podría usted pagar el préstamo.</p><p data-block-key="dosqj">Que un prestamista se enfoque en alguna fuente o monto específico de ingresos cuando considere su solicitud de préstamo, dependerá muchas veces de que usted razonablemente, espere que dicho ingreso continúe en el tiempo.</p><p data-block-key="7j4cm"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-relacion-deuda-ingreso-es-1791/">Sepa por qué su habilidad de pagar el préstamo es importante para los prestamistas.</a></p><p data-block-key="1115r"><br></p><hr><p data-block-key="5nr1s"></p><h2 id="tasa-efectiva-anual-(annual-percentage-rate-apr)" data-block-key="tr9do">Tasa efectiva anual (<b>Annual Percentage Rate </b>– <b>APR)</b></h2><p data-block-key="fd4pj">Una “annual percentage rate”, APR, o tasa efectiva anual, es una medida más amplia del costo de pedir dinero prestado, que la simple tasa de interés. La APR refleja la tasa de interés, cualesquiera puntos disponibles, las tarifas del “mortgage broker” o negociador de la hipoteca, y cualquier otro costo que usted pague para obtener la hipoteca. Por ello, su APR es usualmente más alta que su tasa de interés.</p><p data-block-key="3b8ll"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/cual-es-la-diferencia-entre-una-tasa-de-interes-hipotecaria-y-una-apr-es-135/">Aprenda a comparar tasas efectivas anuales</a></p><p data-block-key="5j8fa"><br></p><hr><p data-block-key="d728t"></p><h2 id="tarifa-de-tasacion-(appraisal-fee)" data-block-key="7ykex">Tarifa de tasación (<b>Appraisal fee)</b></h2><p data-block-key="5947p">Una tarifa de tasación es el costo de realizar una tasación o valoración de una vivienda que usted planea comprar o que ya posee. Las tasaciones o valoraciones de viviendas proporcionan una evaluación independiente del valor de una propiedad. En la mayoría de los casos, la selección del tasador y cualquier costo asociado a esto es responsabilidad de su prestamista.</p><p data-block-key="b08qm"><a href="https://www.consumerfinance.gov/es/prepararse-para-comprar-casa/">Conozca más sobre el proceso de comprar vivienda</a>.</p><p data-block-key="8j7e3"><br></p><hr><p data-block-key="es8ml"></p><h2 id="pago-automatico-(automatic-payment)" data-block-key="h75r2">Pago automático (<b>Automatic payment)</b></h2><p data-block-key="9ikfg">Los pagos automáticos le permiten establecer pagos de hipoteca recurrentes a través de su banco. Los pagos automáticos son una forma conveniente de asegurarse de hacer todos sus pagos a tiempo.</p><p data-block-key="av3g9"><br></p><hr><p data-block-key="7llmj"></p><h2 id="pago-global-(balloon-loan)" data-block-key="rixii">Pago global (<b>Balloon loan)</b></h2><p data-block-key="6rodo">Para hipotecas, tener un "balloon loan" o préstamo con pago global, significa que el préstamo tiene un pago único, más grande de lo normal, que se hace típicamente, al final del plazo del préstamo. Este pago único es llamado “balloon payment” o pago global, y será algunas veces, mucho mayor que otros pagos. Si usted no pudiese hacer el pago global, tendría que refinanciar el préstamo, vender la vivienda o enfrentar un “foreclosure” o ejecución financiera.</p><p data-block-key="bf4nc"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-un-prestamo-reembolsable-al-vencimiento-balloon-loan-es-104/">Sepa por qué los préstamos con pago global pueden ser arriesgados</a>.</p><p data-block-key="7ni7h"><br></p><hr><p data-block-key="c18u6"></p><h2 id="pago-quincenal-(bi-weekly-payment)" data-block-key="nr5p6">Pago quincenal (<b>Bi-weekly payment)</b></h2><p data-block-key="cq4ld">Con el plan de pago quincenal, el administrador hipotecario cobra la mitad de su pago mensual cada dos semanas, lo cual resulta en 26 pagos a lo largo del año (lo que en total resulta en un pago mensual adicional por año). Al hacer pagos adicionales hacia el capital, usted puede pagar su préstamo antes de tiempo. Antes de seleccionar un pago quincenal, asegúrese de revisar los términos de su préstamo para ver si tendría que pagar una penalidad por prepago. Consulte si el administrador hipotecario cobra algún cargo por el plan de pagos quincenal. Es posible que usted pueda lograr el mismo objetivo sin tener que pagar un cargo, haciendo un pago hipotecario mensual extra todos los años.</p><p data-block-key="7gqn2"><br></p><hr><p data-block-key="4gavq"></p><h2 id="declaracion-de-cierre-(closing-disclosure)" data-block-key="3cu0k">Declaración de cierre (<b>Closing Disclosure)</b></h2><p data-block-key="d910g">La Declaración de cierre es una planilla obligatoria de cinco páginas que ofrece los detalles finales del préstamo de hipoteca que usted ha seleccionado. La misma incluye los términos del préstamo, el monto proyectado de sus pagos mensuales, y cuanto pagará usted en tarifas y otros costos para obtener su hipoteca.</p><p data-block-key="9qbbi"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-declaracion-de-cierre-es-1983/">Sepa cómo asegurarse de que todos los detalles del préstamo en su Declaración de cierre estén correctos.</a></p><p data-block-key="do4k6"><br></p><hr><p data-block-key="8vgdc"></p><h2 id="prestamo-para-la-construccion-(construction-loan)" data-block-key="bg9og">Préstamo para la construcción (<b>Construction loan)</b></h2><p data-block-key="6no60">Un préstamo para la construcción suele ser un préstamo a corto plazo que proporciona fondos para cubrir el costo de construcción o rehabilitación de una vivienda.</p><p data-block-key="c9jim"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-un-prestamo-para-construccion-es-108/">Leer más</a></p><p data-block-key="34rqp"><br></p><hr><p data-block-key="d6vbo"></p><h2 id="prestamo-convencional-(conventional-loan)" data-block-key="c1c1l">Préstamo convencional (<b>Conventional loan)</b></h2><p data-block-key="cppb0">Un préstamo convencional es cualquier préstamo hipotecario que no esté asegurado ni garantizado por el gobierno (como en el caso de los programas de préstamos de la Administración Federal de la Vivienda, el Departamento de Asuntos de Veteranos o el Departamento de Agricultura).</p><p data-block-key="eld8c"><a href="https://www.consumerfinance.gov/owning-a-home/conventional-loans/">Leer más</a> (en inglés)</p><p data-block-key="a7m7c"><br></p><hr><p data-block-key="2mpep"></p><h2 id="cofirmante-o-coprestatario-(co-signer-or-co-borrower)" data-block-key="cbdls">Cofirmante o coprestatario (<b>Co-signer or co-borrower)</b></h2><p data-block-key="ak5b5">Un cofirmante o coprestatario es alguien que acepta asumir con usted toda la responsabilidad de devolver un préstamo hipotecario. Esta persona está obligada a pagar cualquier cuota atrasada e incluso el importe total del préstamo si usted no paga. Algunos programas hipotecarios distinguen a un cosignatario como alguien que no figura en el título de propiedad y no tiene ningún interés de propiedad en la vivienda hipotecada. Tener un cosignatario o codeudor en su préstamo hipotecario le da a su prestamista una garantía adicional de que el préstamo será devuelto. Pero el historial crediticio y las finanzas de su cosignatario o coprestatario corren peligro si usted no devuelve el préstamo.</p><p data-block-key="402ms"><a href="https://www.consumerfinance.gov/es/prepararse-para-comprar-casa/">Conozca más sobre el proceso de comprar vivienda</a>.</p><p data-block-key="bqq3m"><br></p><hr><p data-block-key="6j491"></p><h2 id="historial-de-credito-(credit-history)" data-block-key="suaw6">Historial de crédito (<b>Credit history)</b></h2><p data-block-key="erbth">El historial de crédito o crediticio es el récord de sus cuentas de crédito y de su historia de pagos puntuales, tal y como aparecen en su informe de crédito. Las compañías de informes de crédito recolectan y actualizan la información de su récord de crédito y luego lo proveen para que otros negocios lo usen para tomar decisiones sobre usted. Los informes de crédito contienen información de su actividad y situación crediticia actual, tal como su historia de pago de préstamos y el estatus de sus cuentas de crédito.</p><p data-block-key="9mvr"><a href="https://www.consumerfinance.gov/owning-a-home/prepare/get-your-money-situation-in-order/">Sepa más acerca de cómo revisar su historial crediticio antes de comprar una vivienda</a> (en inglés).</p><p data-block-key="ab3a9"><br></p><hr><p data-block-key="csffm"></p><h2 id="informe-de-credito-(credit-report)" data-block-key="3k4ir">Informe de crédito (Credit report)</h2><p data-block-key="8sfcs">Un informe de crédito es una declaración que contiene información acerca de su actividad crediticia y de su situación actual de crédito, como el historial de pago de sus préstamos y el estado de sus cuentas de crédito. Los prestamistas usan la información de sus informes de crédito para determinar si usted califica para algún préstamo, y para definir la tasa de interés que le ofrecerían.</p><p data-block-key="b2db1">Sepa cómo <a href="https://www.consumerfinance.gov/es/obtener-respuestas/como-puedo-obtener-una-copia-gratuita-de-mis-informes-de-credito-es-5/">obtener copias de sus informes de crédito</a>.</p><p data-block-key="8gino"><br></p><hr><p data-block-key="elui7"></p><h2 id="puntuacion-crediticia-(credit-score)" data-block-key="1uc3l">Puntuación crediticia (Credit score)</h2><p data-block-key="6uo7e">Una puntuación crediticia predice la probabilidad que tiene de devolver un préstamo a tiempo. Las empresas utilizan una fórmula matemática, llamada modelo de puntuación, para crear su puntuación crediticia a partir de la información de su informe crediticio. Es importante saber que usted no tiene solo "una" puntuación crediticia y que hay muchas puntuaciones crediticias disponibles tanto para usted como para los prestamistas. Cualquier puntuación crediticia depende de los datos utilizados para calcularla y puede diferir según el modelo de puntuación, la fuente de su historial crediticio, el tipo de producto crediticio e incluso el día en que se calculó.</p><p data-block-key="45q2v"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/como-puedo-obtener-mi-puntaje-de-credito-es-316/">Sepa dónde puede usted encontrar su puntaje de crédito</a>.</p><p data-block-key="cgg44"><br></p><hr><p data-block-key="4641g"></p><h2 id="porcentaje-de-deuda-(debt-ratio)" data-block-key="ebdnv">Porcentaje de deuda (<b>Debt ratio)</b></h2><p data-block-key="5n01t">Su porcentaje de deuda sobre ingresos es el total de los pagos mensuales de sus deudas dividido por sus ingresos brutos mensuales. Este número es una forma que tienen los prestamistas de medir su capacidad para gestionar los pagos mensuales para devolver el dinero que piensa pedir prestado.</p><p data-block-key="egvgk"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-el-total-de-intereses-pagados-a-lo-largo-del-plazo-del-prestamo-tip-de-una-hipoteca-es-2001/">Leer más</a></p><p data-block-key="eusfm"><br></p><hr><p data-block-key="bkhr6"></p><h2 id="escritura-en-lugar-de-ejecucion-hipotecaria-(deed-in-lieu-of-foreclosure)" data-block-key="h3puf">Escritura en lugar de ejecución hipotecaria (<b>Deed-in-lieu of foreclosure)</b></h2><p data-block-key="2ph7h">Una escritura en lugar de una ejecución hipotecaria (deed-in-lieu of foreclosure) es un arreglo en virtud del cual usted voluntariamente entrega la propiedad de su vivienda al prestamista para evitar el proceso de ejecución hipotecaria. Una escritura en lugar de una ejecución hipotecaria es un acuerdo por el que usted cede voluntariamente la propiedad de su vivienda al prestamista para evitar el proceso de ejecución hipotecaria. Una escritura en lugar de una ejecución hipotecaria puede ayudarle a evitar ser personalmente responsable de cualquier cantidad restante de la hipoteca. Si vive en un estado en el que es responsable de cualquier deficiencia, que es una diferencia entre el valor de su propiedad y la cantidad que aún debe de su préstamo hipotecario, querrá pedir a su prestamista que renuncie a la deficiencia. Si el prestamista renuncia a la deficiencia, obtenga la renuncia por escrito y guárdela para sus archivos. Una escritura en lugar de una ejecución hipotecaria es un tipo de <a href="https://www.consumerfinance.gov/es/herramientas-del-consumidor/hipotecas/respuestas/palabras-claves/#mitigacion-de-perdidas">mitigación de pérdidas</a>.</p><p data-block-key="f007a"><br></p><hr><p data-block-key="2b3t2"></p><h2 id="moroso-(delinquent)" data-block-key="taqs7">Moroso (<b>Delinquent)</b></h2><p data-block-key="b6vg9">“Delinquent” o moroso, es otro término usado para referirse a quien está atrasado con sus pagos. Su préstamo puede convertirse en moroso si usted deja de hacer algún pago o hace un pago parcial en la fecha de vencimiento. Luego que usted esté “delinquent” o moroso por algún tiempo, su prestamista o administrador podría comenzar el proceso de “foreclosure” o ejecución hipotecaria. El período de tiempo puede variar de estado a estado.</p><p data-block-key="fnm78">Las reglas federales también pueden aplicarse a cuándo puede comenzar la ejecución hipotecaria. <a href="https://www.consumerfinance.gov/es/obtener-respuestas/si-no-puedo-pagar-mi-hipoteca-que-opciones-tengo-es-268/">Obtenga más información sobre sus opciones si no puede pagar su hipoteca.</a></p><p data-block-key="c48em"><br></p><hr><p data-block-key="2i68d"></p><h2 id="caracteristica-de-pago-inmediato-(demand-feature)" data-block-key="pn9i3">Característica de pago inmediato (<b>Demand feature)</b></h2><p data-block-key="bj8ho">La Divulgación de Cierre tiene una declaración que dice "Su préstamo tiene una&nbsp;característica de pago inmediato exigible", que se marca "sí" o "no". Una característica de pago inmediato exigible permite al prestamista exigirle el reembolso anticipado del préstamo.</p><p data-block-key="5u66t"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-caracteristica-de-pago-inmediato-exigible-que-significa-si-la-caracteristica-de-pago-inmediato-exigible-esta-marcada-en-mi-informacion-de-cierre-es-1997/">Leer más</a></p><p data-block-key="aglfg"><br></p><hr><p data-block-key="eq8vr"></p><h2 id="pago-o-cuota-inicial-(down-payment)" data-block-key="unnyb">Pago o cuota inicial (<b>Down payment)</b></h2><p data-block-key="7ucua">Un pago o cuota inicial es el monto que usted paga por adelantado para adquirir una vivienda. Este pago será un porcentaje del valor de la vivienda y el resto, usted lo tomará prestado a través del préstamo hipotecario. Generalmente, mientras más grande sea su cuota inicial, menor será la tasa de interés que recibirá y mayores las probabilidades de que le aprueben un préstamo.</p><p data-block-key="1if9m"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-clase-de-pago-inicial-necesito-de-que-forma-la-cantidad-del-pago-inicial-que-hago-afecta-los-terminos-de-mi-prestamo-hipotecario-es-120/">Sepa cómo su cuota inicial afecta los términos de su hipoteca.</a></p><p data-block-key="ersv0"><br></p><hr><p data-block-key="9aamf"></p><h2 id="programa-o-subsidio-de-asistencia-con-la-cuota-inicial-(down-payment-programs-or-grants)" data-block-key="mo6ot">Programa o subsidio de asistencia con la cuota inicial (<b>Down payment programs or grants)</b></h2><p data-block-key="5mf7n">Un subsidio o programa de la cuota inicial, típicamente se refiere a la asistencia con el pago inicial que una organización, como el gobierno o alguna agencia sin fines de lucro, le ofrece a los compradores de vivienda. Estos fondos podrían ser un subsidio directo o requerir pago, por ejemplo, al momento de la venta de la vivienda.</p><p data-block-key="c0d5a"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/donde-puedo-obtener-dinero-para-el-pago-inicial-de-una-hipoteca-es-123/">Conozca dónde puede encontrar información acerca de los programas o subsidios de la cuota inicial</a>.</p><p data-block-key="466cu"><br></p><hr><p data-block-key="efiin"></p><h2 id="deposito-de-buena-fe-(earnest-money)" data-block-key="e29wf">Depósito de buena fe (<b>Earnest money)</b></h2><p data-block-key="1cihl">El depósito de buena fe o depósito de arras, es hecho por un comprador para mostrar buena fe o disposición hacia un contrato firmado para la compra de una vivienda. El depósito es retenido por el vendedor o algún tercero, como un agente de bienes raíces o compañía de títulos inmobiliarios. Si la venta de la vivienda se finaliza o “cierra”, el depósito de buena fe podría usarse para pagar los costos de cierre o como parte de la cuota inicial. Si el contrato se rompe por alguna razón aceptable, el depósito de buena fe es devuelto al comprador. En caso de que el comprador no actúe de buena fe, el depósito podría ser confiscado y pagado al vendedor.</p><p data-block-key="67p8k"><a href="https://www.consumerfinance.gov/es/prepararse-para-comprar-casa/">Conozca más sobre el proceso de comprar vivienda</a>.</p><p data-block-key="buu27"><br></p><hr><p data-block-key="69k6u"></p><h2 id="capital-(equity)" data-block-key="alsv3">Capital (Equity)</h2><p data-block-key="9qs9f">El capital es el monto que vale actualmente su propiedad, menos el monto de cualquier hipoteca existente sobre su propiedad.</p><p data-block-key="9g828"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-un-prestamo-con-garantia-hipotecaria-es-106/">Conozca qué es un préstamo sobre la plusvalía.</a></p><p data-block-key="1sl00"><br></p><hr><p data-block-key="45h38"></p><h2 id="cuenta-escrow-o-de-deposito-en-garantia-(escrow)" data-block-key="elelm">Cuenta escrow o de depósito en garantía (<b>Escrow)</b></h2><p data-block-key="4ikuq">Una cuenta “escrow” o cuenta de depósitos en garantía, conocida también como cuenta de retención, es una cuenta que abre el prestamista para pagar ciertos gastos relacionados con la propiedad, tales como impuestos y seguro de propietario. Una parte de su mensualidad va a esta cuenta. Si su hipoteca no tiene una cuenta escrow, usted está pagando estos gastos de la propiedad directamente.</p><p data-block-key="462b9">Sepa&nbsp;<a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-cuenta-de-deposito-en-custodia-o-en-garantia-escrow-es-140/">cómo la cuenta escrow afecta la mensualidad de su hipoteca</a>.</p><p data-block-key="9ptob"><br></p><hr><p data-block-key="92qt4"></p><h2 id="fannie-mae" data-block-key="ddtyb">Fannie Mae</h2><p data-block-key="f2c4f">La “Federal National Mortgage Association”, o Asociación Federal Nacional Hipotecaria, conocida como Fannie Mae, compra y respalda hipotecas a instituciones prestamistas en un esfuerzo por aumentar el acceso de los consumidores a préstamos que puedan pagar. Fannie Mae no es una agencia federal. Es una empresa patrocinada por el gobierno, bajo la tutela de la “Federal Housing Finance Agency”, FHFA, o Agencia Federal para el Financiamiento de la Vivienda.</p><p data-block-key="afbaa"><a href="https://www.consumerfinance.gov/owning-a-home/conventional-loans/">Leer más</a> (en inglés)</p><p data-block-key="59noh"><br></p><hr><p data-block-key="3mn5u"></p><h2 id="tarifa-por-financiamiento-de-la-fha-(fha-funding-fee)" data-block-key="7dp6x">Tarifa por financiamiento de la FHA (<b>FHA funding fee)</b></h2><p data-block-key="4kmvj">La “Federal Housing Finance Agency”, FHFA, o Agencia Federal para el Financiamiento de la Vivienda, exige el pago de una tarifa por financiamiento y de una prima mensual de seguro, en la mayoría de sus programas unifamiliares. Esta prima de seguro pagada por adelantado es también conocida a veces como “upfront mortgage insurance premium”, UFMIP, o prima adelantada de seguro de hipoteca.</p><p data-block-key="r8us"><a href="https://www.consumerfinance.gov/owning-a-home/fha-loans/">Leer más</a> (en inglés)</p><p data-block-key="2ulpt"><br></p><hr><p data-block-key="f8uh5"></p><h2 id="prestamo-de-la-fha-(fha-loan)" data-block-key="k9uy6">Préstamo de la FHA (<b>FHA loan)</b></h2><p data-block-key="6gvab">Los préstamos de la FHA son aquellos, hechos por prestamistas privados, que son regulados y garantizados por la “Federal Housing Administration” o Administración Federal de la Vivienda. Los préstamos de la FHA se diferencian de los convencionales porque permiten prestatarios con puntajes de crédito más bajos, y aceptan cuotas iniciales de porcentajes del monto total del préstamo tan bajos como 3.5 por ciento. El monto máximo de estos préstamos varía de condado en condado.</p><p data-block-key="2f2tb"><a href="https://www.consumerfinance.gov/owning-a-home/fha-loans/">Leer más</a> (en inglés)</p><p data-block-key="1gvgo"><br></p><hr><p data-block-key="cl9na"></p><h2 id="limites-de-las-hipotecas-fha-(fha-mortgage-limits)" data-block-key="4ui7b">Límites de las hipotecas FHA (<b>FHA mortgage limits)</b></h2><p data-block-key="45q4c">Los límites de las hipotecas FHA son los montos máximos de dinero para aquellas hipotecas que califiquen, y que la FHA (siglas en inglés de la Agencia Federal para el Financiamiento de la Vivienda) garantizará como parte de su programa de hipotecas para viviendas unifamiliares. Estos límites dependen de la ubicación de la propiedad y podrían ser revisados cada año.</p><p data-block-key="g5p4"><a class="a-link" href="https://entp.hud.gov/idapp/html/hicostlook.cfm"><span class="a-link__text">Use la herramienta de la FHA para que encuentre los límites en su condado</span> <svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19" xmlns="http://www.w3.org/2000/svg"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg></a>&nbsp;(en inglés).</p><p data-block-key="eisek"><br></p><hr><p data-block-key="1s9e9"></p><h2 id="tarifa-de-financiamiento-(finance-charge)" data-block-key="p02ce">Tarifa de financiamiento (<b>Finance charge)</b></h2><p data-block-key="e9njg">El cargo por financiamiento es la cantidad total de cargos por el préstamo y los intereses que usted pagaría durante todo el período de amortización del préstamo hipotecario.</p><p data-block-key="8ftal"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-el-cargo-por-financiamiento-aplicado-a-una-hipoteca-es-1921/">Leer más</a></p><p data-block-key="6ntkd"><br></p><hr><p data-block-key="ajfnm"></p><h2 id="programas-de-prestamos-para-fhtb-o-compradores-de-vivienda-primerizos-(first-time-home-buyers-(fthb)-loan-programs)" data-block-key="p6mm1">Programas de préstamos para FHTB o compradores de vivienda primerizos (<b>First-time home buyers (FTHB) loan programs)</b></h2><p data-block-key="7qeta">Los “first-time home buyers”, FTHB, o compradores de vivienda primerizos podrían usar una variedad de tipos de programas de préstamos para comprar su primera vivienda. Entre los préstamos más populares para FTHB se encuentran los programas con bajas cuotas iniciales ofrecidos por la FHA (Agencia Federal para el Financiamiento de la Vivienda), la VA (Oficina para Asuntos de los Veteranos), el USDA (Departamento de Agricultura), Fannie Mae y Freddie Mac. Algunos programas definen a los FTHB como alguien que no haya comprado una vivienda en tres o más años.</p><p data-block-key="eqieo"><a href="https://www.consumerfinance.gov/owning-a-home/loan-options">Entienda las opciones de préstamos que tiene</a>&nbsp;(en inglés).</p><p data-block-key="3l5hl"><br></p><hr><p data-block-key="1v0pv"></p><h2 id="hipoteca-de-tasa-fija-(fixed-rate-mortgage)" data-block-key="scqzj">Hipoteca de tasa fija (<b>Fixed-rate mortgage)</b></h2><p data-block-key="e4ec1">Una “fixed-rate mortgage” o hipoteca de tasa fija, es un tipo de préstamo para vivienda en el cual, la tasa de interés es calculada al momento en que usted obtiene el préstamo y la misma nunca cambiará mientras dure el plazo del mismo.</p><p data-block-key="k77k">Sepa más acerca de&nbsp;<a href="https://www.consumerfinance.gov/es/obtener-respuestas/cual-es-la-diferencia-entre-un-prestamo-hipotecario-de-tasa-de-interes-fija-y-un-prestamo-hipotecario-de-tasa-de-inters-ajustable-arm-es-100/">cómo funcionan las hipotecas de tasa fija</a>&nbsp;y qué considerar sobre ellas.</p><p data-block-key="abnka"><br></p><hr><p data-block-key="cg6ai"></p><h2 id="aplazamiento-de-pagos-(forbearance)" data-block-key="a5y2x">Aplazamiento de pagos (<b>Forbearance)</b></h2><p data-block-key="77o90">El aplazamiento o reducción de pagos por un tiempo determinado es cuando su administrador hipotecario le permite temporalmente, pagar la hipoteca a una tasa menor, o dejar de pagar la hipoteca. Su administrador puede concederle un aplazamiento de pagos si, por ejemplo, ha perdido recientemente su trabajo, ha sufrido una catástrofe o una enfermedad o lesión que ha incrementado sus gastos de salud. El aplazamiento de pagos es un tipo de <a href="https://www.consumerfinance.gov/es/herramientas-del-consumidor/hipotecas/respuestas/palabras-claves/#mitigacion-de-perdidas">mitigación de pérdidas</a>.</p><p data-block-key="fdjdl"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-el-aplazamiento-de-pagos-hipotecarios-es-289/">Leer más</a></p><p data-block-key="ef8m8">Dependiendo del tipo de préstamo que tenga, puede haber diferentes opciones de aplazamiento de pagos. Debe ponerse en contacto con el administrador de su préstamo para solicitar el aplazamiento de pagos. Recuerde que tendrá que compensar estos pagos omitidos o reducidos cuando finalice su período de aplazamiento de pagos.</p><p data-block-key="c96ai"><br></p><hr><p data-block-key="c1np0"></p><h2 id="seguro-forzoso-(force-placed-insurance)" data-block-key="0qylm">Seguro forzoso (<b>Force-placed insurance)</b></h2><p data-block-key="b0opa">El administrador de su hipoteca podría exigirle tener “forcé-placed insurance” o seguro forzoso de propietario de vivienda, si usted no cuenta con su propia póliza de seguro, o si la póliza que tiene no cumple con los requisitos del administrador. El seguro forzoso, usualmente, protege al prestamista y no a usted. El administrador le cobrará por el seguro. Tener un seguro forzoso siempre será más costoso que encontrar una póliza de seguro propia.</p><p data-block-key="f8s0r"><br></p><hr><p data-block-key="bmdo6"></p><h2 id="ejecucion-hipotecaria-(foreclosure)" data-block-key="y1qln">Ejecución hipotecaria (Foreclosure)</h2><p data-block-key="fhsri">El “foreclosure” o ejecución hipotecaria ocurre cuando el prestamista recupera la propiedad debido a que el propietario de una vivienda deja de hacer los pagos de una hipoteca. En algunos estados, el prestatario deberá ir a una corte para poder ejecutar un “foreclosure” sobre su propiedad (conocida como ejecución hipotecaria judicial), mientras en otros, el proceso no requerirá ir a una corte (ejecución hipotecaria no judicial). Generalmente, los prestamistas deben ser notificados si algún prestamista ha comenzado el proceso de ejecución en su contra. Existen normas Federales que podrían regular cuando un “foreclosure” podría comenzar.</p><p data-block-key="87pda">Si le preocupa ser objeto de una ejecución hipotecaria<a href="https://www.consumerfinance.gov/es/obtener-respuestas/si-no-puedo-pagar-mi-hipoteca-que-opciones-tengo-es-268/">, sepa cómo encontrar ayuda</a>.</p><p data-block-key="blsdc"><br></p><hr><p data-block-key="an54d"></p><h2 id="freddie-mac" data-block-key="ngt65">Freddie Mac</h2><p data-block-key="c52bt">La “Federal Home Loan Mortgage Corporation”, o Corporación Federal de Préstamos de Hipotecas, conocida como Freddie Mac, es una corporación privada fundada por el Congreso de la nación. Su misión es promover estabilidad y accesibilidad de los consumidores al mercado de bienes raíces, a través de la compra de hipotecas a bancos y otros prestamistas. La corporación se encuentra actualmente bajo la tutela de la “Federal Housing Finance Agency”, FHFA, o Agencia Federal para el Financiamiento de la Vivienda.</p><p data-block-key="2olv2"><a href="https://www.consumerfinance.gov/owning-a-home/conventional-loans/">Leer más</a> (en inglés)</p><p data-block-key="3pg9k"><br></p><hr><p data-block-key="dmg0j"></p><h2 id="estimado-de-buena-fe-(good-faith-estimate)" data-block-key="f34lw">Estimado de buena fe (<b>Good Faith Estimate)</b></h2><p data-block-key="1ihvd">Un Estimado de Buena Fe, también conocido como GFE (por sus siglas en inglés), es un formulario que el prestamista debe entregarle cuando usted solicita una hipoteca inversa. El GFE enumera cierta información básica acerca de los términos de la oferta del préstamo de hipoteca inversa.</p><p data-block-key="8i4t8">Sepa cuándo recibirá usted un&nbsp;<a href="https://www.consumerfinance.gov/es/obtener-respuestas/qu-es-un-estimado-de-buena-fe-gfe-es-146/">Estimado de Buena Fe o GFE</a>.</p><p data-block-key="8eaot"><br></p><hr><p data-block-key="bocqc"></p><h2 id="costo-de-registro-gubernamental-(government-recording-charges)" data-block-key="7z3e2">Costo de registro gubernamental (<b>Government recording charges)</b></h2><p data-block-key="felub">Los costos de registro gubernamental son cargos que cobran los organismos de los gobiernos estatales y locales por registrar legalmente su escritura, su hipoteca y los documentos relacionados con su préstamo hipotecario.</p><p data-block-key="8dp57"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-son-los-costos-de-registro-gubernamental-por-una-hipoteca-es-159/">Leer más</a></p><p data-block-key="ete8f"><br></p><hr><p data-block-key="a2g7n"></p><h2 id="prestamo-hipotecario-de-precio-mayor-(higher-priced-mortgage-loan)" data-block-key="c8s6l">Préstamo hipotecario de precio mayor (<b>Higher-priced mortgage loan)</b></h2><p data-block-key="9hred">En general, un préstamo hipotecario de precio mayor aquel con una tasa efectiva anual (APR) más alta que la tasa de interés referencial, conocida como Tasa de Oferta Preferencial Promedio.</p><p data-block-key="1dpoa"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/el-administrador-se-niega-a-recibir-mi-pago-que-puede-hacer-es-1797/">Leer más</a></p><p data-block-key="foui7"><br></p><hr><p data-block-key="ejnva"></p><h2 id="cuotas-de-la-asociacion-de-propietarios-(hoa-dues)" data-block-key="h656g">Cuotas de la asociación de propietarios (<b>HOA dues)</b></h2><p data-block-key="arvaj">Si usted está interesado en comprar un condominio, una propiedad compartida o una vivienda en algún conjunto u otra comunidad organizada con servicios compartidos, usted tendrá que pagar tarifas de condominio o cuotas de la “homeowners’ association”, HOA, o asociación de propietarios. Estas cuotas varían ampliamente. Las cuotas de condominio o de asociación de propietarios se pagan aparte de su pago mensual de hipoteca. Si usted deja de pagar estas cuotas, podría ser objeto de intentos de cobranzas por parte de la asociación de propietarios, e inclusive, podría enfrentar un “foreclosure” o ejecución hipotecaria.</p><p data-block-key="a201"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/se-incluyen-los-costos-de-condominio-cooperativa-o-las-cuotas-de-la-asociacion-de-propietarios-de-vivienda-en-el-pago-mensual-de-la-hipoteca-es-1945/">Leer más</a></p><p data-block-key="ffdlh"><br></p><hr><p data-block-key="62g72"></p><h2 id="tasacion-de-propiedad-(home-appraisal)" data-block-key="erlr5">Tasación de propiedad (<b>Home appraisal)</b></h2><p data-block-key="ftm9l">Una “appraisal” o tasación de propiedad, es un documento escrito que muestra una opinión de cuánto vale una propiedad. La tasación le da información útil acerca de la propiedad. Describe lo que la hace valiosa y puede mostrar cómo se compara con otras propiedades en el vecindario. Una tasación es una valoración independiente del valor de la propiedad.</p><p data-block-key="3mv31">Sepa por qué&nbsp;<a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-la-tasacion-de-una-propiedad-y-por-que-necesito-fijarme-en-ellas-es-167/">las “appraisals” o tasaciones son importantes</a>.</p><p data-block-key="3cgke"><br></p><hr><p data-block-key="aevdb"></p><h2 id="linea-de-credito-hipotecario-(home-equity-line-of-credit-heloc)" data-block-key="lib72">Línea de crédito hipotecario (<b>Home Equity Line of Credit - HELOC)</b></h2><p data-block-key="3s628">Una “home equity line of credit” (HELOC) o línea de crédito hipotecario es una línea de crédito que le permite pedir prestado sobre su capital inmobiliario. El capital es el monto del valor actual de su propiedad, menos el monto de cualquier hipoteca que tenga. A diferencia de los préstamos sobre el capital inmobiliario, las HELOC, usualmente, tienen tasas de interés ajustables. La mayoría de las HELOC le enviarán cheques especiales o una tarjeta de crédito, y usted podrá tomar dinero prestado de ella por un período específico de tiempo, a partir del momento en que abrió la cuenta. Este período de tiempo es conocido como el “draw period” o período de retiro. Durante el período de retiro usted podrá tomar dinero prestado y deberá hacer pagos mínimos. Cuando el “draw period” o período de retiro termina, usted no podrá ya tomar dinero prestado de su línea de crédito. También cuando termine el periodo de retiro, puede que le exijan pagar todo el saldo restante de una sola vez, o puede que le permitan hacerlo durante un cierto período de tiempo. Si usted no puede pagar la HELOC, su prestamista podría ejecutar un “foreclosure” sobre su vivienda.</p><p data-block-key="et8s8"><br></p><hr><p data-block-key="9lii9"></p><h2 id="prestamo-sobre-el-valor-neto-de-la-vivienda-(home-equity-loan)" data-block-key="p6u67">Préstamo sobre el valor neto de la vivienda (<b>Home equity loan)</b></h2><p data-block-key="a6lmf">Un préstamo sobre el valor neto de la vivienda (a veces conocido como HEL, por sus siglas en inglés) le permite pedir dinero prestado usando el valor neto de su vivienda como garantía. El valor neto es la cantidad que vale actualmente su propiedad, menos el importe de cualquier hipoteca existente sobre la misma. Usted recibe el dinero de un préstamo sobre el valor neto de la vivienda como una suma global. Un préstamo sobre el valor neto de la vivienda suele tener un tipo de interés fijo, es decir, que no cambiará. Si no puede devolver el HEL, el prestamista podría ejecutar la hipoteca de su vivienda.</p><p data-block-key="e8jir"><br></p><hr><p data-block-key="aship"></p><h2 id="inspeccion-de-la-vivienda-(home-inspection)" data-block-key="c3uru">Inspección de la vivienda (<b>Home inspection)</b></h2><p data-block-key="87g91">La inspección de la vivienda frecuentemente forma parte del proceso de comprarla. Típicamente, usted tiene el derecho a contratar un inspector para examinar la propiedad y señalar sus fortalezas y debilidades. Esta inspección es especialmente útil para probar los sistemas estructurales y mecánicos de la vivienda, como calefacción, ventilación, aire acondicionado y electricidad.</p><p data-block-key="ffdfl"><a href="https://www.consumerfinance.gov/owning-a-home/close/schedule-a-home-inspection/">Sepa cómo programar una inspección</a>&nbsp;(en inglés).</p><p data-block-key="44p9g"><br></p><hr><p data-block-key="1c6mk"></p><h2 id="asociacion-de-propietarios-(homeowners'-association-hoa)" data-block-key="upt2b">Asociación de propietarios (<b>Homeowners’ Association - HOA)</b></h2><p data-block-key="8lkun">Una “homeowners’ association," HOA, o asociación de propietarios, se forma típicamente para manejar gastos compartidos de un conjunto o comunidad organizada, tales como, jardinería y otros costos de mantenimiento. El condominio de una HOA asume otras responsabilidades que pueden incluir, por ejemplo, el mantenimiento de las vías de entrada, de las áreas comunes y de los techos.</p><p data-block-key="cm48j"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/se-incluyen-los-costos-de-condominio-cooperativa-o-las-cuotas-de-la-asociacion-de-propietarios-de-vivienda-en-el-pago-mensual-de-la-hipoteca-es-1945/">Obtenga más información sobre cómo los deberes con la asociación de propietarios podrían aparecer en el estado de cuenta de su hipoteca</a>.</p><p data-block-key="8j63c"><br></p><hr><p data-block-key="2diep"></p><h2 id="seguro-del-propietario-de-vivienda-(homeowner's-insurance)" data-block-key="e21ac">Seguro del propietario de vivienda (<b>Homeowner's insurance)</b></h2><p data-block-key="54oun">El “homeowner’s insurance” o seguro del propietario de vivienda, paga por daños que pueda sufrir su propiedad en caso de que algo inesperado suceda, como un incendio o un robo. Cuando usted tiene una hipoteca, su prestamista querrá asegurarse de que la propiedad esté protegida por un seguro. Por eso le exigirán que pruebe que cuenta con uno. El seguro del propietario de vivienda es diferente del <a href="https://www.consumerfinance.gov/es/herramientas-del-consumidor/hipotecas/respuestas/palabras-claves/#seguro-de-hipoteca-privado">seguro de hipoteca</a>.</p><p data-block-key="9snjr"><a href="https://www.consumerfinance.gov/es/prepararse-para-comprar-casa/">Conozca más sobre el proceso de comprar vivienda</a>.</p><p data-block-key="cdgdo"><br></p><hr><p data-block-key="21ivb"></p><h2 id="precio-de-compra-de-una-vivienda-(home-purchase-price)" data-block-key="1ixkv">Precio de compra de una vivienda (<b>Home purchase price)</b></h2><p data-block-key="58ak7">El precio de compra de una vivienda es el monto que el comprador acuerda pagar al vendedor para comprar la vivienda.</p><p data-block-key="bhmvr"><a href="https://www.consumerfinance.gov/owning-a-home/explore/find-the-right-home/">Sepa más sobre cómo encontrar la vivienda que más le convenga</a>&nbsp;(en inglés).</p><p data-block-key="avpnt"><br></p><hr><p data-block-key="cne3l"></p><h2 id="hud" data-block-key="sh1er">HUD</h2><p data-block-key="9r6hv">Los impuestos a la propiedad son cobrados por las autoridades locales, típicamente a nivel del municipio, y se basan en el valor de la propiedad. Los impuestos a la propiedad son frecuentemente cobrados en la mensualidad de la hipoteca del propietario y luego cancelados a la autoridad respectiva, una o más veces cada año. Esta operación se denomina cuenta “escrow” o cuenta de depósito en garantía. Si el préstamo no tiene una cuenta “escrow” significa que el propietario pagará directamente los impuestos a la propiedad.</p><p data-block-key="dtlb5"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/como-encuentro-a-un-asesor-de-vivienda-aprobado-por-el-departamento-de-vivienda-y-desarrollo-urbano-de-eeuu-hud-es-261/">Encuentre un consejero aprobado por el HUD</a>.</p><p data-block-key="5n7dc"><br></p><hr><p data-block-key="8svvd"></p><h2 id="declaracion-de-cierre-hud-1-(hud-1-settlement-statement)" data-block-key="zulrs">Declaración de cierre HUD-1 (<b>HUD-1 settlement statement)</b></h2><p data-block-key="drv1a">La Declaración de Cierre HUD-1 es un documento que enumera todos los cargos y créditos al comprador y al vendedor, en una negociación de bienes raíces, o todos los cargos en la refinanciación de una hipoteca. Usted recibirá una Declaración HUD-1 si solicitó una hipoteca o hipoteca inversa, el 3 de octubre de 2015 o antes de esa fecha.</p><p data-block-key="263g9">Averigüe cuándo recibirá una&nbsp;<a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-declaracion-de-liquidacion-hud-1-hud-1-settlement-statement-es-178/">Declaración HUD-1</a>.</p><p data-block-key="6cpdj"><br></p><hr><p data-block-key="ep6oc"></p><h2 id="indice-(index)" data-block-key="vbkx3">Índice (<b>Index)</b></h2><p data-block-key="9dgjq">El índice es un tipo de interés referencial que refleja las condiciones generales del mercado. Los cambios en el índice están basados en el mercado. Estos cambios, junto al margen de su préstamo, determinarán los cambios en su tasa de interés, si usted tiene un préstamo de hipoteca con tasa ajustable.</p><p data-block-key="7ga04">Entienda cómo&nbsp;<a href="https://www.consumerfinance.gov/es/obtener-respuestas/para-una-hipoteca-de-tasa-ajustable-arm-cuales-son-el-indice-y-el-margen-y-como-funcionan-es-1949/">el índice afecta la tasa interés de una hipoteca con tasa ajustable</a>.</p><p data-block-key="6bkjo"><br></p><hr><p data-block-key="hvs6"></p><h2 id="limite-inicial-de-ajuste-(initial-adjustment-cap)" data-block-key="xwrcr">Límite inicial de ajuste (<b>Initial adjustment cap)</b></h2><p data-block-key="7j72a">Un “initial adjustment cap” o límite inicial de ajuste es un término típicamente asociado a las “adjustable rate mortgages”, ARM, o hipotecas con tasa ajustable. Este límite determina cuál es el máximo incremento de la tasa de interés al momento en que ésta se ajuste por primera vez, una vez haya expirado el período de tasa fija de la hipoteca. Es común que este límite sea del dos o del cinco por ciento, lo que significa que, al producirse el primer ajuste de tasa, la nueva no podrá ser mayor de dos (o cinco) puntos porcentuales, por encima de la tasa inicial del período de tasa fija de la hipoteca.</p><p data-block-key="foaq3"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/para-una-hipoteca-de-tasa-ajustable-arm-cuales-son-el-indice-y-el-margen-y-como-funcionan-es-1949/">Entienda como influye el índice en los préstamos de hipoteca con tasa ajustable</a>.</p><p data-block-key="c9div"><br></p><hr><p data-block-key="e0cdb"></p><h2 id="deposito-escrow-inicial-(initial-escrow-deposit)" data-block-key="3q9p3">Depósito escrow inicial (<b>Initial escrow deposit)</b></h2><p data-block-key="eoe72">Un depósito&nbsp;escrow inicial&nbsp;o en garantía es la cantidad que usted paga en el momento del cierre del préstamo para abrir su cuenta escrow o cuenta de depósito en garantía,&nbsp;si así se lo exige su prestamista.&nbsp;</p><p data-block-key="cr0sl"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-un-pago-inicial-de-deposito-en-garantia-escrow-es-160/">Leer más</a></p><p data-block-key="4l915"><br></p><hr><p data-block-key="50hd7"></p><h2 id="prestamo-de-solo-intereses-(interest-only-loan)" data-block-key="9v3u3">Préstamo de solo intereses (<b>Interest-only loan)</b></h2><p data-block-key="fnmpe">Una hipoteca de solo intereses es un préstamo con pagos programados que le obliga a pagar solo intereses durante un período de tiempo específico.&nbsp;</p><p data-block-key="baik2"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-un-prestamo-de-solo-intereses-es-101/">Leer más</a></p><p data-block-key="a7jiq"><br></p><hr><p data-block-key="c52m3"></p><h2 id="tasa-de-interes-(interest-rate)" data-block-key="aph4p">Tasa de interés (<b>Interest rate)</b></h2><p data-block-key="fgb1k">La tasa de interés de un préstamo es el costo que usted pagará cada año, expresado en porcentaje, por pedir dinero prestado. La misma no refleja tarifas u otros cargos que usted quizás deba pagar por el préstamo. Por ejemplo, si un préstamo de hipoteca es por $100,000, a una tasa de interés del 4 por ciento, significa que ese consumidor habrá acordado pagar $4,000 cada año que tome prestada o deba esa cantidad completa.</p><p data-block-key="dg8qe"><a href="https://www.consumerfinance.gov/owning-a-home/explore-rates/">Explore las tasas de interés en su área</a>&nbsp;(en inglés).</p><p data-block-key="6pq1g"><br></p><hr><p data-block-key="fiekp"></p><h2 id="tasa-de-interes-maxima-durante-la-vigencia-del-prestamo-(interest-rate-cap)" data-block-key="l4vs1">Tasa de interés máxima durante la vigencia del préstamo (<b>Interest rate cap)</b></h2><p data-block-key="6rvoc">La “Lifetime adjustment cap” o límite de la tasa de interés durante la vigencia del préstamo, es usado con hipotecas de tasa ajustable (ARM por sus siglas en inglés). Este límite determina cuánto puede aumentar en total la tasa de interés a lo largo del plazo del préstamo. Por ejemplo, si el límite es cinco por ciento, significa que la tasa nunca puede ser más de cinco puntos mayor que la tasa inicial de la hipoteca. Algunos prestamistas podrían tener límites distintos o más altos.</p><p data-block-key="8npog"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/para-una-hipoteca-de-tasa-ajustable-arm-cuales-son-el-indice-y-el-margen-y-como-funcionan-es-1949/">Entienda como influye el índice en los préstamos de hipoteca con tasa ajustable</a>.</p><p data-block-key="b2sme"><br></p><hr><p data-block-key="736ud"></p><h2 id="prestamo-jumbo-(jumbo-loan)" data-block-key="tbmkf">Préstamo jumbo (<b>Jumbo loan)</b></h2><p data-block-key="7607t">Cada año, Fannie Mae, Freddie Mac, y su entidad reguladora (la Agencia Federal de Finanzas para Vivienda, FHFA) fijan una cantidad máxima de préstamos que les compran a los prestamistas.&nbsp;</p><p data-block-key="36e7c"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-un-prestamo-jumbo-es-116/">Leer más</a></p><p data-block-key="6ghuv"><br></p><hr><p data-block-key="flpqh"></p><h2 id="seguro-de-titulo-del-prestamista-(lenders-title-insurance)" data-block-key="1yz4s">Seguro de título del prestamista (<b>Lenders title insurance)</b></h2><p data-block-key="3172c">El seguro de título del prestamista protege a su prestamista frente a problemas con el título de su propiedad, como que alguien tenga una reclamación legal contra la vivienda. El seguro de título del prestamista sólo protege al prestamista frente a problemas con el título. Para protegerse usted mismo, puede contratar un seguro de título del propietario.</p><p data-block-key="dv6of"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-el-seguro-de-titulo-del-prestamista-es-163/">Leer más</a></p><p data-block-key="bker1"><br></p><hr><p data-block-key="6jo4n"></p><h2 id="limite-de-la-tasa-de-interes-(lifetime-adjustment-cap)" data-block-key="dhu0e">Límite de la tasa de interés (<b>Lifetime adjustment cap)</b></h2><p data-block-key="dacmn">Un límite de la tasa de interés, también conocido como límite anual, es el máximo incremento que puede experimentar anualmente la tasa de interés de una “adjustable rate mortgage”, ARM, o hipoteca de tasa ajustable, inclusive si la tasa de interés del mercado aumentase más. Por ejemplo; si este límite es de cinco por ciento, la nueva tasa de interés no puede ser más de cinco puntos porcentuales mayor que la tasa anterior.</p><p data-block-key="4eaiu"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/para-una-hipoteca-de-tasa-ajustable-arm-cuales-son-el-indice-y-el-margen-y-como-funcionan-es-1949/">Entienda como influye el índice en los préstamos de hipoteca con tasa ajustable</a>.</p><p data-block-key="8c6sc"><br></p><hr><p data-block-key="7e4o1"></p><h2 id="asuncion-del-prestamo-(loan-assumption)" data-block-key="7g5l8">Asunción del préstamo (<b>Loan assumption)</b></h2><p data-block-key="10dfp">La asunción del préstamo se produce cuando un comprador se hace cargo de la hipoteca de un vendedor al adquirir la vivienda de éste. El comprador se hace cargo del saldo restante adeudado en la hipoteca del vendedor, en las condiciones originales del préstamo; por ejemplo, la tasa de interés y la duración restante de la hipoteca. Una asunción de préstamo puede tener sentido desde el punto de vista financiero cuando se ofrecen nuevas hipotecas a tasas de interés más altas que cuando el vendedor suscribió originalmente su hipoteca.</p><p data-block-key="1sqll">La diferencia entre el precio de venta de la vivienda y el saldo del préstamo asumido equivale a la cantidad que el comprador tiene que pagar, ya sea de su bolsillo o suscribiendo su propio préstamo hipotecario.</p><p data-block-key="fle3r">Para hacerse cargo de la hipoteca, el comprador de la vivienda tiene que reunir los requisitos para la asunción del préstamo. La calificación suele basarse en una revisión del crédito y los ingresos del comprador, similar a la calificación para una nueva hipoteca.</p><p data-block-key="2d1fr">La asunción del préstamo también podría aplicarse cuando usted recibe el título de una propiedad que tiene una hipoteca, por ejemplo, después de una muerte o divorcio.</p><p data-block-key="2ubr"><br></p><hr><p data-block-key="2hkbu"></p><h2 id="ampliacion-del-prestamo-(loan-deferment)" data-block-key="tgy4w">Ampliación del préstamo (<b>Loan deferment)</b></h2><p data-block-key="aar4c">Los prestatarios que tienen dificultades para hacer frente a los pagos de una hipoteca suelen tener derecho a pedir ayuda al administrador hipotecario. El administrador puede acordar un aplazamiento del préstamo, que permite al prestatario evitar la ejecución hipotecaria aplazando los pagos vencidos de su hipoteca. El importe aplazado vence cuando el prestatario refinancia el préstamo o vende la casa, o la hipoteca finaliza de otro modo.</p><p data-block-key="4j247"><br></p><hr><p data-block-key="dc1d7"></p><h2 id="estimacion-de-prestamo-(loan-estimate)" data-block-key="5g2dn">Estimación de préstamo (<b>Loan Estimate)</b></h2><p data-block-key="8sp21">La Estimación del Préstamo es un formulario de tres páginas que usted recibe después de solicitar una hipoteca.</p><p data-block-key="uj50"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-estimacion-del-prestamo-es-1995/">Leer más</a></p><p data-block-key="7rjb5"><br></p><hr><p data-block-key="rm4u"></p><h2 id="modificacion-de-prestamo-(loan-modification)" data-block-key="s5bz7">Modificación de préstamo (<b>Loan modification)</b></h2><p data-block-key="2t2vb">La modificación de un préstamo hipotecario es un cambio en los términos del mismo. La modificación es un tipo de <a href="https://www.consumerfinance.gov/es/herramientas-del-consumidor/hipotecas/respuestas/palabras-claves/#mitigacion-de-perdidas">mitigación de pérdidas</a>. Una modificación puede reducir sus mensualidades a un monto que usted pueda costear. Las modificaciones pueden implicar una extension del número de años que tiene para pagar el préstamo, una reducción de la tasa de interés, y/o un aplazamiento, o una reducción de su saldo de capital. Si le ofrecen una modificación de préstamo, asegúrese de saber cómo ésta va a cambiar sus pagos mensuales y el monto total que pagará en el corto y largo plazo.</p><p data-block-key="8oem6"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-modificacion-del-prestamo-hipotecario-es-269/">Leer más</a></p><p data-block-key="9sc84"><br></p><hr><p data-block-key="1ali6"></p><h2 id="relacion-prestamo-contra-valor-(loan-to-value-ratio)" data-block-key="yocfo">Relación préstamo contra valor (<b>Loan-to-value ratio)</b></h2><p data-block-key="enbni">La “loan-to-value ratio”, LTV, o índice de relación préstamo al valor, es una medida usada para comparar el monto de su primera hipoteca, contra el valor tasado de la propiedad. Cuanto más alto sea su pago inicial, menor será su índice LTV. Los prestamistas hipotecarios podrían usar el LTV para decidir si otorgarle un préstamo, y para determinar si deberán exigirle que obtenga seguro hipotecario privado.</p><p data-block-key="aa0ag">Sepa&nbsp;<a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-la-relacion-prestamo-a-valor-ltv-y-como-se-relaciona-con-mis-costos-es-121/">cómo se afecta su índice de relación préstamo al valor a sus costos</a>.</p><p data-block-key="fc4n4"><br></p><hr><p data-block-key="7991p"></p><h2 id="mitigacion-de-perdidas-(loss-mitigation)" data-block-key="jcwma">Mitigación de pérdidas (<b>Loss mitigation)</b></h2><p data-block-key="davih">La mitigación de pérdidas se refiere a los pasos que los administradores de hipotecas toman para trabajar junto a un prestatario para evitar un “foreclosure” o ejecución hipotecaria. La mitigación de pérdidas también se refiere a la responsabilidad que tiene el administrador de reducir la pérdida que puede experimentar el inversionista proveniente de una ejecución hipotecaria. Ciertas opciones de mitigación de pérdidas podrían ayudarle a permanecer en su vivienda. Otras podrían ayudarle a dejar su vivienda sin tener que pasar por una ejecución. Las opciones de mitigación de pérdidas incluyen al “deed-in-lieu of foreclosure” o <a href="https://www.consumerfinance.gov/es/herramientas-del-consumidor/hipotecas/respuestas/palabras-claves/#escritura-en-lugar-de-ejecucion-hipotecaria">escritura por ejecución hipotecaria</a>, “forbearance” o <a href="https://www.consumerfinance.gov/es/herramientas-del-consumidor/hipotecas/respuestas/palabras-claves/#aplazamiento-de-pagos">aplazamiento de pagos</a>, un <a href="https://www.consumerfinance.gov/es/herramientas-del-consumidor/hipotecas/respuestas/palabras-claves/#plan-de-pagos">plan de pagos</a>, una “short sale” o <a href="https://www.consumerfinance.gov/es/herramientas-del-consumidor/hipotecas/respuestas/palabras-claves/#vento-en-corto">venta en corto</a>, o una <a href="https://www.consumerfinance.gov/es/herramientas-del-consumidor/hipotecas/respuestas/palabras-claves/#modificacion-de-prestamo-hipotecario">modificación de préstamo</a>.</p><p data-block-key="2kkh6">Si usted tiene dificultades pagando su hipoteca o si le han ofrecido y está considerando alguna opción de mitigación de pérdidas, comuníquese con algún asesor de vivienda, aprobado por el Departamento de Vivienda y Desarrollo Urbano (HUD, por sus siglas en ingles).</p><p data-block-key="ft2h2">Puede usar la herramienta del CFPB, “<a href="https://www.consumerfinance.gov/find-a-housing-counselor/">Encuentre un Asesor</a>” (en inglés), donde obtendrá una lista de asesores de vivienda, aprobados por el HUD, que estén en su área. También puede llamar a la <a href="https://www.consumerfinance.gov/es/obtener-respuestas/escuche-sobre-algo-llamado-la-linea-de-ayuda-hope-que-es-eso-es-263/">línea HOPE®</a>, la cual está disponible las veinticuatro horas, los siete días de la semana, al (888) 995-HOPE (4673).</p><p data-block-key="a39mp"><br></p><hr><p data-block-key="lnbb"></p><h2 id="margen-(margin)" data-block-key="8lgct">Margen (<b>Margin)</b></h2><p data-block-key="c71d8">El margen es el número de puntos de porcentaje que el prestamista agrega al índice para determinar la tasa de interés bajo una hipoteca de interés ajustable (ARM, por sus siglas en inglés), luego que el período de la tasa inicial o introductoria termine. El margen se determina en el contrato de su préstamo y no cambiará después del cierre.</p><p data-block-key="2jsp7">Entienda cómo <a href="https://www.consumerfinance.gov/es/obtener-respuestas/para-una-hipoteca-de-tasa-ajustable-arm-cuales-son-el-indice-y-el-margen-y-como-funcionan-es-1949/">el margen afecta a un préstamo de tasa ajustable</a>.</p><p data-block-key="a2df0"><br></p><hr><p data-block-key="9ublo"></p><h2 id="gastos-mensuales-(monthly-expenses)" data-block-key="woidg">Gastos mensuales (<b>Monthly expenses)</b></h2><p data-block-key="1k2b1">Los gastos mensuales representan cuánto gasta usted cada mes. Pueden incluir, sin limitarse a éstos, los compromisos recurrentes como los pagos de renta o hipoteca, de servicios públicos, manutención de menores y seguros, además de reglones esenciales como alimentos. La mayoría de estos compromisos tienen una fecha fija de vencimiento.</p><p data-block-key="mdk7"><a href="https://www.consumerfinance.gov/about-us/blog/una-herramienta-facil-para-vigilar-sus-gastos/">Revise sus gastos mensuales con esta tabla de control de gastos</a> (en inglés)</p><p data-block-key="5mbj0"><br></p><hr><p data-block-key="1mpor"></p><h2 id="hipoteca-(mortgage)" data-block-key="l4ter">Hipoteca (<b>Mortgage)</b></h2><p data-block-key="6skjf">Una hipoteca es un acuerdo entre usted y el prestamista, que le permitirá tomar dinero prestado para comprar o refinanciar una vivienda, y da el derecho al prestamista de tomar su propiedad, si usted no paga el dinero que le ha prestado.</p><p data-block-key="fqh1i">Si usted está listo para tomar una hipoteca, <a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-hipoteca-es-99/">sepa más acerca de cómo comprar una vivienda</a>.</p><p data-block-key="8fvic"><br></p><hr><p data-block-key="5tpc3"></p><h2 id="lista-de-pasos-para-un-cierre-de-hipoteca-(mortgage-closing-checklist)" data-block-key="bp7fk">Lista de pasos para un cierre de hipoteca (<b>Mortgage closing checklist)</b></h2><p data-block-key="6ikv1">La lista de pasos para un cierre de hipoteca puede usarse para prepararse y saber así qué esperar en este proceso. La misma puede ayudarle a identificar preguntas que puede hacer con anticipación para así, cerrar su trato con confianza.</p><p data-block-key="dcrbp"><a href="https://www.consumerfinance.gov/owning-a-home/close/#tools">Use esta hoja de trabajo para prepararse para el cierre</a> (en inglés).</p><p data-block-key="dd315"><br></p><hr><p data-block-key="achet"></p><h2 id="costos-de-cierre-de-hipoteca-(mortgage-closing-costs)" data-block-key="205m5">Costos de cierre de hipoteca (<b>Mortgage closing costs)</b></h2><p data-block-key="5gen4">Los costos de cierre de hipoteca son todos los costos que usted pagará durante ese proceso. Estos incluyen cargos por iniciación del préstamo, tarifas de tasación, costo de informes de crédito, tarifas por seguro del título y cualquiera otra tarifa que su prestamista exija o que se pague como parte de cualquier transacción relacionada con una hipoteca de bienes raíces. Los prestamistas están obligados a entregarle una lista de estos costos en la <a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-estimacion-del-prestamo-es-1995/">Estimación del Préstamo</a>.</p><p data-block-key="e6gh8"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-un-cierre-de-hipoteca-que-sucede-en-el-cierre-es-176/">Sepa más sobre lo que sucede durante el cierre</a>.</p><p data-block-key="4337c"><br></p><hr><p data-block-key="eccv2"></p><h2 id="seguro-de-hipoteca-privado-(mortgage-insurance)" data-block-key="dbyw2">Seguro de hipoteca privado (<b>Mortgage insurance)</b></h2><p data-block-key="e0uua">El seguro hipotecario protege al prestamista en caso de que usted se atrase en sus pagos. El seguro hipotecario, típicamente, se le exige si hizo un pago de cuota inicial menor al 20 por ciento del valor de la propiedad. El seguro hipotecario es también típicamente exigido para préstamos de la Administración Federal de Vivienda o FHA, y del Departamento de Agricultura, o USDA. Sin embargo, si usted tiene un préstamo convencional, y su cuota inicial es menor al 20 por ciento del valor de la vivienda, muy probablemente tendrá que pagar un seguro hipotecario privado (PMI, por sus siglas en inglés).</p><p data-block-key="bn660"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-un-seguro-hipotecario-y-como-funciona-es-1953/">Entienda cómo funciona el seguro hipotecario</a>.</p><p data-block-key="8j1er"><br></p><hr><p data-block-key="7hres"></p><h2 id="modificacion-de-prestamo-hipotecario-(mortgage-loan-modification)" data-block-key="z4mqt">Modificación de préstamo hipotecario (<b>Mortgage loan modification)</b></h2><p data-block-key="5pq6i">Una modificación de préstamo hipotecario es un cambio a los términos de su préstamo. La modificación es un tipo de mitigación de pérdidas.</p><p data-block-key="88n42"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-modificacion-del-prestamo-hipotecario-es-269/">Leer más</a></p><p data-block-key="15adt"><br></p><hr><p data-block-key="1d1ie"></p><h2 id="refinanciamiento-(mortgage-refinance)" data-block-key="51cym">Refinanciamiento (<b>Mortgage refinance)</b></h2><p data-block-key="6jc54">Cuando toma un nuevo préstamo para reemplazar uno anterior, usted está refinanciando su hipoteca. Las razones más comunes para refinanciar son; bajar la tasa mensual de interés, reducir el pago de la hipoteca, o pedir prestado más dinero. Cuando usted refinancia, usualmente tendrá que pagar costos de cierre y tarifas. Si al refinanciar obtiene una mensualidad menor, asegúrese de entender cuánto de esa reducción se debe a una tasa de interés menor, y cuánto a un plazo del préstamo más largo.</p><p data-block-key="6427b"><a class="a-link" href="https://files.consumerfinance.gov/f/documents/cfpb_should-i-refinance_handout_es.pdf"><span class="a-link__text">¿Debería refinanciar?</span> <svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewBox="0 0 12 19" xmlns="http://www.w3.org/2000/svg"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg></a></p><p data-block-key="4gc8a"><a class="a-link" href="https://www.federalreserve.gov/pubs/refinancings/"><span class="a-link__text">A Consumer’s Guide to Mortgage Refinancings</span> <svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19" xmlns="http://www.w3.org/2000/svg"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg></a> (en inglés)</p><p data-block-key="8k38a"><a class="a-link" href="https://files.consumerfinance.gov/f/documents/cfpb_your-home-loan-toolkit_es.pdf"><span class="a-link__text">Su conjunto de herramientas para préstamos hipotecarios</span> <svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewBox="0 0 12 19" xmlns="http://www.w3.org/2000/svg"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg></a></p><p data-block-key="ae247"><a class="a-link" href="https://files.consumerfinance.gov/f/documents/cfpb_charm_booklet-es.pdf"><span class="a-link__text">Guía del consumidor para entender las hipotecas con Tasa de Interés Ajustable (ARM)</span> <svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--download" viewBox="0 0 12 19" xmlns="http://www.w3.org/2000/svg"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.476.476 0 0 1-.475-.475V3.046a.476.476 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.925H8.059a.575.575 0 0 1-.574-.573V3.679H1.95v11.84h8.102zm-1.234 5.604L6.388 14.26a.554.554 0 0 1-.784 0l-2.428-2.428a.554.554 0 1 1 .783-.784l1.483 1.482V7.41a.554.554 0 1 1 1.108 0v5.12l1.482-1.482a.554.554 0 0 1 .784.783z"></path></svg></a></p><p data-block-key="8opfh"><br></p><hr><p data-block-key="vf20"></p><h2 id="plazo-de-hipoteca-(mortgage-term)" data-block-key="8te59">Plazo de hipoteca (<b>Mortgage term)</b></h2><p data-block-key="80nth">El plazo de su préstamo de hipoteca indica el tiempo en que usted tendrá que pagarlo. Los plazos de las hipotecas, para la mayoría de los tipos de viviendas, son 15, 20 o 30 años.</p><p data-block-key="5acc2"><a href="https://www.consumerfinance.gov/owning-a-home/explore/understand-the-different-kinds-of-loans-available">Leer más</a> (en inglés)</p><p data-block-key="ds677"><br></p><hr><p data-block-key="a49tk"></p><h2 id="tarifa-por-emision-del-prestamo-(origination-fee)" data-block-key="jkksb">Tarifa por emisión del préstamo (<b>Origination fee)</b></h2><p data-block-key="1taar">Una tarifa por emisión de un préstamo es el cobro que hace el prestamista por tramitar el préstamo hipotecario. La tarifa por emisión podría incluir el procesamiento de la solicitud, la escritura y financiación del préstamo, y otros servicios administrativos. Generalmente, las tarifas de emisión de un préstamo sólo podrían aumentar bajo ciertas circunstancias.</p><p data-block-key="a79s0">Sepa más sobre los&nbsp;<a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-son-los-servicios-de-originacion-de-un-prestamo-hipotecario-que-es-un-costo-de-originacion-es-155/">costos de emisión de una hipoteca</a>.</p><p data-block-key="aslgb"><br></p><hr><p data-block-key="aigrs"></p><h2 id="seguro-de-titulo-del-propietario-(owner's-title-insurance)" data-block-key="99gxz">Seguro de título del propietario (<b>Owner's title insurance)</b></h2><p data-block-key="4hk56">El seguro de título del propietario proporciona una protección a dicho propietario si alguien le demanda y dice que tiene un reclamo contra la vivienda desde antes de que&nbsp;el propietario&nbsp;la haya comprado.</p><p data-block-key="3d4od"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-el-seguro-del-titulo-del-propietario-es-164/">Leer más</a></p><p data-block-key="7q8lh"><br></p><hr><p data-block-key="50rl2"></p><h2 id="financiacion-pace-(pace-financing)" data-block-key="xjgh4">Financiación PACE (<b>PACE financing)</b></h2><p data-block-key="8t2a">La financiación PACE proporciona una manera de pagar por mejoras a la eficiencia energética de la propiedad.</p><p data-block-key="7907e"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-un-prestamo-pace-es-1979/">Leer más</a></p><p data-block-key="du3ah"><br></p><hr><p data-block-key="cpfn5"></p><h2 id="reclamacion-parcial-(partial-claim)" data-block-key="euxqz">Reclamación parcial (<b>Partial claim)</b></h2><p data-block-key="43lg1">Una reclamación parcial es una forma de utilizar el seguro hipotecario para ayudar a un propietario en apuros a evitar la ejecución hipotecaria. El administrador hipotecario presenta una reclamación contra el seguro hipotecario por el importe de los pagos hipotecarios no efectuados, y el asegurador reserva el dinero en una cuenta separada. Después, cuando el prestatario refinancia la hipoteca, vende la casa o rescinde la hipoteca de cualquier otro modo, el importe de la reclamación parcial se abona al administrador hipotecario. A veces, el importe de la reclamación parcial no cubre el importe total de los pagos no efectuados, y en esos casos el prestatario debe pagar la diferencia.</p><p data-block-key="358f7"><br></p><hr><p data-block-key="ae19m"></p><h2 id="monto-del-saldo-restante-(payoff-amount)" data-block-key="xfv02">Monto del saldo restante (<b>Payoff amount)</b></h2><p data-block-key="a251e">La cantidad de su saldo restante es lo que usted tendrá que pagar para cumplir con los términos de su préstamo hipotecario y pagar la deuda por completo. La cantidad de su saldo restante es diferente a la de su saldo actual. Su importe de amortización es la cantidad que tendrá que pagar realmente para satisfacer las condiciones de su préstamo hipotecario y saldar completamente su deuda. Su importe de amortización es diferente de su saldo actual. Su saldo actual puede no reflejar cuánto tendrá que pagar realmente para satisfacer completamente el préstamo. Su importe de amortización también incluye el pago de cualquier interés que deba hasta el día en que pretende liquidar su préstamo. El importe de amortización también puede incluir otras cuotas en las que haya incurrido y que aún no haya pagado.</p><p data-block-key="gkf8"><br></p><hr><p data-block-key="8463r"></p><h2 id="ordenes-de-cambio-permanente-de-estacion-(pcs-orders)" data-block-key="8siq5">Órdenes de cambio permanente de estación (<b>PCS orders)</b></h2><p data-block-key="805ql">Los militares en servicio activo pueden recibir órdenes de “permanent change of station” (PCS), o cambio permanente de estación. La orden PCS significa la reubicación oficial de un militar (y cualquier familiar que viva con él o ella) a una estación de servicio diferente. Si posee una vivienda, podría escoger venderla. Si debe más de lo que esté valorada la vivienda, podría tener problemas vendiéndola. Algunos administradores ofrecen programas para que los militares pueden vender sus viviendas, sin tener luego que pagar el resto del saldo de sus préstamos. Para saber más, visite nuestros <a href="https://www.consumerfinance.gov/consumer-tools/military-financial-lifecycle/">recursos para militares</a> (en inglés).</p><p data-block-key="32t6n"><br></p><hr><p data-block-key="56j7f"></p><h2 id="piti" data-block-key="hwga7">PITI</h2><p data-block-key="cb3r1">Capital, interés, impuestos y seguro, conocido como PITI (por sus siglas en inglés), son los cuatro elementos básicos de un pago&nbsp;mensual&nbsp;hipotecario.&nbsp;</p><p data-block-key="5jsrm"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-significa-piti-es-152/">Leer más</a></p><p data-block-key="c3tn4"><br></p><hr><p data-block-key="acquk"></p><h2 id="pmi" data-block-key="dgcww">PMI</h2><p data-block-key="d3ri2">El “Private Mortgage Insurance“, PMI, o seguro hipotecario privado, es un tipo de seguro hipotecario que protege a su prestamista. Puede que le exijan que pague por PMI si usted tiene un préstamo convencional y su cuota inicial es menor al 20 por ciento del valor de la propiedad. Usted podría cancelar el PMI una vez que haya acumulado cierto capital sobre su vivienda.</p><p data-block-key="a1msh"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-el-seguro-hipotecario-privado-es-122/">Entienda cuándo es requerido el PMI</a>.</p><p data-block-key="9gddi"><br></p><hr><p data-block-key="af4lg"></p><h2 id="cargos-por-intereses-prepagados-(prepaid-interest-charges)" data-block-key="9vnl6">Cargos por intereses prepagados (<b>Prepaid interest charges)</b></h2><p data-block-key="gf9p">Los cargos por intereses prepagados son cargos que deben pagarse en la fecha de cierre por concepto de intereses diarios, que se acumulan sobre su préstamo entre la fecha de cierre y el período cubierto por su primer pago mensual de hipoteca.</p><p data-block-key="1kn5c"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-son-los-cargos-de-intereses-prepagados-es-161/">Leer más</a></p><p data-block-key="9088l"><br></p><hr><p data-block-key="2juof"></p><h2 id="penalidad-por-pago-anticipado-(prepayment-penalty)" data-block-key="5cybn">Penalidad por pago anticipado (<b>Prepayment penalty)</b></h2><p data-block-key="1qa8q">Una penalidad por pago anticipado es un recargo que cobran algunos prestamistas cuando usted paga ya sea una parte o toda su hipoteca con anticipación. Si usted está sujeto a una multa por pago anticipado, usted tendría que haberla aceptado cuando cerró el préstamo hipotecario de su vivienda. No todas las hipotecas tienen una multa por pago anticipado.</p><p data-block-key="c12av"><br></p><hr><p data-block-key="9i75r"></p><h2 id="capital-(principal)" data-block-key="787my">Capital (<b>Principal)</b></h2><p data-block-key="4238q">El capital o principal, en inglés “equity” o “principal”, es el monto del préstamo de hipoteca que usted debe pagar. Sus pagos mensuales incluyen una porción de ese capital. Cuando hace un pago al capital, el prestatario debe menos y también pagará menos intereses gracias al menor tamaño del préstamo.&nbsp;</p><p data-block-key="fb0av"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/en-una-hipoteca-cual-es-la-diferencia-entre-mi-pago-de-capital-e-interes-y-mi-pago-mensual-total-es-1941/">Entienda la diferencia entre la tasa de interés y el capital</a>.</p><p data-block-key="4eq5p"><br></p><hr><p data-block-key="4dg3j"></p><h2 id="impuestos-sobre-la-propiedad-(property-taxes)" data-block-key="2k2vx">Impuestos sobre la propiedad (<b>Property taxes)</b></h2><p data-block-key="9r9bs">Los impuestos sobre la propiedad son tributos cobrados por las jurisdicciones locales, normalmente a nivel de condado, basados en el valor de la propiedad gravada. A menudo, los impuestos sobre la propiedad se recaudan con el pago mensual de la hipoteca del propietario y luego se pagan a la jurisdicción correspondiente una o varias veces al año. Esto se denomina cuenta de depósito en garantía. Si el préstamo no tiene una cuenta de depósito en garantía, entonces el propietario pagará directamente los impuestos sobre la propiedad.</p><p data-block-key="25nmt"><a href="https://www.consumerfinance.gov/es/prepararse-para-comprar-casa/">Conozca más sobre el proceso de comprar vivienda</a>.</p><p data-block-key="6a6bk"><br></p><hr><p data-block-key="8fe8f"></p><h2 id="hipoteca-calificada-(qualified-mortgage)" data-block-key="2or2k">Hipoteca calificada (<b>Qualified mortgage)</b></h2><p data-block-key="8aqpr">Una Hipoteca calificada es una categoría de préstamos que tienen ciertas características, más estables, y que brindan una mayor probabilidad de que usted pueda hacer los pagos de su préstamo.</p><p data-block-key="agfso"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-hipoteca-calificada-es-1789/">Leer más</a></p><p data-block-key="16tnd"><br></p><hr><p data-block-key="i19c"></p><h2 id="peticion-calificada-por-escrito-(qualified-written-request-qwr)" data-block-key="9oipi">Petición calificada por escrito (<b>Qualified Written Request - QWR)</b></h2><p data-block-key="8d8mf">Una Petición Calificada&nbsp;por Escrito&nbsp;(QWR, por sus siglas en inglés) es una correspondencia escrita que usted, o alguien que actúe en su nombre, puede enviar al administrador hipotecario. En lugar de una QWR, usted también puede enviar a su administrador hipotecario un Aviso de Error o una Solicitud de Información.</p><p data-block-key="bhu1v"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-peticion-calificada-por-escrito-un-qwr-es-207/">Leer más</a></p><p data-block-key="62btq"><br></p><hr><p data-block-key="9arlf"></p><h2 id="plan-de-pagos-(repayment-plan)" data-block-key="94hvj">Plan de pagos (<b>Repayment plan)</b></h2><p data-block-key="4s719">Un plan de pagos es una forma estructurada de reponer los pagos que haya dejado de hacer a su hipoteca, en un determinado período de tiempo. Esto es un tipo de <a href="https://www.consumerfinance.gov/es/herramientas-del-consumidor/hipotecas/respuestas/palabras-claves/#mitigacion-de-perdidas">mitigación de pérdidas</a>. Si tiene problemas pagando su hipoteca, el administrador de la misma podría permitirle entrar en un plan de pagos. Antes de hacerlo, asegúrese de entender los requisitos del plan y que podrá hacer los nuevos pagos.</p><p data-block-key="b465"><br></p><hr><p data-block-key="2c9k6"></p><h2 id="hipoteca-inversa-(reverse-mortgage)" data-block-key="wyj3j">Hipoteca inversa (<b>Reverse mortgage)</b></h2><p data-block-key="4b0sg">Un préstamo de hipoteca inversa permite a los propietarios de vivienda, de 62 o más años, pedir dinero prestado, usando el capital acumulado en dicha vivienda como garantía. Se le llama hipoteca inversa porque, en vez de pagar al prestamista, usted recibe dinero de éste. Ese dinero que recibe, más los intereses que le cobran, aumentan cada mes el saldo de su préstamo. La mayoría de las hipotecas inversas son denominadas Hipotecas para la Conversión del Capital Acumulado en la Vivienda, o HECM por sus siglas en inglés.</p><p data-block-key="2uv66">Sepa&nbsp;<a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-debo-tener-en-cuenta-antes-de-solicitar-una-hipoteca-inversa-y-que-debo-preguntarle-a-un-asesor-de-hipotecas-inversas-es-228/">qué debe considerar antes de solicitar una hipoteca inversa</a>.</p><p data-block-key="k13e"><br></p><hr><p data-block-key="a4nm1"></p><h2 id="derecho-de-rescicion-(right-of-rescission)" data-block-key="w6tyh">Derecho de rescición (<b>Right of rescission)</b></h2><p data-block-key="94a27">El derecho de rescisión se refiere al derecho que tienen los consumidores de cancelar ciertos tipos de préstamos. Si está comprando una vivienda, una vez que los documentos de cierre estén firmados, usted yo no tendrá el derecho a rescindir el préstamo. Sin embargo, si está refinanciando una hipoteca, tendrá hasta la media noche, del tercer día hábil luego de hecha la transacción, para rescindir el contrato de la hipoteca. El conteo de los tres días comienza cuando usted firma el contrato del crédito (usualmente, conocido como “promisory note” o pagaré), usted recibirá una planilla de <a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-divulgacion-de-veracidad-en-el-prestamo-es-180/">Divulgación de Veracidad en el Préstamo</a>, y dos copias de una notificación donde se explica su derecho a rescindir.</p><p data-block-key="99hic"><br></p><hr><p data-block-key="c0s7"></p><h2 id="segunda-hipoteca-(second-mortgage)" data-block-key="b6dbp">Segunda hipoteca (<b>Second mortgage)</b></h2><p data-block-key="bbkfa">Una segunda hipoteca o gravamen "junior", es un préstamo que obtiene ofreciendo su casa como garantía colateral, mientras usted aún tiene otro préstamo cuya garantía en su vivienda.</p><p data-block-key="and36"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-una-segunda-hipoteca-o-junior-lien-es-105/">Sepa más sobre segundas hipotecas</a>.</p><p data-block-key="b4i70"><br></p><hr><p data-block-key="b1362"></p><h2 id="interes-de-seguridad-(security-interest)" data-block-key="6dvws">Interés de seguridad (<b>Security interest)</b></h2><p data-block-key="4t58s">El interés de garantía es lo que permite al prestamista ejecutar la hipoteca si usted no paga el dinero que pidió prestado.</p><p data-block-key="5vi7n"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/los-formularios-de-cierre-de-la-hipoteca-mencionan-un-interes-de-garantia-que-es-un-interes-de-garantia-es-1999/">Leer más</a></p><p data-block-key="b47ih"><br></p><hr><p data-block-key="51g8u"></p><h2 id="financiamiento-por-el-vendedor-(seller-financing)" data-block-key="tujea">Financiamiento por el vendedor (<b>Seller financing)</b></h2><p data-block-key="4to48">El financiamiento del vendedor es un préstamo que el vendedor de la vivienda le otorga a usted.&nbsp;</p><p data-block-key="ejlp"><br></p><hr><p data-block-key="9hf0p"></p><h2 id="administrador-de-prestamos-(servicer)" data-block-key="sc17q">Administrador de préstamos (<b>Servicer)</b></h2><p data-block-key="8m4b8">El administrador de su préstamo es la compañía que le envía los estados de cuenta de su hipoteca. El administrador también las tareas del día a día del manejo de su préstamo. Tipicamente, también proceso sus pagos, responde a las preguntas o dudas de los prestamistas, mantiene un seguimiento de los intereses pagados y maneja su&nbsp;cuenta <a href="https://www.consumerfinance.gov/es/herramientas-del-consumidor/hipotecas/respuestas/palabras-claves/#cuenta-escrow-o-de-deposito-en-garantia">escrow&nbsp;o de depósitos en garantía</a> (si es que usted tiene una). El administrador también podría, bajo ciertas circunstancias, comenzar un proceso de “foreclosure” o ejecución hipotecaria. El administrador podría ser la misma compañía que originalmente le otorgó su préstamo.</p><p data-block-key="a4v69"><br></p><hr><p data-block-key="9pkgo"></p><h2 id="apreciacion-de-hipoteca-compartida-(shared-appreciation-mortgage)" data-block-key="nxo31">Apreciación de hipoteca compartida (<b>Shared appreciation mortgage)</b></h2><p data-block-key="e4qrj">En una hipoteca de apreciación compartida, usted acepta darle al prestamista una parte de cualquier aumento en el valor de su vivienda.&nbsp;</p><p data-block-key="et4b0"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/el-administrador-de-mi-prestamo-me-ofrecio-una-hipoteca-de-apreciacion-compartida-como-medio-de-modificacion-que-significa-eso-es-270/">Leer más</a></p><p data-block-key="4o92r"><br></p><hr><p data-block-key="68r37"></p><h2 id="venta-en-corto-(short-sale)" data-block-key="2o54p">Venta en corto (<b>Short sale)</b></h2><p data-block-key="6fjjq">Una venta en corto, que es un tipo de mitigación de pérdidas, es la venta de su vivienda por menos de lo que debe en su hipoteca. Una venta en corto es una alternativa a la ejecución hipotecaria, pero al tratarse de una venta, tendrá que abandonar su casa. Si su prestamista o administrador está de acuerdo con una venta en corto, es posible que pueda vender su casa para saldar su hipoteca, incluso si el precio de venta o los ingresos resultan ser inferiores al saldo restante de su hipoteca. Una venta en corto es un tipo de <a href="https://www.consumerfinance.gov/es/herramientas-del-consumidor/hipotecas/respuestas/palabras-claves/#mitigacion-de-perdidas">mitigación de pérdidas</a>. Si vive en un estado en el que es responsable de cualquier deficiencia, que es la diferencia entre el valor de su propiedad y la cantidad que aún debe en su préstamo hipotecario, querrá pedir a su prestamista que renuncie a la deficiencia. Si el prestamista renuncia a la deficiencia, obtenga la renuncia por escrito y guárdela para sus archivos.</p><p data-block-key="cfvj5"><br></p><hr><p data-block-key="ag1hr"></p><h2 id="hipoteca-de-mayor-riesgo-(subprime-mortgage)" data-block-key="0qmn8">Hipoteca de mayor riesgo (<b>Subprime mortgage)</b></h2><p data-block-key="cfhad">Cuando los prestamistas usan el término “subprime mortgage” o hipoteca de mayor riesgo, generalmente, se refieren a programas de préstamos, frecuentemente con tasas de interés más altas, para prestatarios quienes no califiquen para obtener un “prime loan” o préstamo de bajo riesgo.</p><p data-block-key="1kfcr"><a href="https://www.consumerfinance.gov/es/prepararse-para-comprar-casa/">Conozca más sobre el proceso de comprar vivienda</a>.</p><p data-block-key="4e5c0"><br></p><hr><p data-block-key="4efbb"></p><h2 id="survey-o-plano-de-una-propiedad-(survey)" data-block-key="zga2u">Survey o plano de una propiedad (<b>Survey)</b></h2><p data-block-key="1r9m5">Un plano o "survey" es un dibujo de su propiedad que muestra la ubicación del lote, la casa y cualquier otra estructura, así como cualquier mejora a la propiedad.</p><p data-block-key="6hdl3"><br></p><hr><p data-block-key="3k921"></p><h2 id="cargos-por-servicios-de-titulos-(title-service-fees)" data-block-key="hfcpy">Cargos por servicios de títulos (<b>Title service fees)</b></h2><p data-block-key="86oia">Los cargos por servicios de títulos forman parte de los costos de cierre que usted paga cuando obtiene una hipoteca. Cuando usted compra una vivienda, recibe un documento que se conoce comúnmente como escritura (deed), el cual muestra que el vendedor ha transferido legalmente la propiedad o título de la misma a usted. Los cargos por servicios de títulos son costos relacionados con la emisión de una póliza de seguro de título para el prestamista.</p><p data-block-key="fvh91"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-son-los-cargos-por-servicios-de-titulos-es-157/">Leer más</a></p><p data-block-key="6u360"><br></p><hr><p data-block-key="crgs1"></p><h2 id="porcentaje-de-interes-total-(total-interest-percentage-tip)" data-block-key="2nine">Porcentaje de interés total (<b>Total interest percentage - TIP)</b></h2><p data-block-key="6vk51">El Porcentaje de Interés Total (TIP, por sus siglas en inglés) le indica la cantidad de interés que usted pagará durante el plazo de su préstamo hipotecario, en comparación con la cantidad que pidió prestada.&nbsp;</p><p data-block-key="2uc1e"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-el-total-de-intereses-pagados-a-lo-largo-del-plazo-del-prestamo-tip-de-una-hipoteca-es-2001/">Leer más</a></p><p data-block-key="oeoo"><br></p><hr><p data-block-key="eo3ss"></p><h2 id="total-de-pagos-(total-of-payments)" data-block-key="egyft">Total de pagos (<b>Total of payments)</b></h2><p data-block-key="qpe1">Esta cifra le indica la cantidad total de dinero que habrá pagado durante el período de amortización de su hipoteca.</p><p data-block-key="8tfco"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-significa-total-de-pagos-cuando-se-obtiene-una-hipoteca-es-1925/">Leer más</a></p><p data-block-key="dqmef"><br></p><hr><p data-block-key="fsfv6"></p><h2 id="trid" data-block-key="yby8p">TRID</h2><p data-block-key="54cmf">"TRID" es un acrónimo que algunas personas usan para referirse al nombre en inglés de la norma de Divulgación Integrada de la Ley de Veracidad en los Préstamos (TILA-RESPA).</p><p data-block-key="b520t"><a href="https://www.consumerfinance.gov/es/obtener-respuestas/estoy-solicitando-un-prestamo-hipotecario-y-he-oido-mencionar-el-termino-trid-que-quiere-decir-trid-es-2011/">Leer más</a></p><p data-block-key="5skd6"><br></p><hr><p data-block-key="c75ql"></p><h2 id="prestamo-del-servicio-de-vivienda-rural-del-usda-departamento-de-agricultura-(usda-loan)" data-block-key="5zpz4">Préstamo del servicio de vivienda rural del USDA, Departamento de Agricultura (<b>USDA loan)</b></h2><p data-block-key="1ld28">El “Rural Housing Service”, o Servicio de Vivienda Rural, parte del Departamento de Agricultura (USDA por sus siglas en inglés), ofrece programas hipotecarios sin cuota inicial y tasas de interés favorables, a compradores de vivienda de zonas rurales, que tengan el nivel de ingresos requeridos para ser elegibles.</p><p data-block-key="ca53k"><a href="https://www.consumerfinance.gov/owning-a-home/loan-options/special-loan-programs/">Leer más</a> (en inglés)</p><p data-block-key="c605n"><br></p><hr><p data-block-key="f5ser"></p><h2 id="prestamo-de-la-va-veterans-affairs-(va-loan)" data-block-key="c5up1">Préstamo de la VA, Veterans Affairs (<b>VA loan)</b></h2><p data-block-key="bksps">El “VA loan” o préstamo de la VA es un programa de préstamos ofrecido por el Departamento de Asuntos de Veteranos (VA, por sus siglas en inglés) para ayudar a integrantes de las Fuerzas Armadas, veteranos y sus cónyuges sobrevivientes elegibles, a comprar viviendas. El VA no otorga los préstamos, pero establece las reglas para determinar quiénes califican para obtenerlos y los términos de estos. El VA garantiza que una parte del préstamo sirva para reducir el riesgo de pérdidas del prestamista. Estos préstamos, generalmente, están disponibles solamente para la compra de la vivienda principal.</p><p data-block-key="adhoo">Si usted es veterano, averigüe si&nbsp;<a href="https://www.consumerfinance.gov/es/obtener-respuestas/que-es-un-prestamo-de-la-va-es-113/">un préstamo VA es su mejor opción</a>.</p>
+            </div>
+        
+    
+</div>
+   </div>
+
+   
+   
+
+        
+
+    
+
+
+                    
+                </div>
+            
+        </div>
+    </main>
+
+    
+
+    
+    
+
+    
+        
+        
+
+
+<footer class="o-footer">
+    <div class="wrapper wrapper--match-content">
+
+        <div class="o-footer__pre">
+
+            <a class="a-btn a-btn--secondary o-footer__top-button" data-gtm_ignore="true" data-js-hook="behavior_return-to-top" href="#">
+                Ir arriba <svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--arrow-up" viewBox="0 0 13 19" xmlns="http://www.w3.org/2000/svg"><path d="M11.744 8.815a1.03 1.03 0 0 1-1.456 0L7.53 6.055v9.529a1.03 1.03 0 1 1-2.058 0V6.055l-2.76 2.76a1.029 1.029 0 0 1-1.455-1.456l4.516-4.516a1.03 1.03 0 0 1 1.456 0l4.516 4.516a1.03 1.03 0 0 1 0 1.456z"></path></svg>
+</a>
+
+            <ul class="o-footer__nav-list m-list">
+                
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/es/herramientas-del-consumidor/">Para consumidores</a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/es/obtener-respuestas/">Obtener respuestas</a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/es/enviar-una-queja/">Enviar una queja</a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/es/quienes-somos/">Quiénes somos</a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/es/comprar-casa/">Comprar casa</a>
+                    </li>
+                
+            </ul>
+            <div class="block
+                        block--flush-top
+                        block--flush-bottom
+                        block--padded-top">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="m-social-media
+            m-social-media--follow">
+    
+
+    <ul class="m-list
+               m-list--unstyled
+               m-list--horizontal
+               m-social-media__icons">
+
+        
+        
+
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+        
+
+        
+            
+        
+
+
+        
+            
+                <li class="m-list__item">
+                    <a aria-label="Visítenos en Facebook" class="m-social-media__icon" href="https://www.facebook.com/CFPBespanol">
+<svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--facebook-square" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg"><path d="M15.917 17.5H.083V1.665h15.834zm-2.885-7.887a5.032 5.032 0 1 0-5.818 4.971v-3.516H5.936V9.613h1.278V8.505a1.776 1.776 0 0 1 1.9-1.958 8 8 0 0 1 1.127.098v1.239h-.635a.727.727 0 0 0-.82.785v.944h1.396l-.223 1.455H8.786v3.516a5.03 5.03 0 0 0 4.246-4.97z"></path></svg>
+</a>
+                </li>
+            
+        
+            
+                <li class="m-list__item">
+                    <a aria-label="Visítenos en X" class="m-social-media__icon" href="https://x.com/CFPBespanol">
+<svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--x-square" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg"><path d="M15.9 1.7v15.8H0V1.7h15.8zM8.8 8.8 12.1 5h-.8L8.5 8.3 6.2 5H3.6L7 10l-3.4 4h.8l3-3.5L9.8 14h2.6zm-1 1.2-.3-.5-2.8-4h1.2l2.2 3.2.3.5 2.9 4.2h-1.2L7.7 10z"></path></svg>
+</a>
+                </li>
+            
+        
+            
+                <li class="m-list__item">
+                    <a aria-label="Visítenos en LinkedIn" class="m-social-media__icon" href="https://www.linkedin.com/company/consumer-financial-protection-bureau">
+<svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--linkedin-square" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg"><path d="M15.917 17.5H.083V1.666h15.834zM5.77 6.427a.96.96 0 0 0-1.032-.96.962.962 0 1 0-.025 1.92h.013a.963.963 0 0 0 1.044-.96m-.123 1.719H3.803v5.552h1.845zm6.658 2.368c0-1.705-.91-2.5-2.125-2.5a1.83 1.83 0 0 0-1.663.917v-.786H6.67c.025.52 0 5.554 0 5.554h1.848v-3.102a1.3 1.3 0 0 1 .06-.45 1.01 1.01 0 0 1 .946-.676c.67 0 .936.51.936 1.256V13.7h1.846zm-3.8-1.564.013-.019v.019z"></path></svg>
+</a>
+                </li>
+            
+        
+            
+                <li class="m-list__item">
+                    <a aria-label="Visítenos en YouTube" class="m-social-media__icon" href="https://www.youtube.com/user/cfpbvideo">
+<svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--youtube-square" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg"><path d="M15.917 17.5H.083V1.665h15.834zM13.072 7.013a1.33 1.33 0 0 0-.934-.94 31 31 0 0 0-4.125-.221 31 31 0 0 0-4.125.222 1.33 1.33 0 0 0-.933.94 14 14 0 0 0-.221 2.557 14 14 0 0 0 .22 2.558 1.33 1.33 0 0 0 .934.94 31 31 0 0 0 4.125.222 31 31 0 0 0 4.125-.223 1.33 1.33 0 0 0 .934-.94 14 14 0 0 0 .22-2.557 14 14 0 0 0-.22-2.558m-3.434 2.57L6.932 8.045v3.079z"></path></svg>
+</a>
+                </li>
+            
+        
+            
+                <li class="m-list__item">
+                    <a aria-label="Visítenos en Flickr" class="m-social-media__icon" href="https://www.flickr.com/photos/cfpbphotos">
+<svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--flickr-square" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg"><path d="M15.917 1.666v15.833H.083V1.666zM7.342 9.583a2.588 2.588 0 1 0-2.589 2.588 2.59 2.59 0 0 0 2.588-2.588zm6.491 0a2.587 2.587 0 1 0-2.588 2.588 2.59 2.59 0 0 0 2.588-2.588"></path></svg>
+</a>
+                </li>
+            
+        
+
+        
+
+    </ul>
+</div>
+
+            </div>
+        </div>
+
+        
+        <div class="block block--flush-bottom block--flush-top block--padded-bottom">
+            En este momento, la política de información sólo está disponible en inglés.
+        </div>
+        
+
+        <div class="o-footer-middle-left">
+
+            <div class="o-footer__col">
+                <ul class="o-footer__list m-list">
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/foia-requests/">
+                            FOIA
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/privacy/">
+                            Privacy
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/privacy/website-privacy-policy/">
+                            Website Privacy Policy &amp; Legal Notices
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/data/">
+                            Data
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/open-government/">
+                            Open Government
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/open-government/information-quality-guidelines/">
+                            Information Quality Guidelines
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="o-footer__col">
+                <ul class="o-footer__list m-list">
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/about-us/omwi/">
+                            Office of Minority and Women Inclusion
+                        </a>
+                    </li>
+                    
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/plain-writing/">
+                            Plain Writing
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/accessibility/">
+                            Accessibility
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/office-civil-rights/">
+                            Office of Civil Rights
+                        </a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/office-civil-rights/no-fear-act-cummings-act/">
+                            No FEAR Act &amp; Cummings Act
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="o-footer-middle-right">
+                <ul class="o-footer__list m-list">
+                    <li class="m-list__item">
+                        <a class="m-list__link a-link" href="https://www.usa.gov/es/"><span class="a-link__text">USA.gov/es</span> <svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19" xmlns="http://www.w3.org/2000/svg"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg></a>
+                    </li>
+                    <li class="m-list__item">
+                        <a class="m-list__link a-link" href="https://oig.federalreserve.gov/"><span class="a-link__text">Office of Inspector General</span> <svg aria-hidden="true" class="cf-icon-svg cf-icon-svg--external-link" viewBox="0 0 14 19" xmlns="http://www.w3.org/2000/svg"><path d="M13.017 3.622v4.6a.554.554 0 0 1-1.108 0V4.96L9.747 7.122a1.7 1.7 0 0 1 .13.646v5.57A1.664 1.664 0 0 1 8.215 15h-5.57a1.664 1.664 0 0 1-1.662-1.663v-5.57a1.664 1.664 0 0 1 1.662-1.662h5.57A1.65 1.65 0 0 1 9 6.302l2.126-2.126H7.863a.554.554 0 1 1 0-1.108h4.6a.554.554 0 0 1 .554.554M8.77 8.1l-2.844 2.844a.554.554 0 0 1-.784-.783l2.947-2.948H2.645a.555.555 0 0 0-.554.555v5.57a.555.555 0 0 0 .554.553h5.57a.555.555 0 0 0 .554-.554z"></path></svg></a>
+                    </li>
+                    
+                    <li class="m-list__item">
+                        <a class="m-list__link" href="/cfpb-ombudsman/">
+                            CFPB Ombudsman
+                        </a>
+                     </li>
+                    
+                </ul>
+        </div>
+
+        <div class="o-footer-post">
+            
+<div class="a-tagline a-tagline--large" aria-label="Un sitio web oficial del gobierno federal de los Estados Unidos">
+   <span class="u-usa-flag"></span>
+   <div class="a-tagline__text">
+      Un sitio web oficial del
+      <span class="u-nowrap">gobierno federal de los Estados Unidos</span>
+   </div>
+</div>
+
+        </div>
+
+    </div>
+</footer>
+
+    
+
+    
+
+
+
+    
+    
+
+    <script>
+      if ( window.fetch ) {
+        !function(){
+          
+          var s = [ '/static/js/routes/common.b0591e94a2bb.js' ];
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          jsl(s);
+        }();
+      }
+    </script>
+
+    
+
+    
+    <script>
+      jsl(['/static/js/routes/on-demand/secondary-nav.02c33b083821.js']);
+    </script>
+
+
+</body></html>

@@ -146,6 +146,10 @@ def find_static_assets(soup):
         if src and "/static" in src:
             full_url = urljoin(URL, src)  # Convert to absolute URL
             static_assets.append(full_url)
+        srcset = tag.get("srcset")
+        if srcset:
+            extra = [aa.strip().split()[0] for aa in tag["srcset"].split(",")]
+            static_assets += [urljoin(URL, aa) for aa in extra]
 
     return static_assets
 
@@ -230,12 +234,10 @@ if __name__ == "__main__":
     # Keep track of output
     file_links = []
     all_links = []
-    static_links = []
+    static_links = set()
 
     # Continue parsing until we have no more pages to parse
     while len(pages_to_parse) > 0:
-
-        print(static_links)
 
         # The page we are about to parse
         page = pages_to_parse.pop(0)
@@ -252,7 +254,7 @@ if __name__ == "__main__":
 
         # Store static assets
         if len(S):
-            static_links += S.tolist()
+            static_links |= set(S.tolist())
 
         # If we found links, add them to the list of pages to parse
         if len(L):
@@ -281,7 +283,7 @@ if __name__ == "__main__":
         pd.Series(file_links, name="url").apply(normalize_url).drop_duplicates()
     )
     static_links = (
-        pd.Series(static_links, name="url").apply(normalize_url).drop_duplicates()
+        pd.Series(list(static_links), name="url").apply(normalize_url).drop_duplicates()
     )
 
     # Find file links mistakenly classified as internal links

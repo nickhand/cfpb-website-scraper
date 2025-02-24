@@ -1,0 +1,65 @@
+body:before {
+  content: attr(data-env);
+  display: block;
+  padding: 1.25em;
+  height: 50px;
+  background-color: #bb5b03; /* Dark Orange */
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 800px) {
+  body:before {
+    box-sizing: border-box;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 35px;
+    margin-top: 0.5em;
+    padding: 0.5em;
+    line-height: 1.5;
+    transition-duration: 0.15s;
+    transition-property: inset-inline-start, padding-inline-start, width,
+      transform, margin-top, min-height;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  button.sidebar__collapse-toggle {
+    z-index: 1010;
+  }
+  body:has(div.sidebar--slim):before {
+    width: 60px;
+    width: 0px;
+    content: '';
+  }
+}
+
+[data-env='content']:before {
+  background-color: #f37e77; /* Salmon */
+  color: #000;
+}
+
+[data-env='beta-admin']:before {
+  background-color: #fcf2f2; /* Salmon Light */
+  color: #000;
+}
+
+[data-env='build']:before {
+  background-color: #71b2d4; /* Blue */
+  color: #000;
+}
+
+[data-env="dev2"]:before,
+[data-env="dev3"]:before,
+[data-env="dev4"]:before,
+[data-env="dev5"]:before,
+[data-env^="cfgov-"]:before /* Dev Docker stacks */ {
+  background-color: #e9b04d; /* Orange */
+  color: #000;
+}
