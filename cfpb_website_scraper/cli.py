@@ -1,4 +1,5 @@
 from datetime import datetime
+from pathlib import Path
 
 import click
 import pandas as pd
@@ -9,7 +10,33 @@ from s3fs import S3FileSystem
 from . import APP_NAME, BUCKET_NAME
 from .aws_scraper import __main__ as aws_scraper_cli
 from .aws_scraper.scrape import WebScraper
-from .links import LinkScraper, is_file_link, is_internal_link, is_static_asset
+from .links import (
+    LinkScraper,
+    find_missing_links,
+    is_file_link,
+    is_internal_link,
+    is_static_asset,
+)
+
+
+def load_links(input_filename, kind):
+    """Load the links of a specific kind from a file."""
+    # Load the data
+    data = pd.DataFrame(
+        {"url": [x.strip() for x in open(input_filename, "r").readlines()]}
+    )
+
+    # Filter
+    if kind == "pages":
+        data = data.loc[data["url"].apply(is_internal_link)].drop_duplicates()
+    elif kind == "files":
+        data = data.loc[data["url"].apply(is_file_link)].drop_duplicates()
+    elif kind == "static":
+        data = data.loc[data["url"].apply(is_static_asset)].drop_duplicates()
+    else:
+        raise ValueError(f"Invalid kind: {kind}")
+
+    return data
 
 
 @click.group()
@@ -36,19 +63,7 @@ def submit(input_filename, kind, num_workers=20, **kwargs):
     load_dotenv(find_dotenv())
 
     # Load the data
-    data = pd.DataFrame(
-        {"url": [x.strip() for x in open(input_filename, "r").readlines()]}
-    )
-
-    # Filter
-    if kind == "pages":
-        data = data.loc[data["url"].apply(is_internal_link)].drop_duplicates()
-    elif kind == "files":
-        data = data.loc[data["url"].apply(is_file_link)].drop_duplicates()
-    elif kind == "static":
-        data = data.loc[data["url"].apply(is_static_asset)].drop_duplicates()
-    else:
-        raise ValueError(f"Invalid kind: {kind}")
+    data = load_links(input_filename, kind)
 
     # Log
     logger.info(f"Scraping data for {len(data)} {kind}")
@@ -120,3 +135,25 @@ def find_links(browser="firefox", debug=False):
 
     scraper = LinkScraper(browser=browser, debug=debug)
     scraper.scrape_data()
+
+
+@cli.command(name="missing-links")
+@click.argument(
+    "input_filename",
+    type=str,
+)
+@click.argument(
+    "kind",
+    type=click.Choice(["pages", "files", "static"]),
+)
+def missing_links(input_filename, kind):
+    """Find all missing links."""
+
+    # Load the data
+    data = load_links(input_filename, kind).squeeze()
+
+    # Find the missing links
+    missing_links = find_missing_links(data, kind)
+
+    output_filename = Path(input_filename).parent / f"missing_links_{kind}.csv"
+    missing_links.to_frame().to_csv(output_filename, index=False)

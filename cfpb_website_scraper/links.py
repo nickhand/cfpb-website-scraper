@@ -122,9 +122,10 @@ def is_file_link(url):
         "files.consumerfinance.gov",
         "s3.amazonaws.com",
         "files.consumerfinance.gov.s3.amazonaws.com",
+        "www.consumerfinance.gov",
     ]
-    if p.netloc in allowed_domains:
-        return True
+    if p.netloc not in allowed_domains:
+        return False
 
     # Check allowed paths if domain is on consumerfinance.gov
     if p.netloc == "www.consumerfinance.gov":
@@ -134,6 +135,8 @@ def is_file_link(url):
         ]
         if any(p.path.startswith(path) for path in allowed_paths):
             return True
+        else:
+            return False
 
     # Check suffixes we know are files
     allowed_suffixes = [
@@ -162,10 +165,10 @@ def is_file_link(url):
         ".zip",
     ]
     suffix = Path(url).suffix.strip().lower()
-    if suffix in allowed_suffixes:
-        return True
+    if suffix not in allowed_suffixes:
+        return False
 
-    return False
+    return True
 
 
 def _get_static_asset_links(soup, current_page):
@@ -488,3 +491,54 @@ class LinkScraper:
 
         # Close the web driver
         self.driver.close()
+
+
+def _modify(full_url):
+
+    # Get the path first
+    link = urlparse(full_url).path
+
+    # Get the suffix
+    suffix = Path(link).suffix
+    if suffix != "":
+        return link
+
+    if not link.endswith("/") and not link.endswith("index.html"):
+        link = link + "/"
+    if link.endswith("/"):
+        link = link + "index.html"
+    return link
+
+
+def _get_all_files(directory):
+    return [file for file in Path(directory).rglob("*") if file.is_file()]
+
+
+def find_missing_links(data, kind):
+    """Find missing links."""
+
+    # Figure out the input folder
+    if kind == "pages":
+        input_folder = HOME_FOLDER / ".." / "results" / "pages"
+    elif kind == "files":
+        input_folder = HOME_FOLDER / ".." / "results" / "files"
+    elif kind == "static":
+        input_folder = HOME_FOLDER / ".." / "results" / "pages" / "static"
+
+    # Make it absolute
+    input_folder = input_folder.resolve()
+
+    # Get all files from the input folder
+    files = _get_all_files(input_folder)
+    files = ["/" + str(p.relative_to(input_folder)) for p in files]
+
+    # Get the existing data
+    data_modified = data.copy().apply(_modify)
+
+    sel = data_modified.isin(files)
+    missing_links = data.loc[~sel]
+    logger.info(f"Found {sel.sum()} matched links")
+    logger.info(f"Found {len(missing_links)} missing links")
+
+    # Save the missing links
+    return missing_links

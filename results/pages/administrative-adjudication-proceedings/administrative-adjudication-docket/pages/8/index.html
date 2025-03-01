@@ -12,7 +12,7 @@
         transactionName:
           "ZlEAYkJWV0cEARFdWl8bJENeVE1dCgxKQgQfWQ1SVVtKGgMLCUBQQ1UAWlVoSVUCB191V0JAEFdTQ39dCRYARlRTWAdmUVBcGgwMAVFNbkYNQ0RS",
         queueTime: 1,
-        applicationTime: 468,
+        applicationTime: 484,
         agent: "",
       };
       (window.NREUM || (NREUM = {})).init = {
@@ -22,7 +22,7 @@
         xpid: "UgEHVFBRGwIHUFBaAAYF",
         licenseKey: "c656a7b008",
         applicationID: "17418772",
-      }; /*! For license information please see nr-loader-full-1.282.0.min.js.LICENSE.txt */
+      }; /*! For license information please see nr-loader-full-1.283.2.min.js.LICENSE.txt */
       (() => {
         var e,
           t,
@@ -115,10 +115,9 @@
             },
             9417: (e, t, r) => {
               "use strict";
-              r.d(t, { D0: () => g, gD: () => m, xN: () => p });
-              var n = r(3333),
-                i = r(993);
-              const o = (e) => {
+              r.d(t, { D0: () => h, gD: () => p, xN: () => g });
+              var n = r(3333);
+              const i = (e) => {
                 if (!e || "string" != typeof e) return !1;
                 try {
                   document.createDocumentFragment().querySelector(e);
@@ -127,12 +126,12 @@
                 }
                 return !0;
               };
-              var a = r(2614),
-                s = r(944),
-                c = r(384),
-                u = r(8122);
-              const d = "[data-nr-mask]",
-                l = () => {
+              var o = r(2614),
+                a = r(944),
+                s = r(384),
+                c = r(8122);
+              const u = "[data-nr-mask]",
+                d = () => {
                   const e = {
                     feature_flags: [],
                     experimental: { marks: !1, measures: !1, resources: !1 },
@@ -180,7 +179,7 @@
                     generic_events: { enabled: !0, autoStart: !0 },
                     harvest: { interval: 30 },
                     jserrors: { enabled: !0, autoStart: !0 },
-                    logging: { enabled: !0, autoStart: !0, level: i.p_.INFO },
+                    logging: { enabled: !0, autoStart: !0 },
                     metrics: { enabled: !0, autoStart: !0 },
                     obfuscate: void 0,
                     page_action: { enabled: !0 },
@@ -223,7 +222,7 @@
                     },
                     privacy: { cookies_enabled: !0 },
                     proxy: { assets: void 0, beacon: void 0 },
-                    session: { expiresMs: a.wk, inactiveMs: a.BB },
+                    session: { expiresMs: o.wk, inactiveMs: o.BB },
                     session_replay: {
                       autoStart: !0,
                       enabled: !1,
@@ -238,11 +237,11 @@
                         return e.mask_selector;
                       },
                       set mask_text_selector(t) {
-                        o(t)
-                          ? (e.mask_selector = "".concat(t, ",").concat(d))
+                        i(t)
+                          ? (e.mask_selector = "".concat(t, ",").concat(u))
                           : "" === t || null === t
-                          ? (e.mask_selector = d)
-                          : (0, s.R)(5, t);
+                          ? (e.mask_selector = u)
+                          : (0, a.R)(5, t);
                       },
                       get block_class() {
                         return "nr-block";
@@ -257,9 +256,9 @@
                         return e.block_selector;
                       },
                       set block_selector(t) {
-                        o(t)
+                        i(t)
                           ? (e.block_selector += ",".concat(t))
-                          : "" !== t && (0, s.R)(6, t);
+                          : "" !== t && (0, a.R)(6, t);
                       },
                       get mask_input_options() {
                         return e.mask_input_options;
@@ -267,7 +266,7 @@
                       set mask_input_options(t) {
                         t && "object" == typeof t
                           ? (e.mask_input_options = { ...t, password: !0 })
-                          : (0, s.R)(7, t);
+                          : (0, a.R)(7, t);
                       },
                     },
                     session_trace: { enabled: !0, autoStart: !0 },
@@ -280,25 +279,25 @@
                     },
                   };
                 },
-                f = {},
-                h = "All configuration objects require an agent identifier!";
-              function g(e) {
-                if (!e) throw new Error(h);
-                if (!f[e])
+                l = {},
+                f = "All configuration objects require an agent identifier!";
+              function h(e) {
+                if (!e) throw new Error(f);
+                if (!l[e])
                   throw new Error(
                     "Configuration for ".concat(e, " was never set")
                   );
-                return f[e];
+                return l[e];
+              }
+              function g(e, t) {
+                if (!e) throw new Error(f);
+                l[e] = (0, c.a)(t, d());
+                const r = (0, s.nY)(e);
+                r && (r.init = l[e]);
               }
               function p(e, t) {
-                if (!e) throw new Error(h);
-                f[e] = (0, u.a)(t, l());
-                const r = (0, c.nY)(e);
-                r && (r.init = f[e]);
-              }
-              function m(e, t) {
-                if (!e) throw new Error(h);
-                var r = g(e);
+                if (!e) throw new Error(f);
+                var r = h(e);
                 if (r) {
                   for (var n = t.split("."), i = 0; i < n.length - 1; i++)
                     if ("object" != typeof (r = r[n[i]])) return;
@@ -399,7 +398,7 @@
             9324: (e, t, r) => {
               "use strict";
               r.d(t, { F3: () => i, Xs: () => o, Yq: () => a, xv: () => n });
-              const n = "1.282.0",
+              const n = "1.283.2",
                 i = "PROD",
                 o = "CDN",
                 a = "^2.0.0-alpha.17";
@@ -843,32 +842,6 @@
               }
               r.d(t, { R: () => n });
             },
-            5475: (e, t, r) => {
-              "use strict";
-              r.d(t, { Q: () => i });
-              var n = r(3304);
-              function i(e) {
-                if ("string" == typeof e && e.length) return e.length;
-                if ("object" == typeof e) {
-                  if (
-                    "undefined" != typeof ArrayBuffer &&
-                    e instanceof ArrayBuffer &&
-                    e.byteLength
-                  )
-                    return e.byteLength;
-                  if ("undefined" != typeof Blob && e instanceof Blob && e.size)
-                    return e.size;
-                  if (
-                    !("undefined" != typeof FormData && e instanceof FormData)
-                  )
-                    try {
-                      return (0, n.A)(e).length;
-                    } catch (e) {
-                      return;
-                    }
-                }
-              }
-            },
             5284: (e, t, r) => {
               "use strict";
               r.d(t, { t: () => c, B: () => s });
@@ -968,7 +941,7 @@
             },
             5289: (e, t, r) => {
               "use strict";
-              r.d(t, { GG: () => o, We: () => i, sB: () => a });
+              r.d(t, { GG: () => o, sB: () => a });
               var n = r(3878);
               function i() {
                 return (
@@ -1245,50 +1218,35 @@
                 return !(e && "function" == typeof e && e.apply && !e[o]);
               }
             },
-            9559: (e, t, r) => {
+            9414: (e, t, r) => {
               "use strict";
-              r.d(t, { A5: () => l, NF: () => c, tV: () => u });
-              var n = r(6154),
-                i = r(1863),
-                o = r(5289),
-                a = r(9566),
-                s = r(384);
-              const c = "websocket-",
-                u = "addEventListener",
-                d = {};
-              function l(e) {
-                if (d[e.debugId]++) return e;
-                if (!(0, s.dV)().o.WS) return e;
-                class t extends WebSocket {
-                  static name = "WebSocket";
-                  constructor(...t) {
-                    super(...t);
-                    const r = (0, a.LA)(6);
-                    (this.report = (function (t) {
-                      const r = (0, i.t)();
-                      return function (n, ...a) {
-                        const s = a[0]?.timeStamp || (0, i.t)(),
-                          u = (0, o.We)();
-                        e.emit(c + n, [s, s - r, u, t, ...a]);
-                      };
-                    })(r)),
-                      this.report("new");
-                    ["message", "error", "open", "close"].forEach((e) => {
-                      this.addEventListener(e, function (t) {
-                        this.report(u, { eventType: e, event: t });
-                      });
-                    });
-                  }
-                  send(...e) {
-                    this.report("send", ...e);
-                    try {
-                      return super.send(...e);
-                    } catch (t) {
-                      throw (this.report("send-err", ...e), t);
-                    }
-                  }
-                }
-                return (n.gm.WebSocket = t), e;
+              r.d(t, { J: () => c });
+              var n = r(7836),
+                i = r(2646),
+                o = r(944),
+                a = r(3434);
+              const s = new Map();
+              function c(e, t, r, c) {
+                if (
+                  "object" != typeof t ||
+                  !t ||
+                  "string" != typeof r ||
+                  !r ||
+                  "function" != typeof t[r]
+                )
+                  return (0, o.R)(29);
+                const u = (function (e) {
+                    return (e || n.ee).get("logger");
+                  })(e),
+                  d = (0, a.YM)(u),
+                  l = new i.y(n.P);
+                (l.level = c.level), (l.customAttributes = c.customAttributes);
+                const f = t[r]?.[a.Jt] || t[r];
+                return (
+                  s.set(f, l),
+                  d.inPlace(t, [r], "wrap-logger-", () => s.get(f)),
+                  u
+                );
               }
             },
             9300: (e, t, r) => {
@@ -1333,7 +1291,7 @@
             },
             993: (e, t, r) => {
               "use strict";
-              r.d(t, { ET: () => o, TZ: () => a, p_: () => i });
+              r.d(t, { A$: () => o, ET: () => a, TZ: () => s, p_: () => i });
               var n = r(860);
               const i = {
                   ERROR: "ERROR",
@@ -1342,8 +1300,9 @@
                   DEBUG: "DEBUG",
                   TRACE: "TRACE",
                 },
-                o = "log",
-                a = n.K7.logging;
+                o = { OFF: 0, ERROR: 1, WARN: 2, INFO: 3, DEBUG: 4, TRACE: 5 },
+                a = "log",
+                s = n.K7.logging;
             },
             3785: (e, t, r) => {
               "use strict";
@@ -1351,7 +1310,7 @@
               var n = r(9908),
                 i = r(1863),
                 o = r(860),
-                a = r(3969),
+                a = r(8154),
                 s = r(993);
               function c(e, t, r = {}, c = s.p_.INFO) {
                 (0, n.p)(
@@ -1376,23 +1335,21 @@
                 );
               }
             },
-            3969: (e, t, r) => {
+            8154: (e, t, r) => {
               "use strict";
               r.d(t, {
-                Pj: () => u,
-                TZ: () => i,
-                XG: () => c,
-                rs: () => o,
-                xV: () => s,
-                z_: () => a,
+                z_: () => o,
+                XG: () => s,
+                TZ: () => n,
+                rs: () => i,
+                xV: () => a,
               });
-              var n = r(9559);
-              const i = r(860).K7.metrics,
-                o = "sm",
-                a = "cm",
-                s = "storeSupportabilityMetrics",
-                c = "storeEventMetrics",
-                u = ["new", "send", "close", n.tV];
+              r(6154), r(9566), r(384);
+              const n = r(860).K7.metrics,
+                i = "sm",
+                o = "cm",
+                a = "storeSupportabilityMetrics",
+                s = "storeEventMetrics";
             },
             6630: (e, t, r) => {
               "use strict";
@@ -1535,9 +1492,9 @@
               const o = (e) =>
                 i.RI && !0 === (0, n.gD)(e, "privacy.cookies_enabled");
             },
-            425: (e, t, r) => {
+            8969: (e, t, r) => {
               "use strict";
-              r.d(t, { j: () => j });
+              r.d(t, { j: () => N });
               var n = r(860),
                 i = r(2555),
                 o = r(3371),
@@ -1547,7 +1504,7 @@
                 u = r(5289),
                 d = r(6154),
                 l = r(944),
-                f = r(3969),
+                f = r(8154),
                 h = r(384),
                 g = r(6344);
               const p = [
@@ -1575,32 +1532,8 @@
                 b = r(2614),
                 y = r(993),
                 R = r(3785),
-                x = r(2646),
-                w = r(3434);
-              const E = new Map();
-              function A(e, t, r, n) {
-                if (
-                  "object" != typeof t ||
-                  !t ||
-                  "string" != typeof r ||
-                  !r ||
-                  "function" != typeof t[r]
-                )
-                  return (0, l.R)(29);
-                const i = (function (e) {
-                    return (e || s.ee).get("logger");
-                  })(e),
-                  o = (0, w.YM)(i),
-                  a = new x.y(s.P);
-                (a.level = n.level), (a.customAttributes = n.customAttributes);
-                const c = t[r]?.[w.Jt] || t[r];
-                return (
-                  E.set(c, a),
-                  o.inPlace(t, [r], "wrap-logger-", () => E.get(c)),
-                  i
-                );
-              }
-              function T() {
+                x = r(9414);
+              function w() {
                 const e = (0, h.pV)();
                 p.forEach((t) => {
                   e[t] = (...r) =>
@@ -1617,62 +1550,62 @@
                     })(t, ...r);
                 });
               }
-              const S = {};
-              var _ = r(9417),
-                N = r(5603),
-                O = r(5284);
-              const I = (e) => {
+              const E = {};
+              var A = r(9417),
+                T = r(5603),
+                _ = r(5284);
+              const S = (e) => {
                 const t = e.startsWith("http");
                 (e += "/"), (r.p = t ? e : "https://" + e);
               };
-              let P = !1;
-              function j(e, t = {}, p, x) {
+              let O = !1;
+              function N(e, t = {}, p, N) {
                 let {
-                  init: w,
-                  info: E,
+                  init: I,
+                  info: P,
                   loader_config: j,
-                  runtime: k = {},
-                  exposed: C = !0,
+                  runtime: C = {},
+                  exposed: k = !0,
                 } = t;
-                k.loaderType = p;
-                const L = (0, h.pV)();
-                E || ((w = L.init), (E = L.info), (j = L.loader_config)),
-                  (0, _.xN)(e.agentIdentifier, w || {}),
-                  (0, N.a)(e.agentIdentifier, j || {}),
-                  (E.jsAttributes ??= {}),
-                  d.bv && (E.jsAttributes.isWorker = !0),
-                  (0, i.x1)(e.agentIdentifier, E);
-                const H = (0, _.D0)(e.agentIdentifier),
-                  D = [E.beacon, E.errorBeacon];
-                P ||
-                  (H.proxy.assets &&
-                    (I(H.proxy.assets), D.push(H.proxy.assets)),
-                  H.proxy.beacon && D.push(H.proxy.beacon),
-                  T(),
-                  (0, h.US)("activatedFeatures", O.B),
+                C.loaderType = p;
+                const H = (0, h.pV)();
+                P || ((I = H.init), (P = H.info), (j = H.loader_config)),
+                  (0, A.xN)(e.agentIdentifier, I || {}),
+                  (0, T.a)(e.agentIdentifier, j || {}),
+                  (P.jsAttributes ??= {}),
+                  d.bv && (P.jsAttributes.isWorker = !0),
+                  (0, i.x1)(e.agentIdentifier, P);
+                const D = (0, A.D0)(e.agentIdentifier),
+                  L = [P.beacon, P.errorBeacon];
+                O ||
+                  (D.proxy.assets &&
+                    (S(D.proxy.assets), L.push(D.proxy.assets)),
+                  D.proxy.beacon && L.push(D.proxy.beacon),
+                  w(),
+                  (0, h.US)("activatedFeatures", _.B),
                   (e.runSoftNavOverSpa &&=
-                    !0 === H.soft_navigations.enabled &&
-                    H.feature_flags.includes("soft_nav"))),
-                  (k.denyList = [
-                    ...(H.ajax.deny_list || []),
-                    ...(H.ajax.block_internal ? D : []),
+                    !0 === D.soft_navigations.enabled &&
+                    D.feature_flags.includes("soft_nav"))),
+                  (C.denyList = [
+                    ...(D.ajax.deny_list || []),
+                    ...(D.ajax.block_internal ? L : []),
                   ]),
-                  (k.ptid = e.agentIdentifier),
-                  (0, o.V)(e.agentIdentifier, k),
+                  (C.ptid = e.agentIdentifier),
+                  (0, o.V)(e.agentIdentifier, C),
                   (e.ee = s.ee.get(e.agentIdentifier)),
                   void 0 === e.api &&
                     (e.api = (function (e, t, h = !1) {
                       t || (0, c.Ak)(e, "api");
                       const p = {};
-                      var x = s.ee.get(e),
-                        w = x.get("tracer");
-                      (S[e] = b.g.OFF),
-                        x.on(g.G4.REPLAY_RUNNING, (t) => {
-                          S[e] = t;
+                      var w = s.ee.get(e),
+                        A = w.get("tracer");
+                      (E[e] = b.g.OFF),
+                        w.on(g.G4.REPLAY_RUNNING, (t) => {
+                          E[e] = t;
                         });
-                      var E = "api-",
-                        T = E + "ixn-";
-                      function _(t, r, n, o) {
+                      var T = "api-",
+                        _ = T + "ixn-";
+                      function S(t, r, n, o) {
                         const a = (0, i.Vp)(e);
                         return (
                           null === r
@@ -1682,14 +1615,14 @@
                                 jsAttributes: { ...a.jsAttributes, [t]: r },
                               }),
                           I(
-                            E,
+                            T,
                             n,
                             !0,
                             o || null === r ? "session" : void 0
                           )(t, r)
                         );
                       }
-                      function N() {}
+                      function O() {}
                       (p.log = function (
                         e,
                         { customAttributes: t = {}, level: r = y.p_.INFO } = {}
@@ -1699,9 +1632,9 @@
                           ["API/log/called"],
                           void 0,
                           n.K7.metrics,
-                          x
+                          w
                         ),
-                          (0, R.R)(x, e, t, r);
+                          (0, R.R)(w, e, t, r);
                       }),
                         (p.wrapLogger = (
                           e,
@@ -1716,21 +1649,24 @@
                             ["API/wrapLogger/called"],
                             void 0,
                             n.K7.metrics,
-                            x
+                            w
                           ),
-                            A(x, e, t, { customAttributes: r, level: i });
+                            (0, x.J)(w, e, t, {
+                              customAttributes: r,
+                              level: i,
+                            });
                         }),
                         m.forEach((e) => {
-                          p[e] = I(E, e, !0, "api");
+                          p[e] = I(T, e, !0, "api");
                         }),
                         (p.addPageAction = I(
-                          E,
+                          T,
                           "addPageAction",
                           !0,
                           n.K7.genericEvents
                         )),
                         (p.recordCustomEvent = I(
-                          E,
+                          T,
                           "recordCustomEvent",
                           !0,
                           n.K7.genericEvents
@@ -1741,7 +1677,7 @@
                               "/" !== t.charAt(0) && (t = "/" + t),
                               ((0, o.f)(e).customTransaction =
                                 (r || "http://custom.transaction") + t),
-                              I(E, "setPageViewName", !0)()
+                              I(T, "setPageViewName", !0)()
                             );
                         }),
                         (p.setCustomAttribute = function (e, t, r = !1) {
@@ -1752,18 +1688,18 @@
                               ) ||
                               null === t
                             )
-                              return _(e, t, "setCustomAttribute", r);
+                              return S(e, t, "setCustomAttribute", r);
                             (0, l.R)(40, typeof t);
                           } else (0, l.R)(39, typeof e);
                         }),
                         (p.setUserId = function (e) {
                           if ("string" == typeof e || null === e)
-                            return _("enduser.id", e, "setUserId", !0);
+                            return S("enduser.id", e, "setUserId", !0);
                           (0, l.R)(41, typeof e);
                         }),
                         (p.setApplicationVersion = function (e) {
                           if ("string" == typeof e || null === e)
-                            return _(
+                            return S(
                               "application.version",
                               e,
                               "setApplicationVersion",
@@ -1778,9 +1714,9 @@
                               ["API/start/called"],
                               void 0,
                               n.K7.metrics,
-                              x
+                              w
                             ),
-                              x.emit("manual-start-all");
+                              w.emit("manual-start-all");
                           } catch (e) {
                             (0, l.R)(23, e);
                           }
@@ -1791,14 +1727,14 @@
                             ["API/recordReplay/called"],
                             void 0,
                             n.K7.metrics,
-                            x
+                            w
                           ),
                             (0, a.p)(
                               g.G4.RECORD,
                               [],
                               void 0,
                               n.K7.sessionReplay,
-                              x
+                              w
                             );
                         }),
                         (p[g.G4.PAUSE] = function () {
@@ -1807,20 +1743,20 @@
                             ["API/pauseReplay/called"],
                             void 0,
                             n.K7.metrics,
-                            x
+                            w
                           ),
                             (0, a.p)(
                               g.G4.PAUSE,
                               [],
                               void 0,
                               n.K7.sessionReplay,
-                              x
+                              w
                             );
                         }),
                         (p.interaction = function (e) {
-                          return new N().get("object" == typeof e ? e : {});
+                          return new O().get("object" == typeof e ? e : {});
                         });
-                      const O = (N.prototype = {
+                      const N = (O.prototype = {
                         createTracer: function (e, t) {
                           var r = {},
                             i = this,
@@ -1831,19 +1767,19 @@
                               ["API/createTracer/called"],
                               void 0,
                               n.K7.metrics,
-                              x
+                              w
                             ),
                             h ||
                               (0, a.p)(
-                                T + "tracer",
+                                _ + "tracer",
                                 [(0, v.t)(), e, r],
                                 i,
                                 n.K7.spa,
-                                x
+                                w
                               ),
                             function () {
                               if (
-                                (w.emit(
+                                (A.emit(
                                   (o ? "" : "no-") + "fn-start",
                                   [(0, v.t)(), i, o],
                                   r
@@ -1856,11 +1792,11 @@
                                   const t =
                                     "string" == typeof e ? new Error(e) : e;
                                   throw (
-                                    (w.emit("fn-err", [arguments, this, t], r),
+                                    (A.emit("fn-err", [arguments, this, t], r),
                                     t)
                                   );
                                 } finally {
-                                  w.emit("fn-end", [(0, v.t)()], r);
+                                  A.emit("fn-end", [(0, v.t)()], r);
                                 }
                             }
                           );
@@ -1874,7 +1810,7 @@
                               ["API/" + t + "/called"],
                               void 0,
                               n.K7.metrics,
-                              x
+                              w
                             ),
                             i &&
                               (0, a.p)(
@@ -1885,7 +1821,7 @@
                                 ],
                                 r ? null : this,
                                 i,
-                                x
+                                w
                               ),
                             r ? void 0 : this
                           );
@@ -1898,7 +1834,7 @@
                             t(e), (0, c.Ze)(e, "api");
                           })
                           .catch((e) => {
-                            (0, l.R)(27, e), x.abort();
+                            (0, l.R)(27, e), w.abort();
                           });
                       }
                       return (
@@ -1913,11 +1849,11 @@
                           "end",
                           "get",
                         ].forEach((e) => {
-                          O[e] = I(T, e, void 0, h ? n.K7.softNav : n.K7.spa);
+                          N[e] = I(_, e, void 0, h ? n.K7.softNav : n.K7.spa);
                         }),
                         (p.setCurrentRouteName = h
-                          ? I(T, "routeName", void 0, n.K7.softNav)
-                          : I(E, "routeName", !0, n.K7.spa)),
+                          ? I(_, "routeName", void 0, n.K7.softNav)
+                          : I(T, "routeName", !0, n.K7.spa)),
                         (p.noticeError = function (t, r) {
                           "string" == typeof t && (t = new Error(t)),
                             (0, a.p)(
@@ -1925,22 +1861,22 @@
                               ["API/noticeError/called"],
                               void 0,
                               n.K7.metrics,
-                              x
+                              w
                             ),
                             (0, a.p)(
                               "err",
-                              [t, (0, v.t)(), !1, r, !!S[e]],
+                              [t, (0, v.t)(), !1, r, !!E[e]],
                               void 0,
                               n.K7.jserrors,
-                              x
+                              w
                             );
                         }),
                         d.RI ? (0, u.GG)(() => P(), !0) : P(),
                         p
                       );
-                    })(e.agentIdentifier, x, e.runSoftNavOverSpa)),
-                  void 0 === e.exposed && (e.exposed = C),
-                  (P = !0);
+                    })(e.agentIdentifier, N, e.runSoftNavOverSpa)),
+                  void 0 === e.exposed && (e.exposed = k),
+                  (O = !0);
               }
             },
             8374: (e, t, r) => {
@@ -2031,10 +1967,10 @@
               95: "nr-full-compressor",
               222: "nr-full-recorder",
               891: "nr-full",
-            }[e] + "-1.282.0.min.js")),
+            }[e] + "-1.283.2.min.js")),
           (i.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
           (e = {}),
-          (t = "NRBA-1.282.0.PROD:"),
+          (t = "NRBA-1.283.2.PROD:"),
           (i.l = (r, n, o, a) => {
             if (e[r]) e[r].push(n);
             else {
@@ -2057,9 +1993,9 @@
               if (!s) {
                 c = !0;
                 var f = {
-                  891: "sha512-QwskJQqglBlxNFQoHB/oWrBaUzSyk//kP3gG0xUfwVHsZhBsTBfL/9hddqfEf0vym+ZwYGEwVVNJhE4O1+fh0g==",
-                  222: "sha512-6TMOC1TQNapnzFUULE5dzbbnenlHycHTKKs4qxP9EldTLwvpP4/A5Qk6eIKRlV0Kl80k/rRxerFkIB9Kfdnf/Q==",
-                  95: "sha512-tnhiqz6gSPIJTKoMspoXbuotiFw/6cjQDPON54njuog7HtTp7tOV/fTZEjk7ZoK3pBfhcXizs4A0k+zFrERqnQ==",
+                  891: "sha512-AvZhj4m+h2B/1kW4uDUzuPHC+lkjrkdXalVNoHyJgrLk7a6iFKNSNge7GsIL8eYZ8zTqKuhnzCa4dbxc+tpeJg==",
+                  222: "sha512-iYC8/IszvScsGAJc4YhoK3/RRrYa8Dt4Fx0dMjiPRd/wiJ6bquHHgDpmIPMTULY5f17ZfijdRyIltFMjbQG0ow==",
+                  95: "sha512-7nJqBsE9e2w0waUpifeNh5JejezdrAgWS7deetz7SIxIxShxOUsURVpMXZJN4ksOcpN2m3fdUCnna/VQ/1fKoQ==",
                 };
                 ((s = document.createElement("script")).charset = "utf-8"),
                   (s.timeout = 120),
@@ -2149,8 +2085,8 @@
                 for (t && t(r); u < a.length; u++)
                   (o = a[u]), i.o(e, o) && e[o] && e[o][0](), (e[o] = 0);
               },
-              r = (self["webpackChunk:NRBA-1.282.0.PROD"] =
-                self["webpackChunk:NRBA-1.282.0.PROD"] || []);
+              r = (self["webpackChunk:NRBA-1.283.2.PROD"] =
+                self["webpackChunk:NRBA-1.283.2.PROD"] || []);
             r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
           })(),
           (() => {
@@ -2245,7 +2181,7 @@
                 t
               );
             }
-            var d = i(425);
+            var d = i(8969);
             var l = i(1687),
               f = i(4234),
               h = i(5289),
@@ -2341,8 +2277,8 @@
               E = i(2843),
               A = i(3878),
               T = i(782),
-              S = i(1863);
-            class _ extends b {
+              _ = i(1863);
+            class S extends b {
               static featureName = T.T;
               constructor(e, t = !0) {
                 super(e, T.T, t),
@@ -2351,7 +2287,7 @@
                       () =>
                         (0, w.p)(
                           "docHidden",
-                          [(0, S.t)()],
+                          [(0, _.t)()],
                           void 0,
                           T.T,
                           this.ee
@@ -2361,7 +2297,7 @@
                     (0, A.sp)("pagehide", () =>
                       (0, w.p)(
                         "winPagehide",
-                        [(0, S.t)()],
+                        [(0, _.t)()],
                         void 0,
                         T.T,
                         this.ee
@@ -2370,33 +2306,19 @@
                     this.importAggregator(e));
               }
             }
-            var N = i(9559),
-              O = i(3969);
-            class I extends b {
+            var O = i(8154);
+            class N extends b {
               static featureName = O.TZ;
               constructor(e, t = !0) {
-                super(e, O.TZ, t),
-                  (0, N.A5)(this.ee),
-                  O.Pj.forEach((e) => {
-                    this.ee.on(N.NF + e, (...t) => {
-                      (0, w.p)(
-                        "buffered-" + N.NF + e,
-                        [...t],
-                        void 0,
-                        this.featureName,
-                        this.ee
-                      );
-                    });
-                  }),
-                  this.importAggregator(e);
+                super(e, O.TZ, t), this.importAggregator(e);
               }
             }
-            var P = i(6774),
-              j = i(3304);
-            class k {
+            var I = i(6774),
+              P = i(3304);
+            class j {
               constructor(e, t, r, n, i) {
                 (this.name = "UncaughtError"),
-                  (this.message = "string" == typeof e ? e : (0, j.A)(e)),
+                  (this.message = "string" == typeof e ? e : (0, P.A)(e)),
                   (this.sourceURL = t),
                   (this.line = r),
                   (this.column = n),
@@ -2406,7 +2328,7 @@
             function C(e) {
               return D(e)
                 ? e
-                : new k(
+                : new j(
                     void 0 !== e?.message ? e.message : e,
                     e?.filename || e?.sourceURL,
                     e?.lineno || e?.line,
@@ -2414,7 +2336,7 @@
                     e?.__newrelic
                   );
             }
-            function L(e) {
+            function k(e) {
               const t = "Unhandled Promise Rejection";
               if (!e?.reason) return;
               if (D(e.reason))
@@ -2434,7 +2356,7 @@
                 e.error instanceof SyntaxError &&
                 !/:\d+$/.test(e.error.stack?.trim())
               ) {
-                const t = new k(
+                const t = new j(
                   e.message,
                   e.filename,
                   e.lineno,
@@ -2448,11 +2370,11 @@
             function D(e) {
               return e instanceof Error && !!e.stack;
             }
-            class M extends b {
-              static featureName = P.T;
+            class L extends b {
+              static featureName = I.T;
               #r = !1;
               constructor(e, r = !0) {
-                super(e, P.T, r);
+                super(e, I.T, r);
                 try {
                   this.removeOnAbort = new AbortController();
                 } catch (e) {}
@@ -2460,7 +2382,7 @@
                   this.abortHandler &&
                     (0, w.p)(
                       "ierr",
-                      [C(e), (0, S.t)(), !0, {}, this.#r, t],
+                      [C(e), (0, _.t)(), !0, {}, this.#r, t],
                       void 0,
                       this.featureName,
                       this.ee
@@ -2476,8 +2398,8 @@
                         (0, w.p)(
                           "err",
                           [
-                            L(e),
-                            (0, S.t)(),
+                            k(e),
+                            (0, _.t)(),
                             !1,
                             { unhandledPromiseRejection: 1 },
                             this.#r,
@@ -2495,7 +2417,7 @@
                       this.abortHandler &&
                         (0, w.p)(
                           "err",
-                          [H(e), (0, S.t)(), !1, {}, this.#r],
+                          [H(e), (0, _.t)(), !1, {}, this.#r],
                           void 0,
                           this.featureName,
                           this.ee
@@ -2510,34 +2432,52 @@
                 this.removeOnAbort?.abort(), (this.abortHandler = void 0);
               }
             }
-            var K = i(8990);
-            let U = 1;
-            const V = "nr@id";
-            function F(e) {
+            var M = i(8990);
+            let K = 1;
+            const U = "nr@id";
+            function V(e) {
               const t = typeof e;
               return !e || ("object" !== t && "function" !== t)
                 ? -1
                 : e === g.gm
                 ? 0
-                : (0, K.I)(e, V, function () {
-                    return U++;
+                : (0, M.I)(e, U, function () {
+                    return K++;
                   });
             }
-            var G = i(5475),
-              B = i(8139),
-              W = i(7836),
-              z = i(3434);
-            const q = {},
-              Z = ["open", "send"];
-            function Y(t) {
-              var r = t || W.ee;
+            function G(e) {
+              if ("string" == typeof e && e.length) return e.length;
+              if ("object" == typeof e) {
+                if (
+                  "undefined" != typeof ArrayBuffer &&
+                  e instanceof ArrayBuffer &&
+                  e.byteLength
+                )
+                  return e.byteLength;
+                if ("undefined" != typeof Blob && e instanceof Blob && e.size)
+                  return e.size;
+                if (!("undefined" != typeof FormData && e instanceof FormData))
+                  try {
+                    return (0, P.A)(e).length;
+                  } catch (e) {
+                    return;
+                  }
+              }
+            }
+            var F = i(8139),
+              B = i(7836),
+              W = i(3434);
+            const z = {},
+              q = ["open", "send"];
+            function Z(t) {
+              var r = t || B.ee;
               const n = (function (e) {
-                return (e || W.ee).get("xhr");
+                return (e || B.ee).get("xhr");
               })(r);
               if (void 0 === g.gm.XMLHttpRequest) return n;
-              if (q[n.debugId]++) return n;
-              (q[n.debugId] = 1), (0, B.u)(r);
-              var i = (0, z.YM)(n),
+              if (z[n.debugId]++) return n;
+              (z[n.debugId] = 1), (0, F.u)(r);
+              var i = (0, W.YM)(n),
                 o = g.gm.XMLHttpRequest,
                 a = g.gm.MutationObserver,
                 s = g.gm.Promise,
@@ -2587,7 +2527,7 @@
                   for (var r in e) t[r] = e[r];
                 })(o, f),
                 (f.prototype = o.prototype),
-                i.inPlace(f.prototype, Z, "-xhr-", y),
+                i.inPlace(f.prototype, q, "-xhr-", y),
                 n.on("send-xhr-start", function (e, t) {
                   h(e, t),
                     (function (e) {
@@ -2618,19 +2558,19 @@
               }
               return n;
             }
-            var X = "fetch-",
-              Q = X + "body-",
+            var Y = "fetch-",
+              X = Y + "body-",
               J = ["arrayBuffer", "blob", "json", "text", "formData"],
-              ee = g.gm.Request,
-              te = g.gm.Response,
-              re = "prototype";
-            const ne = {};
-            function ie(e) {
+              Q = g.gm.Request,
+              ee = g.gm.Response,
+              te = "prototype";
+            const re = {};
+            function ne(e) {
               const t = (function (e) {
-                return (e || W.ee).get("fetch");
+                return (e || B.ee).get("fetch");
               })(e);
-              if (!(ee && te && g.gm.fetch)) return t;
-              if (ne[t.debugId]++) return t;
+              if (!(Q && ee && g.gm.fetch)) return t;
+              if (re[t.debugId]++) return t;
               function r(e, r, n) {
                 var i = e[r];
                 "function" == typeof i &&
@@ -2639,7 +2579,7 @@
                       r = [...arguments],
                       o = {};
                     t.emit(n + "before-start", [r], o),
-                      o[W.P] && o[W.P].dt && (e = o[W.P].dt);
+                      o[B.P] && o[B.P].dt && (e = o[B.P].dt);
                     var a = i.apply(this, r);
                     return (
                       t.emit(n + "start", [r, e], a),
@@ -2655,31 +2595,31 @@
                   });
               }
               return (
-                (ne[t.debugId] = 1),
+                (re[t.debugId] = 1),
                 J.forEach((e) => {
-                  r(ee[re], e, Q), r(te[re], e, Q);
+                  r(Q[te], e, X), r(ee[te], e, X);
                 }),
-                r(g.gm, "fetch", X),
-                t.on(X + "end", function (e, r) {
+                r(g.gm, "fetch", Y),
+                t.on(Y + "end", function (e, r) {
                   var n = this;
                   if (r) {
                     var i = r.headers.get("content-length");
                     null !== i && (n.rxSize = i),
-                      t.emit(X + "done", [null, r], n);
-                  } else t.emit(X + "done", [e], n);
+                      t.emit(Y + "done", [null, r], n);
+                  } else t.emit(Y + "done", [e], n);
                 }),
                 t
               );
             }
-            var oe = i(7485),
-              ae = i(5603);
-            class se {
+            var ie = i(7485),
+              oe = i(5603);
+            class ae {
               constructor(e) {
                 this.agentIdentifier = e;
               }
               generateTracePayload(e) {
                 if (!this.shouldGenerateTrace(e)) return null;
-                var t = (0, ae.o)(this.agentIdentifier);
+                var t = (0, oe.o)(this.agentIdentifier);
                 if (!t) return null;
                 var n = (t.accountID || "").toString() || null,
                   i = (t.agentID || "").toString() || null,
@@ -2724,7 +2664,7 @@
                   v: [0, 1],
                   d: { ty: "Browser", ac: n, ap: i, id: e, tr: t, ti: r },
                 };
-                return o && n !== o && (a.d.tk = o), btoa((0, j.A)(a));
+                return o && n !== o && (a.d.tk = o), btoa((0, P.A)(a));
               }
               shouldGenerateTrace(e) {
                 return this.isDtEnabled() && this.isAllowedOrigin(e);
@@ -2740,7 +2680,7 @@
                   t = !0;
                 else if (r.allowed_origins instanceof Array)
                   for (var n = 0; n < r.allowed_origins.length; n++) {
-                    var i = (0, oe.D)(r.allowed_origins[n]);
+                    var i = (0, ie.D)(r.allowed_origins[n]);
                     if (
                       e.hostname === i.hostname &&
                       e.protocol === i.protocol &&
@@ -2769,17 +2709,17 @@
                 return !!e && !!e.cors_use_tracecontext_headers;
               }
             }
-            var ce = i(9300),
-              ue = i(7295),
-              de = ["load", "error", "abort", "timeout"],
-              le = de.length,
-              fe = (0, x.dV)().o.REQ,
-              he = (0, x.dV)().o.XHR;
-            class ge extends b {
-              static featureName = ce.T;
+            var se = i(9300),
+              ce = i(7295),
+              ue = ["load", "error", "abort", "timeout"],
+              de = ue.length,
+              le = (0, x.dV)().o.REQ,
+              fe = (0, x.dV)().o.XHR;
+            class he extends b {
+              static featureName = se.T;
               constructor(e, t = !0) {
-                super(e, ce.T, t),
-                  (this.dt = new se(e.agentIdentifier)),
+                super(e, se.T, t),
+                  (this.dt = new ae(e.agentIdentifier)),
                   (this.handler = (e, t, r, n) =>
                     (0, w.p)(e, t, r, n, this.ee));
                 try {
@@ -2798,7 +2738,7 @@
                             duration: Math.floor(t.duration),
                             cbTime: 0,
                           };
-                        pe(r, t.name),
+                        ge(r, t.name),
                           this.handler(
                             "xhr",
                             [
@@ -2814,8 +2754,8 @@
                       }
                     });
                 } catch (e) {}
-                ie(this.ee),
-                  Y(this.ee),
+                ne(this.ee),
+                  Z(this.ee),
                   (function (e, t, r, n) {
                     function i(e) {
                       var t = this;
@@ -2847,7 +2787,7 @@
                     }
                     function o(e) {
                       (this.params = { method: e[0] }),
-                        pe(this, e[1]),
+                        ge(this, e[1]),
                         (this.metrics = {});
                     }
                     function s(t, r) {
@@ -2882,10 +2822,10 @@
                         i = e[0],
                         o = this;
                       if (n && i) {
-                        var a = (0, G.Q)(i);
+                        var a = G(i);
                         a && (n.txSize = a);
                       }
-                      (this.startTime = (0, S.t)()),
+                      (this.startTime = (0, _.t)()),
                         (this.body = i),
                         (this.listener = function (e) {
                           try {
@@ -2904,8 +2844,8 @@
                             } catch (e) {}
                           }
                         });
-                      for (var s = 0; s < le; s++)
-                        r.addEventListener(de[s], this.listener, (0, A.jT)(!1));
+                      for (var s = 0; s < de; s++)
+                        r.addEventListener(ue[s], this.listener, (0, A.jT)(!1));
                     }
                     function u(e, t, r) {
                       (this.cbTime += e),
@@ -2917,41 +2857,41 @@
                           this.end(r);
                     }
                     function d(e, t) {
-                      var r = "" + F(e) + !!t;
+                      var r = "" + V(e) + !!t;
                       this.xhrGuids &&
                         !this.xhrGuids[r] &&
                         ((this.xhrGuids[r] = !0), (this.totalCbs += 1));
                     }
                     function l(e, t) {
-                      var r = "" + F(e) + !!t;
+                      var r = "" + V(e) + !!t;
                       this.xhrGuids &&
                         this.xhrGuids[r] &&
                         (delete this.xhrGuids[r], (this.totalCbs -= 1));
                     }
                     function f() {
-                      this.endTime = (0, S.t)();
+                      this.endTime = (0, _.t)();
                     }
                     function h(e, r) {
-                      r instanceof he &&
+                      r instanceof fe &&
                         "load" === e[0] &&
                         t.emit("xhr-load-added", [e[1], e[2]], r);
                     }
                     function p(e, r) {
-                      r instanceof he &&
+                      r instanceof fe &&
                         "load" === e[0] &&
                         t.emit("xhr-load-removed", [e[1], e[2]], r);
                     }
                     function m(e, t, r) {
-                      t instanceof he &&
+                      t instanceof fe &&
                         ("onload" === r && (this.onload = !0),
                         ("load" === (e[0] && e[0].type) || this.onload) &&
-                          (this.xhrCbStart = (0, S.t)()));
+                          (this.xhrCbStart = (0, _.t)()));
                     }
                     function v(e, r) {
                       this.xhrCbStart &&
                         t.emit(
                           "xhr-cb-time",
-                          [(0, S.t)() - this.xhrCbStart, this.onload, r],
+                          [(0, _.t)() - this.xhrCbStart, this.onload, r],
                           r
                         );
                     }
@@ -2972,7 +2912,7 @@
                         "string" == typeof t && 0 !== t.length)
                       ) {
                         t &&
-                          ((this.parsedOrigin = (0, oe.D)(t)),
+                          ((this.parsedOrigin = (0, ie.D)(t)),
                           (this.sameOrigin = this.parsedOrigin.sameOrigin));
                         var i = n.generateTracePayload(this.parsedOrigin);
                         if (
@@ -3006,7 +2946,7 @@
                     function y(e, t) {
                       (this.params = {}),
                         (this.metrics = {}),
-                        (this.startTime = (0, S.t)()),
+                        (this.startTime = (0, _.t)()),
                         (this.dt = t),
                         e.length >= 1 && (this.target = e[0]),
                         e.length >= 2 && (this.opts = e[1]);
@@ -3015,28 +2955,28 @@
                         i = this.target;
                       "string" == typeof i
                         ? (r = i)
-                        : "object" == typeof i && i instanceof fe
+                        : "object" == typeof i && i instanceof le
                         ? (r = i.url)
                         : g.gm?.URL &&
                           "object" == typeof i &&
                           i instanceof URL &&
                           (r = i.href),
-                        pe(this, r);
+                        ge(this, r);
                       var o = (
                         "" +
-                        ((i && i instanceof fe && i.method) ||
+                        ((i && i instanceof le && i.method) ||
                           n.method ||
                           "GET")
                       ).toUpperCase();
                       (this.params.method = o),
                         (this.body = n.body),
-                        (this.txSize = (0, G.Q)(n.body) || 0);
+                        (this.txSize = G(n.body) || 0);
                     }
                     function R(e, t) {
                       if (
-                        ((this.endTime = (0, S.t)()),
+                        ((this.endTime = (0, _.t)()),
                         this.params || (this.params = {}),
-                        (0, ue.iW)(this.params))
+                        (0, ce.iW)(this.params))
                       )
                         return;
                       let n;
@@ -3047,7 +2987,7 @@
                       const i = {
                         txSize: this.txSize,
                         rxSize: n,
-                        duration: (0, S.t)() - this.startTime,
+                        duration: (0, _.t)() - this.startTime,
                       };
                       r(
                         "xhr",
@@ -3061,11 +3001,11 @@
                         n = this.metrics;
                       if (!this.ended) {
                         this.ended = !0;
-                        for (let t = 0; t < le; t++)
-                          e.removeEventListener(de[t], this.listener, !1);
+                        for (let t = 0; t < de; t++)
+                          e.removeEventListener(ue[t], this.listener, !1);
                         t.aborted ||
-                          (0, ue.iW)(t) ||
-                          ((n.duration = (0, S.t)() - this.startTime),
+                          (0, ce.iW)(t) ||
+                          ((n.duration = (0, _.t)() - this.startTime),
                           this.loadCaptureCalled || 4 !== e.readyState
                             ? null == t.status && (t.status = 0)
                             : E(this, e),
@@ -3085,9 +3025,9 @@
                         return "json" === r && null !== t
                           ? t
                           : "arraybuffer" === r || "blob" === r || "json" === r
-                          ? (0, G.Q)(e.response)
+                          ? G(e.response)
                           : "text" === r || "" === r || void 0 === r
-                          ? (0, G.Q)(e.responseText)
+                          ? G(e.responseText)
                           : void 0;
                       })(r, e.lastSize);
                       if ((n && (e.metrics.rxSize = n), e.sameOrigin)) {
@@ -3123,8 +3063,8 @@
                   this.importAggregator(e);
               }
             }
-            function pe(e, t) {
-              var r = (0, oe.D)(t),
+            function ge(e, t) {
+              var r = (0, ie.D)(t),
                 n = e.params || e;
               (n.hostname = r.hostname),
                 (n.port = r.port),
@@ -3134,68 +3074,68 @@
                 (e.parsedOrigin = r),
                 (e.sameOrigin = r.sameOrigin);
             }
-            const me = {},
-              ve = ["pushState", "replaceState"];
-            function be(e) {
+            const pe = {},
+              me = ["pushState", "replaceState"];
+            function ve(e) {
               const t = (function (e) {
-                return (e || W.ee).get("history");
+                return (e || B.ee).get("history");
               })(e);
               return (
                 !g.RI ||
-                  me[t.debugId]++ ||
-                  ((me[t.debugId] = 1),
-                  (0, z.YM)(t).inPlace(window.history, ve, "-")),
+                  pe[t.debugId]++ ||
+                  ((pe[t.debugId] = 1),
+                  (0, W.YM)(t).inPlace(window.history, me, "-")),
                 t
               );
             }
-            var ye = i(3738);
+            var be = i(3738);
             const {
-              He: Re,
-              bD: xe,
-              d3: we,
-              Kp: Ee,
-              TZ: Ae,
-              Lc: Te,
-              uP: Se,
+              He: ye,
+              bD: Re,
+              d3: xe,
+              Kp: we,
+              TZ: Ee,
+              Lc: Ae,
+              uP: Te,
               Rz: _e,
-            } = ye;
-            class Ne extends b {
-              static featureName = Ae;
+            } = be;
+            class Se extends b {
+              static featureName = Ee;
               constructor(e, t = !0) {
-                super(e, Ae, t);
+                super(e, Ee, t);
                 if (!(0, m.V)(this.agentIdentifier))
                   return void this.deregisterDrain();
                 const r = this.ee;
                 let n;
-                be(r),
-                  (this.eventsEE = (0, B.u)(r)),
-                  this.eventsEE.on(Se, function (e, t) {
-                    this.bstStart = (0, S.t)();
-                  }),
+                ve(r),
+                  (this.eventsEE = (0, F.u)(r)),
                   this.eventsEE.on(Te, function (e, t) {
-                    (0,
-                    w.p)("bst", [e[0], t, this.bstStart, (0, S.t)()], void 0, a.K7.sessionTrace, r);
+                    this.bstStart = (0, _.t)();
                   }),
-                  r.on(_e + we, function (e) {
-                    (this.time = (0, S.t)()),
+                  this.eventsEE.on(Ae, function (e, t) {
+                    (0,
+                    w.p)("bst", [e[0], t, this.bstStart, (0, _.t)()], void 0, a.K7.sessionTrace, r);
+                  }),
+                  r.on(_e + xe, function (e) {
+                    (this.time = (0, _.t)()),
                       (this.startPath = location.pathname + location.hash);
                   }),
-                  r.on(_e + Ee, function (e) {
+                  r.on(_e + we, function (e) {
                     (0,
                     w.p)("bstHist", [location.pathname + location.hash, this.startPath, this.time], void 0, a.K7.sessionTrace, r);
                   });
                 try {
                   (n = new PerformanceObserver((e) => {
                     const t = e.getEntries();
-                    (0, w.p)(Re, [t], void 0, a.K7.sessionTrace, r);
+                    (0, w.p)(ye, [t], void 0, a.K7.sessionTrace, r);
                   })),
-                    n.observe({ type: xe, buffered: !0 });
+                    n.observe({ type: Re, buffered: !0 });
                 } catch (e) {}
                 this.importAggregator(e, { resourceObserver: n });
               }
             }
             var Oe = i(2614);
-            class Ie extends b {
+            class Ne extends b {
               static featureName = t.TZ;
               #i;
               #o;
@@ -3274,11 +3214,11 @@
                       (this.abortHandler = this.recorder.stopRecording)));
               }
             }
-            var Pe = i(3333);
-            class je extends b {
-              static featureName = Pe.TZ;
+            var Ie = i(3333);
+            class Pe extends b {
+              static featureName = Ie.TZ;
               constructor(e, t = !0) {
-                super(e, Pe.TZ, t);
+                super(e, Ie.TZ, t);
                 const r = [
                   e.init.page_action.enabled,
                   e.init.performance.capture_marks,
@@ -3289,7 +3229,7 @@
                 if (
                   g.RI &&
                   (e.init.user_actions.enabled &&
-                    (Pe.Zp.forEach((e) =>
+                    (Ie.Zp.forEach((e) =>
                       (0, A.sp)(
                         e,
                         (e) =>
@@ -3303,7 +3243,7 @@
                         !0
                       )
                     ),
-                    Pe.qN.forEach((e) => {
+                    Ie.qN.forEach((e) => {
                       const t = (0, v.s)(
                         (e) => {
                           (0, w.p)(
@@ -3341,17 +3281,24 @@
                   : this.deregisterDrain();
               }
             }
-            var ke = i(993),
-              Ce = i(3785);
-            class Le extends b {
-              static featureName = ke.TZ;
+            var je = i(993),
+              Ce = i(3785),
+              ke = i(9414);
+            class He extends b {
+              static featureName = je.TZ;
               constructor(e, t = !0) {
-                super(e, ke.TZ, t);
+                super(e, je.TZ, t);
                 const r = this.ee;
-                this.ee.on("wrap-logger-end", function ([e]) {
-                  const { level: t, customAttributes: n } = this;
-                  (0, Ce.R)(r, e, n, t);
-                }),
+                (0, ke.J)(r, g.gm.console, "log", { level: "info" }),
+                  (0, ke.J)(r, g.gm.console, "error", { level: "error" }),
+                  (0, ke.J)(r, g.gm.console, "warn", { level: "warn" }),
+                  (0, ke.J)(r, g.gm.console, "info", { level: "info" }),
+                  (0, ke.J)(r, g.gm.console, "debug", { level: "debug" }),
+                  (0, ke.J)(r, g.gm.console, "trace", { level: "trace" }),
+                  this.ee.on("wrap-logger-end", function ([e]) {
+                    const { level: t, customAttributes: n } = this;
+                    (0, Ce.R)(r, e, n, t);
+                  }),
                   this.importAggregator(e);
               }
             }
@@ -3429,7 +3376,7 @@
                 }
               }
             })({
-              features: [R, _, Ne, Ie, ge, I, M, je, Le],
+              features: [R, S, Se, Ne, he, N, L, Pe, He],
               loaderType: "pro",
             });
           })();
@@ -3602,7 +3549,7 @@
           >
             <span class="u-usa-flag"></span>
             <div class="a-tagline__text">
-              An unofficial website of the
+              An official website of the
               <span class="u-nowrap">United States government</span>
             </div>
           </div>
@@ -7863,7 +7810,7 @@
                     role="navigation"
                     aria-label="Pagination"
                   >
-                    <a class="a-btn m-pagination__btn-prev" href="../7"
+                    <a class="a-btn m-pagination__btn-prev" href="../../pages/7"
                       ><svg
                         xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true"
@@ -7902,7 +7849,7 @@
                         Go
                       </button>
                     </form>
-                    <a class="a-btn m-pagination__btn-next" href="../9"
+                    <a class="a-btn m-pagination__btn-next" href="../../pages/9"
                       ><span>Next</span
                       ><svg
                         aria-hidden="true"
@@ -8263,7 +8210,7 @@
           >
             <span class="u-usa-flag"></span>
             <div class="a-tagline__text">
-              An unofficial website of the
+              An official website of the
               <span class="u-nowrap">United States government</span>
             </div>
           </div>

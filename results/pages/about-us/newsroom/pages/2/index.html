@@ -12,7 +12,7 @@
         transactionName:
           "ZlEAYkJWV0cEARFdWl8bJENeVE1dCgxKQgQfWQ1SVVtKGgMLCUBQQ1UAWlVoSVUCB191V0JAEFdTQ39dCRYARlRTWAdmUVBcGgwMAVFNbkYNQ0RS",
         queueTime: 1,
-        applicationTime: 1467,
+        applicationTime: 2476,
         agent: "",
       };
       (window.NREUM || (NREUM = {})).init = {
@@ -22,7 +22,7 @@
         xpid: "UgEHVFBRGwIHUFBaAAYF",
         licenseKey: "c656a7b008",
         applicationID: "17418772",
-      }; /*! For license information please see nr-loader-full-1.281.0.min.js.LICENSE.txt */
+      }; /*! For license information please see nr-loader-full-1.283.2.min.js.LICENSE.txt */
       (() => {
         var e,
           t,
@@ -115,10 +115,9 @@
             },
             9417: (e, t, r) => {
               "use strict";
-              r.d(t, { D0: () => g, gD: () => m, xN: () => p });
-              var n = r(3333),
-                i = r(993);
-              const o = (e) => {
+              r.d(t, { D0: () => h, gD: () => p, xN: () => g });
+              var n = r(3333);
+              const i = (e) => {
                 if (!e || "string" != typeof e) return !1;
                 try {
                   document.createDocumentFragment().querySelector(e);
@@ -127,12 +126,12 @@
                 }
                 return !0;
               };
-              var a = r(2614),
-                s = r(944),
-                c = r(384),
-                u = r(8122);
-              const d = "[data-nr-mask]",
-                l = () => {
+              var o = r(2614),
+                a = r(944),
+                s = r(384),
+                c = r(8122);
+              const u = "[data-nr-mask]",
+                d = () => {
                   const e = {
                     feature_flags: [],
                     experimental: { marks: !1, measures: !1, resources: !1 },
@@ -180,7 +179,7 @@
                     generic_events: { enabled: !0, autoStart: !0 },
                     harvest: { interval: 30 },
                     jserrors: { enabled: !0, autoStart: !0 },
-                    logging: { enabled: !0, autoStart: !0, level: i.p_.INFO },
+                    logging: { enabled: !0, autoStart: !0 },
                     metrics: { enabled: !0, autoStart: !0 },
                     obfuscate: void 0,
                     page_action: { enabled: !0 },
@@ -223,7 +222,7 @@
                     },
                     privacy: { cookies_enabled: !0 },
                     proxy: { assets: void 0, beacon: void 0 },
-                    session: { expiresMs: a.wk, inactiveMs: a.BB },
+                    session: { expiresMs: o.wk, inactiveMs: o.BB },
                     session_replay: {
                       autoStart: !0,
                       enabled: !1,
@@ -238,11 +237,11 @@
                         return e.mask_selector;
                       },
                       set mask_text_selector(t) {
-                        o(t)
-                          ? (e.mask_selector = "".concat(t, ",").concat(d))
+                        i(t)
+                          ? (e.mask_selector = "".concat(t, ",").concat(u))
                           : "" === t || null === t
-                          ? (e.mask_selector = d)
-                          : (0, s.R)(5, t);
+                          ? (e.mask_selector = u)
+                          : (0, a.R)(5, t);
                       },
                       get block_class() {
                         return "nr-block";
@@ -257,9 +256,9 @@
                         return e.block_selector;
                       },
                       set block_selector(t) {
-                        o(t)
+                        i(t)
                           ? (e.block_selector += ",".concat(t))
-                          : "" !== t && (0, s.R)(6, t);
+                          : "" !== t && (0, a.R)(6, t);
                       },
                       get mask_input_options() {
                         return e.mask_input_options;
@@ -267,7 +266,7 @@
                       set mask_input_options(t) {
                         t && "object" == typeof t
                           ? (e.mask_input_options = { ...t, password: !0 })
-                          : (0, s.R)(7, t);
+                          : (0, a.R)(7, t);
                       },
                     },
                     session_trace: { enabled: !0, autoStart: !0 },
@@ -280,25 +279,25 @@
                     },
                   };
                 },
-                f = {},
-                h = "All configuration objects require an agent identifier!";
-              function g(e) {
-                if (!e) throw new Error(h);
-                if (!f[e])
+                l = {},
+                f = "All configuration objects require an agent identifier!";
+              function h(e) {
+                if (!e) throw new Error(f);
+                if (!l[e])
                   throw new Error(
                     "Configuration for ".concat(e, " was never set")
                   );
-                return f[e];
+                return l[e];
+              }
+              function g(e, t) {
+                if (!e) throw new Error(f);
+                l[e] = (0, c.a)(t, d());
+                const r = (0, s.nY)(e);
+                r && (r.init = l[e]);
               }
               function p(e, t) {
-                if (!e) throw new Error(h);
-                f[e] = (0, u.a)(t, l());
-                const r = (0, c.nY)(e);
-                r && (r.init = f[e]);
-              }
-              function m(e, t) {
-                if (!e) throw new Error(h);
-                var r = g(e);
+                if (!e) throw new Error(f);
+                var r = h(e);
                 if (r) {
                   for (var n = t.split("."), i = 0; i < n.length - 1; i++)
                     if ("object" != typeof (r = r[n[i]])) return;
@@ -399,7 +398,7 @@
             9324: (e, t, r) => {
               "use strict";
               r.d(t, { F3: () => i, Xs: () => o, Yq: () => a, xv: () => n });
-              const n = "1.281.0",
+              const n = "1.283.2",
                 i = "PROD",
                 o = "CDN",
                 a = "^2.0.0-alpha.17";
@@ -1219,6 +1218,37 @@
                 return !(e && "function" == typeof e && e.apply && !e[o]);
               }
             },
+            9414: (e, t, r) => {
+              "use strict";
+              r.d(t, { J: () => c });
+              var n = r(7836),
+                i = r(2646),
+                o = r(944),
+                a = r(3434);
+              const s = new Map();
+              function c(e, t, r, c) {
+                if (
+                  "object" != typeof t ||
+                  !t ||
+                  "string" != typeof r ||
+                  !r ||
+                  "function" != typeof t[r]
+                )
+                  return (0, o.R)(29);
+                const u = (function (e) {
+                    return (e || n.ee).get("logger");
+                  })(e),
+                  d = (0, a.YM)(u),
+                  l = new i.y(n.P);
+                (l.level = c.level), (l.customAttributes = c.customAttributes);
+                const f = t[r]?.[a.Jt] || t[r];
+                return (
+                  s.set(f, l),
+                  d.inPlace(t, [r], "wrap-logger-", () => s.get(f)),
+                  u
+                );
+              }
+            },
             9300: (e, t, r) => {
               "use strict";
               r.d(t, { T: () => n });
@@ -1261,7 +1291,7 @@
             },
             993: (e, t, r) => {
               "use strict";
-              r.d(t, { ET: () => o, TZ: () => a, p_: () => i });
+              r.d(t, { A$: () => o, ET: () => a, TZ: () => s, p_: () => i });
               var n = r(860);
               const i = {
                   ERROR: "ERROR",
@@ -1270,8 +1300,9 @@
                   DEBUG: "DEBUG",
                   TRACE: "TRACE",
                 },
-                o = "log",
-                a = n.K7.logging;
+                o = { OFF: 0, ERROR: 1, WARN: 2, INFO: 3, DEBUG: 4, TRACE: 5 },
+                a = "log",
+                s = n.K7.logging;
             },
             3785: (e, t, r) => {
               "use strict";
@@ -1279,7 +1310,7 @@
               var n = r(9908),
                 i = r(1863),
                 o = r(860),
-                a = r(3969),
+                a = r(8154),
                 s = r(993);
               function c(e, t, r = {}, c = s.p_.INFO) {
                 (0, n.p)(
@@ -1304,15 +1335,16 @@
                 );
               }
             },
-            3969: (e, t, r) => {
+            8154: (e, t, r) => {
               "use strict";
               r.d(t, {
-                TZ: () => n,
+                z_: () => o,
                 XG: () => s,
+                TZ: () => n,
                 rs: () => i,
                 xV: () => a,
-                z_: () => o,
               });
+              r(6154), r(9566), r(384);
               const n = r(860).K7.metrics,
                 i = "sm",
                 o = "cm",
@@ -1460,9 +1492,9 @@
               const o = (e) =>
                 i.RI && !0 === (0, n.gD)(e, "privacy.cookies_enabled");
             },
-            425: (e, t, r) => {
+            8969: (e, t, r) => {
               "use strict";
-              r.d(t, { j: () => j });
+              r.d(t, { j: () => N });
               var n = r(860),
                 i = r(2555),
                 o = r(3371),
@@ -1472,7 +1504,7 @@
                 u = r(5289),
                 d = r(6154),
                 l = r(944),
-                f = r(3969),
+                f = r(8154),
                 h = r(384),
                 g = r(6344);
               const p = [
@@ -1500,32 +1532,8 @@
                 b = r(2614),
                 y = r(993),
                 R = r(3785),
-                x = r(2646),
-                w = r(3434);
-              const E = new Map();
-              function A(e, t, r, n) {
-                if (
-                  "object" != typeof t ||
-                  !t ||
-                  "string" != typeof r ||
-                  !r ||
-                  "function" != typeof t[r]
-                )
-                  return (0, l.R)(29);
-                const i = (function (e) {
-                    return (e || s.ee).get("logger");
-                  })(e),
-                  o = (0, w.YM)(i),
-                  a = new x.y(s.P);
-                (a.level = n.level), (a.customAttributes = n.customAttributes);
-                const c = t[r]?.[w.Jt] || t[r];
-                return (
-                  E.set(c, a),
-                  o.inPlace(t, [r], "wrap-logger-", () => E.get(c)),
-                  i
-                );
-              }
-              function T() {
+                x = r(9414);
+              function w() {
                 const e = (0, h.pV)();
                 p.forEach((t) => {
                   e[t] = (...r) =>
@@ -1542,45 +1550,45 @@
                     })(t, ...r);
                 });
               }
-              const _ = {};
-              var S = r(9417),
-                O = r(5603),
-                N = r(5284);
-              const I = (e) => {
+              const E = {};
+              var A = r(9417),
+                T = r(5603),
+                _ = r(5284);
+              const S = (e) => {
                 const t = e.startsWith("http");
                 (e += "/"), (r.p = t ? e : "https://" + e);
               };
-              let P = !1;
-              function j(e, t = {}, p, x) {
+              let O = !1;
+              function N(e, t = {}, p, N) {
                 let {
-                  init: w,
-                  info: E,
+                  init: I,
+                  info: P,
                   loader_config: j,
                   runtime: C = {},
                   exposed: k = !0,
                 } = t;
                 C.loaderType = p;
                 const H = (0, h.pV)();
-                E || ((w = H.init), (E = H.info), (j = H.loader_config)),
-                  (0, S.xN)(e.agentIdentifier, w || {}),
-                  (0, O.a)(e.agentIdentifier, j || {}),
-                  (E.jsAttributes ??= {}),
-                  d.bv && (E.jsAttributes.isWorker = !0),
-                  (0, i.x1)(e.agentIdentifier, E);
-                const L = (0, S.D0)(e.agentIdentifier),
-                  D = [E.beacon, E.errorBeacon];
-                P ||
-                  (L.proxy.assets &&
-                    (I(L.proxy.assets), D.push(L.proxy.assets)),
-                  L.proxy.beacon && D.push(L.proxy.beacon),
-                  T(),
-                  (0, h.US)("activatedFeatures", N.B),
+                P || ((I = H.init), (P = H.info), (j = H.loader_config)),
+                  (0, A.xN)(e.agentIdentifier, I || {}),
+                  (0, T.a)(e.agentIdentifier, j || {}),
+                  (P.jsAttributes ??= {}),
+                  d.bv && (P.jsAttributes.isWorker = !0),
+                  (0, i.x1)(e.agentIdentifier, P);
+                const D = (0, A.D0)(e.agentIdentifier),
+                  L = [P.beacon, P.errorBeacon];
+                O ||
+                  (D.proxy.assets &&
+                    (S(D.proxy.assets), L.push(D.proxy.assets)),
+                  D.proxy.beacon && L.push(D.proxy.beacon),
+                  w(),
+                  (0, h.US)("activatedFeatures", _.B),
                   (e.runSoftNavOverSpa &&=
-                    !0 === L.soft_navigations.enabled &&
-                    L.feature_flags.includes("soft_nav"))),
+                    !0 === D.soft_navigations.enabled &&
+                    D.feature_flags.includes("soft_nav"))),
                   (C.denyList = [
-                    ...(L.ajax.deny_list || []),
-                    ...(L.ajax.block_internal ? D : []),
+                    ...(D.ajax.deny_list || []),
+                    ...(D.ajax.block_internal ? L : []),
                   ]),
                   (C.ptid = e.agentIdentifier),
                   (0, o.V)(e.agentIdentifier, C),
@@ -1589,14 +1597,14 @@
                     (e.api = (function (e, t, h = !1) {
                       t || (0, c.Ak)(e, "api");
                       const p = {};
-                      var x = s.ee.get(e),
-                        w = x.get("tracer");
-                      (_[e] = b.g.OFF),
-                        x.on(g.G4.REPLAY_RUNNING, (t) => {
-                          _[e] = t;
+                      var w = s.ee.get(e),
+                        A = w.get("tracer");
+                      (E[e] = b.g.OFF),
+                        w.on(g.G4.REPLAY_RUNNING, (t) => {
+                          E[e] = t;
                         });
-                      var E = "api-",
-                        T = E + "ixn-";
+                      var T = "api-",
+                        _ = T + "ixn-";
                       function S(t, r, n, o) {
                         const a = (0, i.Vp)(e);
                         return (
@@ -1607,7 +1615,7 @@
                                 jsAttributes: { ...a.jsAttributes, [t]: r },
                               }),
                           I(
-                            E,
+                            T,
                             n,
                             !0,
                             o || null === r ? "session" : void 0
@@ -1624,9 +1632,9 @@
                           ["API/log/called"],
                           void 0,
                           n.K7.metrics,
-                          x
+                          w
                         ),
-                          (0, R.R)(x, e, t, r);
+                          (0, R.R)(w, e, t, r);
                       }),
                         (p.wrapLogger = (
                           e,
@@ -1641,21 +1649,24 @@
                             ["API/wrapLogger/called"],
                             void 0,
                             n.K7.metrics,
-                            x
+                            w
                           ),
-                            A(x, e, t, { customAttributes: r, level: i });
+                            (0, x.J)(w, e, t, {
+                              customAttributes: r,
+                              level: i,
+                            });
                         }),
                         m.forEach((e) => {
-                          p[e] = I(E, e, !0, "api");
+                          p[e] = I(T, e, !0, "api");
                         }),
                         (p.addPageAction = I(
-                          E,
+                          T,
                           "addPageAction",
                           !0,
                           n.K7.genericEvents
                         )),
                         (p.recordCustomEvent = I(
-                          E,
+                          T,
                           "recordCustomEvent",
                           !0,
                           n.K7.genericEvents
@@ -1666,7 +1677,7 @@
                               "/" !== t.charAt(0) && (t = "/" + t),
                               ((0, o.f)(e).customTransaction =
                                 (r || "http://custom.transaction") + t),
-                              I(E, "setPageViewName", !0)()
+                              I(T, "setPageViewName", !0)()
                             );
                         }),
                         (p.setCustomAttribute = function (e, t, r = !1) {
@@ -1703,9 +1714,9 @@
                               ["API/start/called"],
                               void 0,
                               n.K7.metrics,
-                              x
+                              w
                             ),
-                              x.emit("manual-start-all");
+                              w.emit("manual-start-all");
                           } catch (e) {
                             (0, l.R)(23, e);
                           }
@@ -1716,14 +1727,14 @@
                             ["API/recordReplay/called"],
                             void 0,
                             n.K7.metrics,
-                            x
+                            w
                           ),
                             (0, a.p)(
                               g.G4.RECORD,
                               [],
                               void 0,
                               n.K7.sessionReplay,
-                              x
+                              w
                             );
                         }),
                         (p[g.G4.PAUSE] = function () {
@@ -1732,14 +1743,14 @@
                             ["API/pauseReplay/called"],
                             void 0,
                             n.K7.metrics,
-                            x
+                            w
                           ),
                             (0, a.p)(
                               g.G4.PAUSE,
                               [],
                               void 0,
                               n.K7.sessionReplay,
-                              x
+                              w
                             );
                         }),
                         (p.interaction = function (e) {
@@ -1756,19 +1767,19 @@
                               ["API/createTracer/called"],
                               void 0,
                               n.K7.metrics,
-                              x
+                              w
                             ),
                             h ||
                               (0, a.p)(
-                                T + "tracer",
+                                _ + "tracer",
                                 [(0, v.t)(), e, r],
                                 i,
                                 n.K7.spa,
-                                x
+                                w
                               ),
                             function () {
                               if (
-                                (w.emit(
+                                (A.emit(
                                   (o ? "" : "no-") + "fn-start",
                                   [(0, v.t)(), i, o],
                                   r
@@ -1781,11 +1792,11 @@
                                   const t =
                                     "string" == typeof e ? new Error(e) : e;
                                   throw (
-                                    (w.emit("fn-err", [arguments, this, t], r),
+                                    (A.emit("fn-err", [arguments, this, t], r),
                                     t)
                                   );
                                 } finally {
-                                  w.emit("fn-end", [(0, v.t)()], r);
+                                  A.emit("fn-end", [(0, v.t)()], r);
                                 }
                             }
                           );
@@ -1799,7 +1810,7 @@
                               ["API/" + t + "/called"],
                               void 0,
                               n.K7.metrics,
-                              x
+                              w
                             ),
                             i &&
                               (0, a.p)(
@@ -1810,7 +1821,7 @@
                                 ],
                                 r ? null : this,
                                 i,
-                                x
+                                w
                               ),
                             r ? void 0 : this
                           );
@@ -1823,7 +1834,7 @@
                             t(e), (0, c.Ze)(e, "api");
                           })
                           .catch((e) => {
-                            (0, l.R)(27, e), x.abort();
+                            (0, l.R)(27, e), w.abort();
                           });
                       }
                       return (
@@ -1838,11 +1849,11 @@
                           "end",
                           "get",
                         ].forEach((e) => {
-                          N[e] = I(T, e, void 0, h ? n.K7.softNav : n.K7.spa);
+                          N[e] = I(_, e, void 0, h ? n.K7.softNav : n.K7.spa);
                         }),
                         (p.setCurrentRouteName = h
-                          ? I(T, "routeName", void 0, n.K7.softNav)
-                          : I(E, "routeName", !0, n.K7.spa)),
+                          ? I(_, "routeName", void 0, n.K7.softNav)
+                          : I(T, "routeName", !0, n.K7.spa)),
                         (p.noticeError = function (t, r) {
                           "string" == typeof t && (t = new Error(t)),
                             (0, a.p)(
@@ -1850,22 +1861,22 @@
                               ["API/noticeError/called"],
                               void 0,
                               n.K7.metrics,
-                              x
+                              w
                             ),
                             (0, a.p)(
                               "err",
-                              [t, (0, v.t)(), !1, r, !!_[e]],
+                              [t, (0, v.t)(), !1, r, !!E[e]],
                               void 0,
                               n.K7.jserrors,
-                              x
+                              w
                             );
                         }),
                         d.RI ? (0, u.GG)(() => P(), !0) : P(),
                         p
                       );
-                    })(e.agentIdentifier, x, e.runSoftNavOverSpa)),
+                    })(e.agentIdentifier, N, e.runSoftNavOverSpa)),
                   void 0 === e.exposed && (e.exposed = k),
-                  (P = !0);
+                  (O = !0);
               }
             },
             8374: (e, t, r) => {
@@ -1956,10 +1967,10 @@
               95: "nr-full-compressor",
               222: "nr-full-recorder",
               891: "nr-full",
-            }[e] + "-1.281.0.min.js")),
+            }[e] + "-1.283.2.min.js")),
           (i.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
           (e = {}),
-          (t = "NRBA-1.281.0.PROD:"),
+          (t = "NRBA-1.283.2.PROD:"),
           (i.l = (r, n, o, a) => {
             if (e[r]) e[r].push(n);
             else {
@@ -1982,9 +1993,9 @@
               if (!s) {
                 c = !0;
                 var f = {
-                  891: "sha512-54Aat8Udm6iAAlMAdj4qB/wPExKn9TKWSsPnD5+K2RMckmHE0cb0CFc0VauDfpPug5wse9qzwDKuwIMa3hX6gw==",
-                  222: "sha512-IA751FH/bvhLWl8I5ZELgH0tFQetWKV1G+9qRkPvOrTSv2X2tgItmreKfvrd8zImHp4sIPTnSN0otmgnX7UJXA==",
-                  95: "sha512-Rwnn8hCtQVvDGDl0hSpEazVuRDuvlGnJpNuNwuapJ46vDCvUNGBIzCZCrZYygTgVJUjMrfQoMAULb+2gKoTIiQ==",
+                  891: "sha512-AvZhj4m+h2B/1kW4uDUzuPHC+lkjrkdXalVNoHyJgrLk7a6iFKNSNge7GsIL8eYZ8zTqKuhnzCa4dbxc+tpeJg==",
+                  222: "sha512-iYC8/IszvScsGAJc4YhoK3/RRrYa8Dt4Fx0dMjiPRd/wiJ6bquHHgDpmIPMTULY5f17ZfijdRyIltFMjbQG0ow==",
+                  95: "sha512-7nJqBsE9e2w0waUpifeNh5JejezdrAgWS7deetz7SIxIxShxOUsURVpMXZJN4ksOcpN2m3fdUCnna/VQ/1fKoQ==",
                 };
                 ((s = document.createElement("script")).charset = "utf-8"),
                   (s.timeout = 120),
@@ -2074,8 +2085,8 @@
                 for (t && t(r); u < a.length; u++)
                   (o = a[u]), i.o(e, o) && e[o] && e[o][0](), (e[o] = 0);
               },
-              r = (self["webpackChunk:NRBA-1.281.0.PROD"] =
-                self["webpackChunk:NRBA-1.281.0.PROD"] || []);
+              r = (self["webpackChunk:NRBA-1.283.2.PROD"] =
+                self["webpackChunk:NRBA-1.283.2.PROD"] || []);
             r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
           })(),
           (() => {
@@ -2170,7 +2181,7 @@
                 t
               );
             }
-            var d = i(425);
+            var d = i(8969);
             var l = i(1687),
               f = i(4234),
               h = i(5289),
@@ -2295,7 +2306,7 @@
                     this.importAggregator(e));
               }
             }
-            var O = i(3969);
+            var O = i(8154);
             class N extends b {
               static featureName = O.TZ;
               constructor(e, t = !0) {
@@ -2315,7 +2326,7 @@
               }
             }
             function C(e) {
-              return L(e)
+              return D(e)
                 ? e
                 : new j(
                     void 0 !== e?.message ? e.message : e,
@@ -2328,7 +2339,7 @@
             function k(e) {
               const t = "Unhandled Promise Rejection";
               if (!e?.reason) return;
-              if (L(e.reason))
+              if (D(e.reason))
                 try {
                   return (
                     (e.reason.message = t + ": " + e.reason.message),
@@ -2354,12 +2365,12 @@
                 );
                 return (t.name = SyntaxError.name), t;
               }
-              return L(e.error) ? e.error : C(e);
+              return D(e.error) ? e.error : C(e);
             }
-            function L(e) {
+            function D(e) {
               return e instanceof Error && !!e.stack;
             }
-            class D extends b {
+            class L extends b {
               static featureName = I.T;
               #r = !1;
               constructor(e, r = !0) {
@@ -3271,16 +3282,23 @@
               }
             }
             var je = i(993),
-              Ce = i(3785);
-            class ke extends b {
+              Ce = i(3785),
+              ke = i(9414);
+            class He extends b {
               static featureName = je.TZ;
               constructor(e, t = !0) {
                 super(e, je.TZ, t);
                 const r = this.ee;
-                this.ee.on("wrap-logger-end", function ([e]) {
-                  const { level: t, customAttributes: n } = this;
-                  (0, Ce.R)(r, e, n, t);
-                }),
+                (0, ke.J)(r, g.gm.console, "log", { level: "info" }),
+                  (0, ke.J)(r, g.gm.console, "error", { level: "error" }),
+                  (0, ke.J)(r, g.gm.console, "warn", { level: "warn" }),
+                  (0, ke.J)(r, g.gm.console, "info", { level: "info" }),
+                  (0, ke.J)(r, g.gm.console, "debug", { level: "debug" }),
+                  (0, ke.J)(r, g.gm.console, "trace", { level: "trace" }),
+                  this.ee.on("wrap-logger-end", function ([e]) {
+                    const { level: t, customAttributes: n } = this;
+                    (0, Ce.R)(r, e, n, t);
+                  }),
                   this.importAggregator(e);
               }
             }
@@ -3358,7 +3376,7 @@
                 }
               }
             })({
-              features: [R, S, Se, Ne, he, N, D, Pe, ke],
+              features: [R, S, Se, Ne, he, N, L, Pe, He],
               loaderType: "pro",
             });
           })();
@@ -3523,7 +3541,7 @@
           >
             <span class="u-usa-flag"></span>
             <div class="a-tagline__text">
-              An unofficial website of the
+              An official website of the
               <span class="u-nowrap">United States government</span>
             </div>
           </div>
@@ -6090,7 +6108,7 @@
                   </svg>
                   <div class="m-notification__content">
                     <div class="m-notification__message">
-                      2099 filtered results
+                      2098 filtered results
                     </div>
                   </div>
                 </div>
@@ -8341,7 +8359,7 @@
                         Go
                       </button>
                     </form>
-                    <a class="a-btn m-pagination__btn-next" href="../3"
+                    <a class="a-btn m-pagination__btn-next" href="../../pages/3"
                       ><span>Next</span
                       ><svg
                         aria-hidden="true"
@@ -8773,7 +8791,7 @@
           >
             <span class="u-usa-flag"></span>
             <div class="a-tagline__text">
-              An unofficial website of the
+              An official website of the
               <span class="u-nowrap">United States government</span>
             </div>
           </div>

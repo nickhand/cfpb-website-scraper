@@ -12,7 +12,7 @@
         transactionName:
           "ZlEAYkJWV0cEARFdWl8bJENeVE1dCgxKQgQfWQ1SVVtKGgMLCUBQQ1UAWlVoSVUCB191V0JAEFdTQ39dCRYARlRTWAdmUVBcGgwMAVFNbkYNQ0RS",
         queueTime: 1,
-        applicationTime: 1251,
+        applicationTime: 884,
         agent: "",
       };
       (window.NREUM || (NREUM = {})).init = {
@@ -22,7 +22,7 @@
         xpid: "UgEHVFBRGwIHUFBaAAYF",
         licenseKey: "c656a7b008",
         applicationID: "17418772",
-      }; /*! For license information please see nr-loader-full-1.280.0.min.js.LICENSE.txt */
+      }; /*! For license information please see nr-loader-full-1.281.0.min.js.LICENSE.txt */
       (() => {
         var e,
           t,
@@ -274,7 +274,10 @@
                     soft_navigations: { enabled: !0, autoStart: !0 },
                     spa: { enabled: !0, autoStart: !0 },
                     ssl: void 0,
-                    user_actions: { enabled: !0 },
+                    user_actions: {
+                      enabled: !0,
+                      elementAttributes: ["id", "className", "tagName", "type"],
+                    },
                   };
                 },
                 f = {},
@@ -396,7 +399,7 @@
             9324: (e, t, r) => {
               "use strict";
               r.d(t, { F3: () => i, Xs: () => o, Yq: () => a, xv: () => n });
-              const n = "1.280.0",
+              const n = "1.281.0",
                 i = "PROD",
                 o = "CDN",
                 a = "^2.0.0-alpha.17";
@@ -1953,10 +1956,10 @@
               95: "nr-full-compressor",
               222: "nr-full-recorder",
               891: "nr-full",
-            }[e] + "-1.280.0.min.js")),
+            }[e] + "-1.281.0.min.js")),
           (i.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
           (e = {}),
-          (t = "NRBA-1.280.0.PROD:"),
+          (t = "NRBA-1.281.0.PROD:"),
           (i.l = (r, n, o, a) => {
             if (e[r]) e[r].push(n);
             else {
@@ -1979,9 +1982,9 @@
               if (!s) {
                 c = !0;
                 var f = {
-                  891: "sha512-gTR5fByC4LD48tkiwKbdeytCJabDNFtblwKWtVgk6fa6ZeE3U+cnxdF+MiT1l+Mez1BZtd2DU94MZj1jVOXtcA==",
-                  222: "sha512-NJKFNFtMMHnc8YOEBVmUq9LNqWvsLsdLP3e9Gs1fVaFHRa4EAJrwOyPr9kTELND/XI5EwchGhfaTo4pZLJLk/g==",
-                  95: "sha512-DpHqL1YbYoTbRDCmoL6pbAFRa3tncVh3X4stpnEkqRqIitRKvvUifRYXHN0BUn79gax4rEmmPe7oS3bFspgIRw==",
+                  891: "sha512-54Aat8Udm6iAAlMAdj4qB/wPExKn9TKWSsPnD5+K2RMckmHE0cb0CFc0VauDfpPug5wse9qzwDKuwIMa3hX6gw==",
+                  222: "sha512-IA751FH/bvhLWl8I5ZELgH0tFQetWKV1G+9qRkPvOrTSv2X2tgItmreKfvrd8zImHp4sIPTnSN0otmgnX7UJXA==",
+                  95: "sha512-Rwnn8hCtQVvDGDl0hSpEazVuRDuvlGnJpNuNwuapJ46vDCvUNGBIzCZCrZYygTgVJUjMrfQoMAULb+2gKoTIiQ==",
                 };
                 ((s = document.createElement("script")).charset = "utf-8"),
                   (s.timeout = 120),
@@ -2071,8 +2074,8 @@
                 for (t && t(r); u < a.length; u++)
                   (o = a[u]), i.o(e, o) && e[o] && e[o][0](), (e[o] = 0);
               },
-              r = (self["webpackChunk:NRBA-1.280.0.PROD"] =
-                self["webpackChunk:NRBA-1.280.0.PROD"] || []);
+              r = (self["webpackChunk:NRBA-1.281.0.PROD"] =
+                self["webpackChunk:NRBA-1.281.0.PROD"] || []);
             r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
           })(),
           (() => {
@@ -3514,7 +3517,7 @@
           >
             <span class="u-usa-flag"></span>
             <div class="a-tagline__text">
-              An unofficial website of the
+              An official website of the
               <span class="u-nowrap">United States government</span>
             </div>
           </div>
@@ -8096,7 +8099,7 @@
                     role="navigation"
                     aria-label="Pagination"
                   >
-                    <a class="a-btn m-pagination__btn-prev" href="../3"
+                    <a class="a-btn m-pagination__btn-prev" href="../../pages/3"
                       ><svg
                         xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true"
@@ -8135,7 +8138,7 @@
                         Go
                       </button>
                     </form>
-                    <a class="a-btn m-pagination__btn-next" href="../5"
+                    <a class="a-btn m-pagination__btn-next" href="../../pages/5"
                       ><span>Next</span
                       ><svg
                         aria-hidden="true"
@@ -8747,7 +8750,7 @@
           >
             <span class="u-usa-flag"></span>
             <div class="a-tagline__text">
-              An unofficial website of the
+              An official website of the
               <span class="u-nowrap">United States government</span>
             </div>
           </div>
