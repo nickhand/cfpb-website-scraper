@@ -233,7 +233,7 @@ class WebScraper:
         # Get the url
         url = row[
             "url"
-        ]  # this is the full url, e.g., httpsL//www.consumerfinance.gov/...
+        ]  # this is the full url, e.g., https://www.consumerfinance.gov/...
 
         # Load
         load_dotenv(find_dotenv())
@@ -287,7 +287,7 @@ class WebScraper:
             for url, page_source in pages.items():
 
                 # Figure out the output path
-                output_path = path_url
+                output_path = url
                 if output_path.endswith("/"):
                     output_path = f"{output_path}index.html"
                 elif not output_path.endswith("index.html"):

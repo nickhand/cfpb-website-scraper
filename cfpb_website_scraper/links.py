@@ -2,7 +2,7 @@ import os.path
 import random
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Literal
+from typing import Literal
 from urllib.parse import urljoin, urlparse
 
 from bs4 import BeautifulSoup
@@ -15,6 +15,30 @@ from .aws_scraper.scrape import get_webdriver, normalize_url
 WEBSITE_URL = "https://www.consumerfinance.gov/"
 
 
+def _is_same_url(url1, url2):
+    """Test if two URLs are the same by comparing domain and path."""
+
+    p1 = urlparse(url1)
+    p2 = urlparse(url2)
+
+    # Check if the domains are the same
+    if p1.netloc != p2.netloc:
+        return False
+
+    # Check if the paths are the same
+    if p1.path != p2.path:
+        return False
+
+    return True
+
+
+def _remove_query_params(url):
+    """
+    Remove query parameters from a URL.
+    """
+    return urljoin(url, urlparse(url).path)
+
+
 def _format_url(url, current_page):
     """
     Format the URLs to be consistent.
@@ -25,17 +49,23 @@ def _format_url(url, current_page):
         - Removes query parameters
     """
     # Check for relative paths or headers
-    if (
-        url.startswith("./")
-        or url.startswith("../")
-        or url.startswith("#")
-        or url.startswith("?")
-    ):
+    if url.startswith("./") or url.startswith("../"):
 
         # Parse it
         p = urlparse(f"{current_page}/{url}")
 
         # Normalize it to handle "../" and "./"
+        path = os.path.normpath(p.path)
+
+        # Recombine the URL
+        url = f"{p.scheme}://{p.netloc}{path}"
+
+    # hash or query params first
+    elif url.startswith("#") or url.startswith("?"):
+        # Parse it
+        p = urlparse(f"{current_page}{url}")
+
+        # Normalize the path
         path = os.path.normpath(p.path)
 
         # Recombine the URL
@@ -48,8 +78,8 @@ def _format_url(url, current_page):
     # Now normalize by removing double slashes
     url = normalize_url(url)
 
-    # Remove any query parameters
-    url = urljoin(url, urlparse(url).path)
+    # Last thing: remove any query parameters
+    url = _remove_query_params(url)
 
     return url
 
@@ -113,6 +143,7 @@ def is_file_link(url):
         ".docx",
         ".epub",
         ".jpg",
+        ".jpeg",
         ".mp3",
         ".mp4",
         ".pdf",
@@ -158,7 +189,7 @@ def _get_static_asset_links(soup, current_page):
         srcset = tag.get("srcset")
         if srcset:
             extra = [aa.strip().split()[0] for aa in tag["srcset"].split(",")]
-            links |= set([_format_url(WEBSITE_URL, aa) for aa in extra])
+            links |= set([_format_url(aa, current_page) for aa in extra])
 
     return links
 
@@ -384,19 +415,24 @@ class LinkScraper:
             # Increase the number of parsed pages
             parsed_pages += 1
 
+            # Get formatted current URL
+            current_url_no_query = _remove_query_params(self.driver.current_url)
+            if not current_url_no_query.endswith("/"):
+                current_url_no_query += "/"
+
             # IMPORTANT: Check for current URL redirects
-            if self.driver.current_url != page:
+            if not _is_same_url(page, current_url_no_query):
 
                 # Log it
-                logger.info(f"Redirected from {page} to {self.driver.current_url}")
+                logger.info(f"Redirected from {page} to {current_url_no_query}")
 
                 # Save the redirect
-                redirects[page] = self.driver.current_url
-                self.files["redirects"].write(f"{page},{self.driver.current_url}\n")
+                redirects[page] = current_url_no_query
+                self.files["redirects"].write(f"{page},{current_url_no_query}\n")
                 self.files["redirects"].flush()
 
                 # Parse the redirect if we haven't already
-                page = self.driver.current_url
+                page = current_url_no_query
 
                 # These are pages we know about
                 known_pages = pages_to_parse | all_links
@@ -406,6 +442,9 @@ class LinkScraper:
                     continue
 
             # Save the url to the set and write it
+            if "/?" in page:
+                raise ValueError(f"Found a ? in the URL: {page}")
+
             all_links.add(page)
             self.files["links"].write(f"{page}\n")
             self.files["links"].flush()
@@ -435,6 +474,10 @@ class LinkScraper:
 
                 # Save the rest of the links (non-internals, files, etc.)
                 for page in new_links_to_save:
+
+                    if "/?" in page:
+                        raise ValueError(f"Found a ? in the URL: {page}")
+
                     self.files["links"].write(f"{page}\n")
                     self.files["links"].flush()
 
