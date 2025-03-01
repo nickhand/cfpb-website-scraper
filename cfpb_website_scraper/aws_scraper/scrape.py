@@ -21,11 +21,11 @@ def normalize_url(url):
     return re.sub(r"(?<!:)//+", "/", url)
 
 
-WEBSITE_URL = "https://www.consumerfinance.gov"
-
-
 def get_webdriver(
-    browser: str, download_dir: Optional[str] = None, debug: bool = False
+    browser: str,
+    download_dir: Optional[str] = None,
+    debug: bool = False,
+    nojs: bool = True,
 ) -> Union[webdriver.Chrome, webdriver.Firefox]:
     """
     Initialize a selenium web driver with the specified options.
@@ -56,7 +56,8 @@ def get_webdriver(
         options.add_argument("--no-sandbox")
         options.add_argument("--disable-extensions")
         options.add_argument("--disable-gpu")
-        options.add_argument("--disable-javascript")  # Disable JavaScript !IMPORTANT
+        if nojs:
+            options.add_argument("--disable-javascript")  # Disable JavaScript
         if not debug:
             options.add_argument("--headless")
 
@@ -78,7 +79,8 @@ def get_webdriver(
     elif browser == "firefox":
         # Create the options
         options = webdriver.FirefoxOptions()
-        options.set_preference("javascript.enabled", False)  # Disable JavaScript
+        if nojs:
+            options.set_preference("javascript.enabled", False)  # Disable JavaScript
         if not debug:
             options.add_argument("--headless")
 
@@ -229,7 +231,9 @@ class WebScraper:
         """Run the scraping operation for the specified row of the data frame."""
 
         # Get the url
-        url = row["url"]
+        url = row[
+            "url"
+        ]  # this is the full url, e.g., httpsL//www.consumerfinance.gov/...
 
         # Load
         load_dotenv(find_dotenv())
@@ -241,7 +245,8 @@ class WebScraper:
         if self.kind == "pages":
 
             # Format the url
-            full_url = normalize_url(f"{WEBSITE_URL}/{url}")
+            full_url = normalize_url(url)
+            path_url = urlparse(full_url).path  # e.g., /about-us/blog/...
 
             # Navigate to the page
             self.driver.get(full_url)
@@ -270,19 +275,19 @@ class WebScraper:
                     self.driver.get(f"{full_url}?page={pg_num}")
 
                     if pg_num == 1:
-                        pg_url = url
+                        pg_url = path_url
                     else:
-                        pg_url = f"{url}/pages/{pg_num}"
+                        pg_url = f"{path_url}/pages/{pg_num}"
 
                     pages[pg_url] = self.driver.page_source
             else:
-                pages[url] = page_source
+                pages[path_url] = page_source
 
             # Save each page to s3
             for url, page_source in pages.items():
 
                 # Figure out the output path
-                output_path = url
+                output_path = path_url
                 if output_path.endswith("/"):
                     output_path = f"{output_path}index.html"
                 elif not output_path.endswith("index.html"):

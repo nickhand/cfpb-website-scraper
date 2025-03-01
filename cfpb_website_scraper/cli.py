@@ -9,8 +9,7 @@ from s3fs import S3FileSystem
 from . import APP_NAME, BUCKET_NAME
 from .aws_scraper import __main__ as aws_scraper_cli
 from .aws_scraper.scrape import WebScraper
-
-WEBSITE_URL = "https://www.consumerfinance.gov"
+from .links import LinkScraper, is_file_link, is_internal_link, is_static_asset
 
 
 @click.group()
@@ -37,12 +36,24 @@ def submit(input_filename, kind, num_workers=20, **kwargs):
     load_dotenv(find_dotenv())
 
     # Load the data
-    data = pd.read_csv(input_filename)
+    data = pd.DataFrame(
+        {"url": [x.strip() for x in open(input_filename, "r").readlines()]}
+    )
+
+    # Filter
+    if kind == "pages":
+        data = data.loc[data["url"].apply(is_internal_link)].drop_duplicates()
+    elif kind == "files":
+        data = data.loc[data["url"].apply(is_file_link)].drop_duplicates()
+    elif kind == "static":
+        data = data.loc[data["url"].apply(is_static_asset)].drop_duplicates()
+    else:
+        raise ValueError(f"Invalid kind: {kind}")
 
     # Log
     logger.info(f"Scraping data for {len(data)} {kind}")
 
-    # Figure out the s3 folde
+    # Figure out the s3 folder
     date_string = datetime.today().strftime("%y-%m-%d_%H_%M_%S")
     s3_subfolder = f"input-data/{date_string}"
     input_filename = f"s3://{BUCKET_NAME}/{s3_subfolder}/{kind}.csv"
@@ -90,3 +101,22 @@ def run(data_path, kind, **kwargs):
         scraper=scraper,
         **kwargs,
     )
+
+
+@cli.command(name="find-links")
+@click.option(
+    "--browser",
+    type=click.Choice(["firefox", "chrome"]),
+    default="firefox",
+    help="The browser to use.",
+)
+@click.option(
+    "--debug",
+    is_flag=True,
+    help="Turn on additional logging for debugging purposes.",
+)
+def find_links(browser="firefox", debug=False):
+    """Find all links on the CFPB website."""
+
+    scraper = LinkScraper(browser=browser, debug=debug)
+    scraper.scrape_data()
