@@ -130,11 +130,19 @@ def run(data_path, kind, **kwargs):
     is_flag=True,
     help="Turn on additional logging for debugging purposes.",
 )
-def find_links(browser="firefox", debug=False):
+@click.option("--input-filename", type=str, help="The input file data to start from")
+def find_links(browser="firefox", debug=False, input_filename=None):
     """Find all links on the CFPB website."""
 
+    if input_filename is not None:
+        data = (
+            pd.read_csv(input_filename, header=None, names=["url"]).squeeze().tolist()
+        )
+    else:
+        data = None
+
     scraper = LinkScraper(browser=browser, debug=debug)
-    scraper.scrape_data()
+    scraper.scrape_data(data=data)
 
 
 @cli.command(name="missing-links")

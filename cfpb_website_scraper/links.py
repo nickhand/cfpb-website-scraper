@@ -341,6 +341,7 @@ class LinkScraper:
 
     def scrape_data(
         self,
+        data: list[str] = None,
         errors: Literal["raise", "ignore"] = "ignore",
         max_retries: int = 3,
         min_sleep: int = 10,
@@ -365,9 +366,11 @@ class LinkScraper:
         log_freq :
             How often to log messages
         """
+        if data is None:
+            data = [WEBSITE_URL]
 
         # This will track the pages we still need to parse
-        pages_to_parse = set([WEBSITE_URL])
+        pages_to_parse = set(data)
 
         # Keep track of output
         all_links = set()  # All links found
@@ -530,6 +533,9 @@ def find_missing_links(data, kind):
 
     # Get all files from the input folder
     files = _get_all_files(input_folder)
+
+    if kind == "static":
+        input_folder = (input_folder / "..").resolve()
     files = ["/" + str(p.relative_to(input_folder)) for p in files]
 
     # Get the existing data
