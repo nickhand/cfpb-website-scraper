@@ -20,6 +20,8 @@ data = pd.DataFrame(
 for col in ["to", "from"]:
     data[col] = data[col].apply(lambda x: urlparse(x).path)
 
+data["status"] = "301!"
+
 
 # Save
 output_filename = THIS_FOLDER / ".." / "results" / "pages" / "_redirects"
